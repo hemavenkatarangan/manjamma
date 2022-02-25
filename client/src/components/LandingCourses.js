@@ -72,7 +72,7 @@ function LandingCourses() {
                                 {/* <div className="swiper-container card-slider1"> */}
                                     {/* <div className="swiper-wrapper"> */}
                                     {/* <div className="swiper-slide"> */}
-                                        <a href="../yogam">
+                                        <a href="/abhayam">
                                             <div className="card">
                                                 <div className="card-body" style={{textAlign: 'center'}}>
                                                     <img src="images/courses/abhayamthumbnail.png"></img>
@@ -87,10 +87,10 @@ function LandingCourses() {
                                         {/* </div> */}
                                         {/* <div className="swiper-slide"> */}
                                         <div className="col-lg-4">
-                                            <a href="../kaushalam">
+                                            <a href="/avistaran">
                                             <div className="card">
                                             <div className="card-body" style={{textAlign: 'center'}}>
-                                                    <img src="images/courses/avistaranthumbnail.png" ></img>
+                                                    <img src="images/courses/AvistaranT.png" ></img>
                                                     <div className="text">
                                                         <div className="testimonial-author">Avistaran</div>
                                                         {/* <div className="occupation">Doctor</div> */}
@@ -102,7 +102,7 @@ function LandingCourses() {
                                         {/* </div> */}
                                         {/* <div className="swiper-slide"> */}
                                         <div className="col-lg-4">
-                                            <a href="ttc">
+                                            <a href="/about#upcoming">
                                             <div className="card">
                                             <div className="card-body" style={{textAlign: 'center'}}>
                                                     <img src="images/courses/upcoming.png"></img>

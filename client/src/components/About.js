@@ -1,4 +1,4 @@
-import { useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 import { HeartFilled, BookFilled } from '@ant-design/icons'
 import { Card } from 'antd';
 import { Link } from 'react-router-dom';
@@ -38,20 +38,35 @@ const content = [{
 function About() {
 
     const [showPhil, setShowPhil] = useState('none')
+    const [showPresident, setShowPresident] = useState('none')
+    const [showUpcoming, setShowUpcoming] = useState('none')
 
     useEffect(() => {
         var url = window.location.href
         var splitingForPhil = url.split('#')[1]
-        if(splitingForPhil) {
-            setShowPhil('block')
-        } else {
-            setShowPhil('none')
+        switch(splitingForPhil) {
+            case 'phil' : setShowPhil('block')
+                          setShowPresident('none')
+                          setShowUpcoming('none')
+                          break;
+            case 'president' : setShowPhil('none')
+                               setShowPresident('block')
+                               setShowUpcoming('none')
+                          break;
+            case 'upcoming' : setShowPhil('none')
+                              setShowPresident('none')
+                              setShowUpcoming('block')
+                          break;
+            default : setShowPhil('none')
+                      setShowPresident('none')
+                      setShowUpcoming('none')
+                    break;
         }
     }, [])
 
     return (
         <>
-           
+
             <div className="ex-basic-1 pt-5 pb-5" style={{ marginTop: '30px' }}>
                 <div className="container">
                     <div className="row">
@@ -61,11 +76,11 @@ function About() {
                     </div>
                 </div>
             </div>
-            <div className="ex-basic-1 pt-4" style={{marginTop: '-50px'}}>
+            <div className="ex-basic-1 pt-4" style={{ marginTop: '-50px' }}>
                 <div className="container">
                     <div className="row">
-                        <div className="text-container" style={{ marginTop: '20px' }}>
-                            <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>Our Mission</h1>
+                        <div className="text-container">
+                            <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD', fontSize: '24px' }}>Our Mission</h1>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                                 Our mission is to bring about change in the minds and bodies of people so that they can discover the full potential of their mental and physical faculties through Yoga.
                             </p>
@@ -74,8 +89,8 @@ function About() {
                             </p>
                         </div>
 
-                        <div className="text-container" style={{ marginTop: '20px' }}>
-                            <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>About Bharat Yoga Vidya Kendra</h1>
+                        <div className="text-container">
+                            <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD', fontSize: '24px' }}>About Bharat Yoga Vidya Kendra</h1>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                                 Sri M has founded the Bharat Yoga Vidya Kendra (BYVK), an initiative of the Satsang Foundation, with the vision of spreading the ancient science of Yoga for the wellbeing of all.
                             </p>
@@ -96,11 +111,11 @@ function About() {
                             </p>
 
                         </div>
-                        <div style={{ marginBottom: '45px', display: showPhil}} id="phil">
+                        <div style={{ marginBottom: '45px', display: showPhil }} id="phil">
 
                         </div>
-                        <div className="text-container" style={{ marginTop: '20px' }} >
-                            <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>Our Yoga Philosophy</h1>
+                        <div className="text-container" >
+                            <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD', fontSize: '24px' }}>Our Yoga Philosophy</h1>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                                 “Yoga is a practice by which any human being who is earnestly interested can transform his or her life in a positive way. Yoga has a much vaster implication than just postures. It starts with the body, goes to the mind and proceeds to the spirit.”
                             </p>
@@ -115,57 +130,102 @@ function About() {
                             </p>
 
                         </div>
-                        <div className="text-container" style={{ marginTop: '20px' }}>
-                            <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD' ,fontSize: '24px'}}>Our Values</h1>
+                        <div className="text-container">
+                            <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD', fontSize: '24px' }}>Our Values</h1>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                                 Our core values are as follows:
                             </p>
-                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD' ,fontSize: '24px'}}>Yoga is Scientific and practical</h3>
+                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD', fontSize: '24px' }}>Yoga is Scientific and practical</h3>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                                 Yoga is a scientific and systematic way to understand the true essence of the self. However, unlike many sciences that are inaccessible to the common person, Yoga offers practical tools that any human can use to experiment and verify the results on their own.
                             </p>
-                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD' ,fontSize: '24px'}}>Yoga as Non-denominational and Non-discriminatory</h3>
+                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD', fontSize: '24px' }}>Yoga as Non-denominational and Non-discriminatory</h3>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                                 We teach Yoga as a non-denominational practice that can be done by anybody. We offer Yoga to people of all backgrounds and honour their existing religious, cultural and backgrounds. Anyone who sincerely and dedicatedly practices, gets the desired results.
                             </p>
-                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD' ,fontSize: '24px'}}>Discovering the self through Yoga</h3>
+                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD', fontSize: '24px' }}>Discovering the self through Yoga</h3>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                                 Yoga is a step by step way for each individual to discover themselves as they are right now. Yogic practices enable the practitioner to cultivate a sharp and unprejudiced mind, allowing the practitioner to see themselves in a new light.
                             </p>
-                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD' ,fontSize: '24px'}}>Every individual matters</h3>
+                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD', fontSize: '24px' }}>Every individual matters</h3>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-                            We believe that personal transformation requires an individualised approach. We specifically design our class sizes to be small, and train our teachers to be attentive, so that each student receives the appropriate attention, care and support that nurtures them to grow.
+                                We believe that personal transformation requires an individualised approach. We specifically design our class sizes to be small, and train our teachers to be attentive, so that each student receives the appropriate attention, care and support that nurtures them to grow.
                             </p>
-                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD' ,fontSize: '24px'}}>Samvaad</h3>
+                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD', fontSize: '24px' }}>Samvaad</h3>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                                 Deep understanding can only be cultivated through Saamvaad, dialogue. Our approach is to teach the Yogic path in a way that encourages enquiry, exploration and dialogue between participants and the teacher. We believe that transformation cannot occur through blindly following what a teacher says, but by exploring the teachings for oneself.
                             </p>
-                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD' ,fontSize: '24px'}}>The Yogashala and BYVK Location</h3>
+                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD', fontSize: '24px' }}>The Yogashala and BYVK Location</h3>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-                            The Yogashala was inaugurated on 11 December 2020. In a simple ceremony, Sri M consecrated the main deity, Rishi Patanjali at the Yogashala’s temple. Built under Sri M’s personal supervision, the Yogashala is an aesthetically designed, naturally lit and well-ventilated hall that can comfortably accommodate a class of 25 yoga practitioners. It offers a safe and nurturing  space for students to learn, practise, and experience Yoga.
+                                The Yogashala was inaugurated on 11 December 2020. In a simple ceremony, Sri M consecrated the main deity, Rishi Patanjali at the Yogashala’s temple. Built under Sri M’s personal supervision, the Yogashala is an aesthetically designed, naturally lit and well-ventilated hall that can comfortably accommodate a class of 25 yoga practitioners. It offers a safe and nurturing  space for students to learn, practise, and experience Yoga.
                             </p>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-                            BYVK is located at the Satsang Foundation Campus, on the outskirts of Madanapalle. The Ashram is surrounded by hills on all sides, and the Ashram premises consists of beautiful trees, flowers, birds, cows, a small pond with lilies and fish.
+                                BYVK is located at the Satsang Foundation Campus, on the outskirts of Madanapalle. The Ashram is surrounded by hills on all sides, and the Ashram premises consists of beautiful trees, flowers, birds, cows, a small pond with lilies and fish.
                             </p>
-                            <div className="text-container" style={{ marginTop: '20px' }}>
-                            <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>About the Satsang Foundation</h1>
-                            <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-                            Bharat Yoga Vidya Kendra is an initiative of The Satsang Foundation.
-                            </p>
-                            <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-                            The Satsang Foundation, established by Sri M, is a meeting point for spiritual seekers of all persuasions.
-                            </p>
-                            <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-                            The key objectives and activities of the Foundation derive from the dual intents of concern for mankind and the search for truth. Sri Ms teachings and the work of the foundation are designed to help people to explore ways to expand their spiritual horizons and lead a multi-dimensional life. The Satsang Foundation also extends a helping hand to the less privileged of society.
-                            </p>
-                            <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-                            Some of The Satsang Foundation’s projects include the Satsang Vidyalaya, Satsang Rural School, Chanda Satsang Vidyalaya, Sacred Grove Wellnes & Study Centre, MyTree, Jal Seva, Swasthya Kendra, Satsang Seva Mission and Manav Ekta Mission.
-                            </p>
-                            <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-                            To learn more you can <a href="https://satsang-foundation.org/">visit their website.</a>
-                            </p>
+                            <div className="text-container">
+                                <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD', fontSize: '24px' }}>About the Satsang Foundation</h1>
+                                <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                    Bharat Yoga Vidya Kendra is an initiative of The Satsang Foundation.
+                                </p>
+                                <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                    The Satsang Foundation, established by Sri M, is a meeting point for spiritual seekers of all persuasions.
+                                </p>
+                                <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                    The key objectives and activities of the Foundation derive from the dual intents of concern for mankind and the search for truth. Sri Ms teachings and the work of the foundation are designed to help people to explore ways to expand their spiritual horizons and lead a multi-dimensional life. The Satsang Foundation also extends a helping hand to the less privileged of society.
+                                </p>
+                                <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                    Some of The Satsang Foundation’s projects include the Satsang Vidyalaya, Satsang Rural School, Chanda Satsang Vidyalaya, Sacred Grove Wellnes & Study Centre, MyTree, Jal Seva, Swasthya Kendra, Satsang Seva Mission and Manav Ekta Mission.
+                                </p>
+                                <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                    To learn more you can <a href="https://satsang-foundation.org/">visit their website.</a>
+                                </p>
 
-                        </div>
+                            </div>
+                            <div style={{ marginBottom: '100px', display: showPresident }} id="president">
+
+                            </div>
+                            <div className="text-container" >
+                                <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD', fontSize: '24px' }}>BYVK highlights and Upcoming Courses</h1>
+                                <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                The first ever residential Yoga Teacher Training Course (TTC) conducted by Bharat Yoga Vidya Kendra (BYVK) in February 2021 was inaugurated by the Honourable President of India, Sri Ramnath Govind. He visited the Yogashala and interacted with the students and teachers. 
+                                </p>
+                                <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                He encouraged everyone to keep up with their daily practices and have the spirit to learn and enquire ever kindled in their hearts.
+                                </p>
+                                <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                The second residential TTC conducted in April 2021 was visited by the former Chief Justice of India, Mr Sharad Arvind Bobde. In an interaction session with the students, he explained the importance of discipline in the life of a disciple.
+                                </p>
+                                <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                The second residential TTC conducted in April 2021 was visited by the former Chief Justice of India, Mr Sharad Arvind Bobde. In an interaction session with the students, he explained the importance of discipline in the life of a disciple.
+                                </p>
+                                <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                To support the elderly in becoming physically strong and independent in their golden years, BYVK conducted the first ever Yoga retreat AbhayaM in November 2021. It was a sheer delight to see the enthusiasm and dedication of participants who were more than eager to become students again.
+                                </p>
+                                <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                Our founder Sri M was conferred with the Padma Bhushan Award 2020, for the distinguished service of high order in the field of Spirituality, by the Hon’ble President of India, Shri Ram Nath Kovind, in New Delhi on 8th Nov 2021. Sri M received the award in the ‘Spiritualism’ category, for his work on social issues and promotion of inter-faith peace and harmony.
+                                </p>
+                            </div>
+                            <div style={{ marginBottom: '100px', display: showUpcoming }} id="upcoming">
+
+                            </div>
+                            <div className="text-container">
+                                <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD', fontSize: '24px' }}>Upcoming Courses-</h1>
+                                <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                In continuing with our efforts to spread wellbeing through Yoga, we are coming up with new and interesting courses.
+                                </p>
+                                <h4 className="h4-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                <strong>Avistaran - </strong>residential retreat for professionals
+                                </h4>
+                                <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                This course is for people with busy lives and stressful jobs. It will help them pause and reconnect with their body and mind.
+                                </p>
+                                <h4 className="h4-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                <strong>Sakhayam - </strong>online course for women
+                                </h4>
+                                <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+                                This will be designed to help women look after their health better and address common health problems like PCOS, hormonal imbalance and early menopause which many women face.
+                                </p>
+                            </div>
                         </div>
 
                         {/* <div className="col-xl-10 offset-xl-1">

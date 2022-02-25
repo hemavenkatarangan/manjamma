@@ -37,12 +37,12 @@ function Nav() {
                         <div className='col'>
                             <img src="../images/logo.png" alt="Bharat Yoga Vidya Kendra" />
                         </div>
-                        <div className='col' style={{marginLeft: '-28px',marginTop: '10px'}}>
+                        <div className='col' style={{ marginLeft: '-28px', marginTop: '10px' }}>
                             <div className='row'>
-                                <b style={{ padding: '3px', color: 'darkblue', fontWeight: 'bold', lineHeight: 'normal', fontFamily:'Droid Serif'}}>Bharat Yoga Vidya Kendra</b>
+                                <b style={{ padding: '3px', color: 'darkblue', fontWeight: 'bold', lineHeight: 'normal', fontFamily: 'Droid Serif' }}>Bharat Yoga Vidya Kendra</b>
                             </div>
                             <div className='row'>
-                                <b style={{ color: 'gray', fontSize: '.85rem', fontFamily:'Droid Serif', fontStyle:'italic', marginLeft: '.2rem'}}>An initiative of The Satsang Foundation</b>
+                                <b style={{ color: 'gray', fontSize: '.85rem', fontFamily: 'Droid Serif', fontStyle: 'italic', marginLeft: '.2rem' }}>Lokah Samastah Sukhino Bhavantu</b>
                             </div>
                         </div>
                     </div>
@@ -54,40 +54,40 @@ function Nav() {
                 </button>
 
                 <div className="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-                    <ul className="navbar-nav ml-auto" style={{ fontFamily:'Poppins'}}>
+                    <ul className="navbar-nav ml-auto" style={{ fontFamily: 'Poppins' }}>
                         <li className="nav-item">
-                            <a className="nav-link page-scroll" style={{color:'black'}} href="/">Home <span className="sr-only">(current)</span></a>
+                            <a className="nav-link page-scroll" style={{ color: 'black' }} href="/">Home <span className="sr-only">(current)</span></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link page-scroll" style={{color:'black'}} href="/about">About Us</a>
+                            <a className="nav-link page-scroll" style={{ color: 'black' }} href="/about">About Us</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link page-scroll" style={{color:'black'}} href="/srim">Sri M</a>
+                            <a className="nav-link page-scroll" style={{ color: 'black' }} href="/srim">Sri M</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="dropdown01" style={{color:'black'}} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
+                            <a class="nav-link" href="#" id="dropdown01" style={{ color: 'black' }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                <a class="dropdown-item page-scroll" style={{color:'black'}} href="/yogam">YogaM - Beginners Course</a>
+                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/yogam">YogaM - Beginners Course</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" style={{color:'black'}} href="/kaushalam">KaushalaM - Intermediate Course</a>
+                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/kaushalam">KaushalaM - Intermediate Course</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" style={{color:'black'}} href="/abhayam">AbhayaM -Senior Citizens Course</a>
+                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/abhayam">AbhayaM - Senior Citizens Course</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" style={{color:'black'}} href="/ttc">TTC - Yoga Teachers Training Course</a>
+                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/ttc">TTC - Yoga Teachers Training Course</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" style={{color:'black'}} href="/avistaran">Avistaran - Yoga for Professionals
-</a>
-                           
+                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/avistaran">Avistaran - Yoga for Professionals
+                                </a>
+
                             </div>
                         </li>
                         {/* <li className="nav-item">
                             <a className="nav-link page-scroll" style={{color:'black'}} href="/courses">Courses</a>
                         </li> */}
                         <li className="nav-item">
-                            <a className="nav-link page-scroll" style={{color:'black'}} href="/contactus">Contact Us</a>
+                            <a className="nav-link page-scroll" style={{ color: 'black' }} href="/contactus">Contact Us</a>
                         </li>
-                        </ul>
-                        {/* {isAuthenticated ? <li className="nav-item">
+                    </ul>
+                    {/* {isAuthenticated ? <li className="nav-item">
                             <a className="nav-link page-scroll" href="/user">Hi, {user.user.name}</a>
                         </li> : <div>
                         <span className="nav-item">
