@@ -6,7 +6,7 @@ function SriM() {
                 <div className="container">
                 <div className="row" style={{textAlign: 'center', marginTop: '20px', color: 'darkblue',fontFamily: 'Poppins'}}>
                         <div className="col-xl-10 offset-xl-1">
-                            <h1 style={{textAlign: 'center', marginTop: '20px', color: 'darkblue',fontFamily: 'Poppins'}}>Sri M</h1>
+                            <h1 style={{textAlign: 'center',  color: 'darkblue',fontFamily: 'Poppins'}}>Sri M</h1>
                         </div>
                     </div>
                     <div className="row">

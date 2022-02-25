@@ -6,7 +6,7 @@ function AbhayaM() {
                 <div className="container">
                 <div className="row" >
                         <div className="col-xl-10 offset-xl-1" >
-                            <h1 style={{textAlign:'center', marginTop:'20px',fontFamily: 'Poppins', color: '#004AAD',fontSize: '32px' }}>AbhayaM Senior Citizens Course</h1>
+                            <h1 style={{textAlign:'center',fontFamily: 'Poppins', color: 'darkblue' }}>AbhayaM Senior Citizens Course</h1>
                         </div>
                     </div>
                     <div className="row">
