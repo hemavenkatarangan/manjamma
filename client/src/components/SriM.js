@@ -16,7 +16,7 @@ function SriM() {
                     </div>
                 </div>
             </div>
-            <div className="ex-basic-1 pt-4">
+            <div className="ex-basic-1 pt-4" style={{marginTop: '-50px'}}>
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-10 offset-xl-1" style={{ marginTop: '20px'}} >

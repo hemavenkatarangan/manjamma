@@ -61,7 +61,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <div className="ex-basic-1 pt-4">
+            <div className="ex-basic-1 pt-4" style={{marginTop: '-50px'}}>
                 <div className="container">
                     <div className="row">
                         <div className="text-container" style={{ marginTop: '20px' }}>

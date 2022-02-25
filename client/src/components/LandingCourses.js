@@ -66,7 +66,7 @@ function LandingCourses() {
                             </div> */}
 
                         </div>
-                        <div className="row">
+                        <div className="row" style={{marginTop:'30px'}}>
                         <div className="col-lg-4">
                             {/* <div className="slider-container"> */}
                                 {/* <div className="swiper-container card-slider1"> */}

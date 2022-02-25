@@ -16,7 +16,7 @@ function YogaM() {
                     </div>
                 </div>
             </div>
-            <div className="ex-basic-1 pt-4">
+            <div className="ex-basic-1 pt-4" style={{marginTop: '-50px'}}>
                 <div className="container">
                     
                     <div className="row">

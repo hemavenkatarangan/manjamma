@@ -86,20 +86,23 @@ function Nav() {
                         <li className="nav-item">
                             <a className="nav-link page-scroll" style={{color:'black'}} href="/contactus">Contact Us</a>
                         </li>
-                        
-                        {isAuthenticated ? <li className="nav-item">
+                        </ul>
+                        {/* {isAuthenticated ? <li className="nav-item">
                             <a className="nav-link page-scroll" href="/user">Hi, {user.user.name}</a>
-                        </li> :<div>
+                        </li> : <div>
                         <span className="nav-item">
                             <a className="btn-solid-sm page-scroll" href="/register">Sign Up</a>
                         </span>
                     </div>}
-                    </ul>
+                    
                     {isAuthenticated ? <div>
                         <span className="nav-item">
                             <a className="btn-solid-sm page-scroll" onClick={(e) => logOutUserFromPanel(e)}>Logout</a>
                         </span>
-                    </div> : ''}
+                    </div> : ''} */}
+                    <div>
+                        <img src="/images/logosat.png" alt="byvk"></img>
+                    </div>
                 </div>
             </div>
         </nav>
