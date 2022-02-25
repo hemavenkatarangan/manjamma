@@ -14,34 +14,7 @@ const contentStyle = {
     width: '100%'
 };
 
-// const courseNames = {
-//     YOGAM:'YOGAM',
-//     TTC:'TTC',
-//     KAUSHALAM:'KAUSHALAM',
-// }
 
-
-// const userFeedBack = [{
-//     name: 'Pankaj Kakkar',
-//     feedback: 'This course has been awesome. Sri M’s grace and guidance was evident. Gratitude for organizing this wonderful event.',
-//     image: null
-// },
-// {
-//     name: 'Dr Shubha Chetan',
-//     feedback: 'This course is structured carefully and brings in a holistic approach comprehensively. The teachers were excellent in their behaviour ,kindness and imparting of knowledge.',
-//     image: null
-// },
-// {
-//     name: 'Dr Liyakath PA',
-//     feedback: 'The environment was so conducive for one’s mental and spiritual development. The syllabus for the course was well crafted covering various aspects of yoga in-depth and the teachers were quite adept in handling our questions and concerns. Thank you for showing a new path in my life, the yoga way of my life. Looking forward to being a part of the next level courses and thereby upgrading myself in my journey called life.',
-//     image: null
-// }]
-
-// const courseDetails = [{
-//     courseId:courseNames.YOGAM,
-//     courseName: 'Yoga M',
-//     courseDescription: 'Hello'
-// }]
 
 function Landing() {
     const [isOpen, setOpen] = useState(false)
@@ -141,25 +114,25 @@ function Landing() {
                 </div>
                 </div>
             </div>
-            <div style={{ marginTop: '39px' }}>
+            <div >
                 <AboutInLanding />
             </div>
-            <div style={{ marginTop: '39px' }}>
+            <div style={{ marginTop: '10px' }}>
                 <YogaPhilosophy />
             </div>
 
-            <div style={{ marginTop: '39px' }} id="courses">
+            <div style={{ marginTop: '10px' }} id="courses">
                 <LandingCourses />
             </div>
 
-            <div style={{ marginTop: '39px' }}>
+            <div style={{ marginTop: '10px' }}>
                 <LandingCoursesCalender />
             </div>
 
-            <div style={{ marginTop: '39px' }}>
+            <div style={{ marginTop: '10px' }}>
                 <SriMTeachings />
             </div>
-            <div style={{ marginTop: '39px' }}>
+            <div style={{ marginTop: '10px' }}>
                 <LandingYogaStories />
             </div>
         </div>
