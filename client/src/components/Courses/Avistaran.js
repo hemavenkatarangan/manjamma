@@ -158,7 +158,7 @@ function Avistaran() {
                                 </div>
                             </div>
                             {/* upcoming courses  */}
-                            <h4 style={{textAlign:'left', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD' }}>Upcoming Avistaran Courses</h4>
+                            <h4 style={{textAlign:'left', marginTop:'20px',fontFamily: 'Poppins', color: '#004AAD' }}>Upcoming Avistaran Courses</h4>
                             <div className="row">
                                 <div className="col-lg-4">   
                                     <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}> 
