@@ -74,7 +74,7 @@ function About() {
                             </p>
                         </div>
 
-                        <div className="text-container" style={{ marginTop: '45px' }}>
+                        <div className="text-container" style={{ marginTop: '20px' }}>
                             <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>About Bharat Yoga Vidya Kendra</h1>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                                 Sri M has founded the Bharat Yoga Vidya Kendra (BYVK), an initiative of the Satsang Foundation, with the vision of spreading the ancient science of Yoga for the wellbeing of all.
@@ -99,7 +99,7 @@ function About() {
                         <div style={{ marginBottom: '45px', display: showPhil}} id="phil">
 
                         </div>
-                        <div className="text-container" style={{ marginTop: '45px' }} >
+                        <div className="text-container" style={{ marginTop: '20px' }} >
                             <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>Our Yoga Philosophy</h1>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                                 “Yoga is a practice by which any human being who is earnestly interested can transform his or her life in a positive way. Yoga has a much vaster implication than just postures. It starts with the body, goes to the mind and proceeds to the spirit.”
@@ -115,7 +115,7 @@ function About() {
                             </p>
 
                         </div>
-                        <div className="text-container" style={{ marginTop: '45px' }}>
+                        <div className="text-container" style={{ marginTop: '20px' }}>
                             <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD' ,fontSize: '24px'}}>Our Values</h1>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                                 Our core values are as follows:
@@ -147,7 +147,7 @@ function About() {
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                             BYVK is located at the Satsang Foundation Campus, on the outskirts of Madanapalle. The Ashram is surrounded by hills on all sides, and the Ashram premises consists of beautiful trees, flowers, birds, cows, a small pond with lilies and fish.
                             </p>
-                            <div className="text-container" style={{ marginTop: '45px' }}>
+                            <div className="text-container" style={{ marginTop: '20px' }}>
                             <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>About the Satsang Foundation</h1>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                             Bharat Yoga Vidya Kendra is an initiative of The Satsang Foundation.
