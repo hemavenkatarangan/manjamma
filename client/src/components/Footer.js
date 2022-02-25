@@ -35,33 +35,29 @@ function Footer() {
                                 GMaps Thumbnail
                             </div>
                         </div>
-                        <div className="footer-col third">
-                            <div style={{ height: '142px', width: '100%', textAlign: 'center', marginTop:'2rem'}}>
+                        <div className="footer-col third" style={{ marginTop:'10px'}}>
+                            <div style={{ height: '142px', width: '100%', textAlign: 'center', marginTop:'10px'}}>
                             <span className="fa-stack">
                                 <a href="https://www.facebook.com/TheSatsangFoundationOfficial/">
-                                    <i className="fas fa-circle fa-stack-2x"></i>
-                                    <i className="fab fa-facebook-f fa-stack-1x"></i>
+                                     <img className="img-fluid mt-5 mb-3" src="../images/facebook.JPG" style={{ width: '100%', height: '100%' }} alt="byvk" />
                                 </a>
                             </span>
                             <span className="fa-stack">
                                 <a href="https://twitter.com/SatsangTweets">
-                                    <i className="fas fa-circle fa-stack-2x"></i>
-                                    <i className="fab fa-twitter fa-stack-1x"></i>
+                                     <img className="img-fluid mt-5 mb-3" src="../images/whatsapp.png" style={{ width: '100%', height: '100%' }} alt="byvk" />
                                 </a>
                             </span>
                             <span className="fa-stack">
                                 <a href="https://www.instagram.com/thesatsangfoundationofficial/">
-                                    <i className="fas fa-circle fa-stack-2x"></i>
-                                    <i className="fab fa-instagram fa-stack-1x"></i>
+                                    <img className="img-fluid mt-5 mb-3" src="../images/instagram.png" style={{ width: '100%', height: '100%' }} alt="byvk" />
                                 </a>
                             </span>
                             <span className="fa-stack">
                                 <a href="#your-link">
-                                    <i className="fas fa-circle fa-stack-2x"></i>
-                                    <i className="fab fa-vimeo fa-stack-1x"></i>
+                                     <img className="img-fluid mt-5 mb-3" src="../images/youtube.png" style={{ width: '100%', height: '100%' }} alt="byvk" />
                                 </a>
                             </span>
-                            <p style={{ color: 'white', fontFamily:'Poppins', fontSize:'13px'}}>
+                            <p style={{ color: 'white', fontFamily:'Poppins', fontSize:'13px',marginTop:'20px'}}>
                                 The Satsang Foundation Campus
                                 Nakkaladdini, Kumarapuram,
                                 Madanapalle, Andhra Pradesh, 517325
