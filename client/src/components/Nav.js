@@ -101,7 +101,7 @@ function Nav() {
                         </span>
                     </div> : ''} */}
                     <div style={{ textAlign: 'right'}}>
-                        <img style={{width:'50%',height:'50%'}} src="/images/logosatsang1.png" alt="byvk"></img>
+                        <img style={{width:'40%',height:'40%'}} src="/images/logosatsang1.png" alt="byvk"></img>
                     </div>
                 </div>
             </div>
