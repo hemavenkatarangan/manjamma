@@ -100,7 +100,7 @@ function Nav() {
                             <a className="btn-solid-sm page-scroll" onClick={(e) => logOutUserFromPanel(e)}>Logout</a>
                         </span>
                     </div> : ''} */}
-                    <div style={{ textAlign: 'right'}}>
+                    <div>
                         <img style={{width:'50%',height:'50%'}} src="/images/logosatsang1.png" alt="byvk"></img>
                     </div>
                 </div>
