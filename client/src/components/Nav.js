@@ -101,7 +101,7 @@ function Nav() {
                         </span>
                     </div> : ''} */}
                     <div>
-                        <img src="/images/logosat.png" alt="byvk"></img>
+                        <img src="/images/logosatsang1.png" alt="byvk"></img>
                     </div>
                 </div>
             </div>
