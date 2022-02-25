@@ -14,7 +14,7 @@ function SriMTeachings() {
                             <div className="slider-container">
                                 <div className="swiper-container card-slider-tube">
                                     <div className="swiper-wrapper">
-                                        <div className="swiper-slide">
+                                        
                                         <div className="swiper-slide">
                                             <div className="card">
                                             <div className="card-body">
@@ -23,7 +23,7 @@ function SriMTeachings() {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                       
                                         </div>
                                         <div className="swiper-slide">
                                             <div className="card">
@@ -61,24 +61,7 @@ function SriMTeachings() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* <div className="swiper-slide">
-                                            <div className="card">
-                                            <div className="card-body">
-                                                    <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/m_hOUEO1e9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <div className="card">
-                                            <div className="card-body">
-                                                    <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/m_hOUEO1e9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> */}
+                                       
                                     </div>
                                     <div className="swiper-button-next"></div>
                                     <div className="swiper-button-prev"></div>
