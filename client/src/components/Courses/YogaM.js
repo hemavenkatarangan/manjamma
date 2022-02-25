@@ -2,78 +2,25 @@ function YogaM() {
 
     return (
         <>
-            {/* <header className="header">
+            <div className="ex-basic-1 pt-5 pb-5" style={{ marginTop: '30px' }}>
                 <div className="container">
-                    <div className="row" style={{ textAlign: 'center' }}>
-                        <div className="col-xl-10 offset-xl-1">
-                            <h1>Yoga M (English and Malayalam)</h1>
-                        </div>
-                    </div>
-                </div>
-            </header> */}
-            {/* <div className="slider-3">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <h2 className="heading white-heading">Courses</h2>
-                            <p className="p-heading"></p>
+                <div className="row" >
+                        <div className="col-xl-10 offset-xl-1" >
+                            <h1 style={{textAlign:'center', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>Yoga M Beginners Course</h1>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className="slider-container">
-                                <div className="swiper-container card-slider1">
-                                    <div className="swiper-wrapper">
-                                    <div className="swiper-slide">
-                                            <div className="card">
-                                                <div className="card-body" style={{textAlign: 'center'}}>
-                                                    <img src="../images/courses/yogam.jpg"></img>
-                                                    <div className="text">
-                                                        <div className="testimonial-author">Yoga M</div>
-                                                        <div className="occupation">Doctor</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <div className="card">
-                                            <div className="card-body" style={{textAlign: 'center'}}>
-                                                    <img src="../images/courses/yogaa.jpg" style={{width:'100%'}}></img>
-                                                    <div className="text">
-                                                        <div className="testimonial-author">Kaushala M</div>
-                                                        <div className="occupation">Doctor</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <div className="card">
-                                            <div className="card-body" style={{textAlign: 'center'}}>
-                                                    <img src="../images/courses/yogam.jpg"></img>
-                                                    <div className="text">
-                                                        <div className="testimonial-author">TTC</div>
-                                                        <div className="occupation">Doctor</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-button-next"></div>
-                                    <div className="swiper-button-prev"></div>
-
-                                </div>
-                            </div>
-
+                            <img className="img-fluid mt-5 mb-3" src="../images/courses/yogam.png" style={{ width: '100%', height: '500px' }} alt="byvk" />
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
             <div className="ex-basic-1 pt-4">
                 <div className="container">
                     
                     <div className="row">
                         <div className="col-xl-10 offset-xl-1">
-                            <h1 style={{textAlign:'center', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD' }}>Yoga M Beginners Course</h1>
                             <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
                                 <strong>Yoga M </strong>
                                 Yoga M is a 10-day beginner level online yoga course.
