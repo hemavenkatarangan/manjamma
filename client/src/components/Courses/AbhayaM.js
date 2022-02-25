@@ -6,7 +6,7 @@ function AbhayaM() {
                 <div className="container">
                 <div className="row" >
                         <div className="col-xl-10 offset-xl-1" >
-                            <h1 style={{textAlign:'center', marginTop:'10px',fontFamily: 'Poppins', color: 'darkblue' }}>AbhayaM Senior Citizens Course</h1>
+                            <h1 style={{textAlign:'center', marginTop:'20px',fontFamily: 'Poppins', color: 'darkblue',fontSize: '32px' }}>AbhayaM Senior Citizens Course</h1>
                         </div>
                     </div>
                     <div className="row">
@@ -20,7 +20,7 @@ function AbhayaM() {
                 <div className="container">
                     
                     <div className="row">
-                        <div className="col-xl-10 offset-xl-1" style={{marginTop:'10px'}}>
+                        <div className="col-xl-10 offset-xl-1" >
                             <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify',  fontSize: '16px' }}>
                                 <strong>AbhayaM </strong>
                                 is a 14-day residential retreat dedicated for the elderly, designed under the direct guidance of Sri M.
