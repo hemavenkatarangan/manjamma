@@ -2,12 +2,26 @@ function AbhayaM() {
 
     return (
         <>
+        <div className="ex-basic-1 pt-5 pb-5" style={{ marginTop: '30px' }}>
+                <div className="container">
+                <div className="row" >
+                        <div className="col-xl-10 offset-xl-1" >
+                            <h1 style={{textAlign:'center', marginTop:'20px',fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>AbhayaM Senior Citizens Course</h1>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <img className="img-fluid mt-5 mb-3" src="../images/courses/AbhayaM.png" style={{ width: '100%', height: '500px' }} alt="byvk" />
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="ex-basic-1 pt-4">
                 <div className="container">
                     
                     <div className="row">
                         <div className="col-xl-10 offset-xl-1">
-                            <h1 style={{textAlign:'center', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD' }}>AbhayaM Senior Citizens Course</h1>
+                            <h1 style={{textAlign:'center', marginTop:'20px',fontFamily: 'Poppins', color: '#004AAD' }}>AbhayaM Senior Citizens Course</h1>
                             <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
                                 <strong>AbhayaM </strong>
                                 is a 14-day residential retreat dedicated for the elderly, designed under the direct guidance of Sri M.
@@ -27,7 +41,7 @@ function AbhayaM() {
                             <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
                             This course is also an opportunity to explore and develop the spiritual aspect of life and learn to embrace the enhancing years without any fear.
                             </p>
-                            <h4 style={{textAlign:'left', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD' }}>Course Information:</h4>
+                            <h4 style={{textAlign:'left', marginTop:'20px',fontFamily: 'Poppins', color: '#004AAD' }}>Course Information:</h4>
                             <div className="row">
                                 <div className="col-lg-4">   
                                     <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}> 
@@ -102,7 +116,7 @@ function AbhayaM() {
                                 </div>
                             </div>
                             {/* upcoming courses  */}
-                            <h4 style={{textAlign:'left', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD' }}>Upcoming AbhayaM Courses</h4>
+                            <h4 style={{textAlign:'left', marginTop:'20px',fontFamily: 'Poppins', color: '#004AAD' }}>Upcoming AbhayaM Courses</h4>
                             <div className="row">
                                 <div className="col-lg-4">   
                                     <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}> 

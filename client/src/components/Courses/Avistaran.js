@@ -6,7 +6,7 @@ function Avistaran() {
                 <div className="container">
                 <div className="row" >
                         <div className="col-xl-10 offset-xl-1" >
-                            <h1 style={{textAlign:'center', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>Yoga retreat for Professionals - Avistaran</h1>
+                            <h1 style={{textAlign:'center', marginTop:'20px',fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>Yoga retreat for Professionals - Avistaran</h1>
                         </div>
                     </div>
                     <div className="row">
