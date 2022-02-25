@@ -2,12 +2,25 @@ function Avistaran() {
 
     return (
         <>
+        <div className="ex-basic-1 pt-5 pb-5" style={{ marginTop: '30px' }}>
+                <div className="container">
+                <div className="row" >
+                        <div className="col-xl-10 offset-xl-1" >
+                            <h1 style={{textAlign:'center', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>Yoga retreat for Professionals - Avistaran</h1>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <img className="img-fluid mt-5 mb-3" src="../images/courses/Avistaran.png" style={{ width: '100%', height: '500px' }} alt="byvk" />
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="ex-basic-1 pt-4">
                 <div className="container">
                     
                     <div className="row">
                         <div className="col-xl-10 offset-xl-1">
-                            <h1 style={{textAlign:'center', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD' }}>Yoga retreat for Professionals - Avistaran</h1>
                             <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
                                 <strong>Avistaran </strong>
                                 is a 9-day Yoga retreat for Corporate Professionals.
