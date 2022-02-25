@@ -90,7 +90,7 @@ function LandingCourses() {
                                             <a href="/avistaran">
                                             <div className="card">
                                             <div className="card-body" style={{textAlign: 'center'}}>
-                                                    <img src="images/courses/AvistaranT.png" ></img>
+                                                    <img src="images/courses/avistaranthumbnail.png" ></img>
                                                     <div className="text">
                                                         <div className="testimonial-author">Avistaran</div>
                                                         {/* <div className="occupation">Doctor</div> */}
