@@ -11,7 +11,7 @@ function YogaM() {
                     </div>
                     <div className="row">
                         <div className="col-lg-12">
-                            <img className="img-fluid mt-5 mb-3" src="../images/courses/yogam.jpg" style={{ width: '100%', height: '500px' }} alt="byvk" />
+                            <img className="img-fluid mt-5 mb-3" src="../images/courses/YogaM.png" style={{ width: '100%', height: '500px' }} alt="byvk" />
                         </div>
                     </div>
                 </div>
