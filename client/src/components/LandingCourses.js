@@ -5,7 +5,7 @@ function LandingCourses() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <h2 className="heading white-heading" style={{color:'#004AAD', fontFamily:'Poppins', fontSize:'32px'}}>Our Courses</h2>
+                            <h2 className="heading white-heading" style={{color:'darkblue', fontFamily:'Poppins', fontSize:'24px'}}>Our Courses</h2>
                             <p className="p-heading"></p>
                         </div>
                     </div>

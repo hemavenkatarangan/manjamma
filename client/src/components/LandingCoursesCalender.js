@@ -55,7 +55,7 @@ function LandingCoursesCalender() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <h2 className="heading" style={{color:'#004AAD', fontFamily:'Poppins', marginTop:'20px', fontSize:'32px'}}>Course Calendar</h2>
+                            <h2 className="heading" style={{color:'darkblue', fontFamily:'Poppins', marginTop:'20px', fontSize: '24px'}}>Course Calendar</h2>
                             {/* <p className="p-heading"></p> */}
                         </div>
                     </div>

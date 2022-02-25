@@ -5,7 +5,7 @@ function SriMTeachings() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <h2 className="h2-large white-heading" style={{color:'#004AAD', textAlign:'center',fontFamily:'Poppins', fontSize:'32px'}}><b>Sri M On Yoga</b></h2>
+                            <h2 className="h2-large white-heading" style={{color:'darkblue', textAlign:'center',fontFamily:'Poppins', fontSize:'24px'}}><b>Sri M On Yoga</b></h2>
                             {/* <p className="p-heading">You can read below a few testimonials from satisfied shop owners. Of course there are also some unhappy ones but they're not here</p> */}
                         </div>
                     </div>

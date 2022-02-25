@@ -36,6 +36,8 @@ function Footer() {
                         <h4 style={{ color: 'white', fontFamily:'Poppins' }}>Quick Links</h4>
                         <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/">Home</a></p>
                         <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/about">About Us</a></p>
+                        
+                        <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/srim">Sri M</a></p>
                         <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/contactus">Contact Us</a></p>
                         <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/#courses">Courses</a></p>
                         <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/yogam">Yoga M</a></p>
@@ -43,14 +45,10 @@ function Footer() {
                         <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/ttc">TTC</a></p>
                         <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/abhayam">Abhaya M</a></p>
                         <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/avistaran">Avistaran</a></p>
-                        {/* <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/yogam">Yoga M</a></p>
-                        <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/yogam">Yoga M</a></p>
-                        <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/yogam">Yoga M</a></p> */}
+                        
                     </div>
                     <div className="col-lg-3">
-                        {/* <div className="col-lg-12">
-                            <img alt="logo" style={{height:'auto', width:'100%'}} src="images/tsf.png"></img>
-                        </div> */}
+                        
                         <div className="col-lg-12">
                         <img alt="logo" style={{height:'200px', width:'200px'}} src="images/byvkwhite.png"></img>
                         </div>
