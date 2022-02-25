@@ -1,25 +1,17 @@
 function SriM() {
     return (
         <>
-            {/* <header className="header">
-                <div className="container">
-                    <div className="row" style={{textAlign: 'center'}}>
-                        <div className="col-xl-10 offset-xl-1">
-                            <h1>Sri M</h1>
-                        </div>
-                    </div>
-                </div>
-            </header> */}
+           
             <div className="ex-basic-1 pt-5 pb-5" style={{ marginTop: '30px' }}>
                 <div className="container">
-                <div className="row" style={{textAlign: 'center', marginTop: '100px', fontFamily: 'Poppins'}}>
+                <div className="row" style={{textAlign: 'center', marginTop: '20px', fontFamily: 'Poppins'}}>
                         <div className="col-xl-10 offset-xl-1">
                             <h1>Sri M</h1>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-lg-12">
-                            <img className="img-fluid mt-5 mb-3" src="../images/srim/srim1.jpg" style={{ width: '100%', height: '500px' }} alt="byvk" />
+                            <img className="img-fluid mt-5 mb-3" src="../images/AboutSriM.png" style={{ width: '100%', height: '500px' }} alt="byvk" />
                         </div>
                     </div>
                 </div>
