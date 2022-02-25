@@ -6,7 +6,7 @@ function YogaM() {
                 <div className="container">
                 <div className="row" >
                         <div className="col-xl-10 offset-xl-1" >
-                            <h1 style={{textAlign:'center', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>Yoga M Beginners Course</h1>
+                            <h1 style={{textAlign:'center', marginTop:'20px',fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>Yoga M Beginners Course</h1>
                         </div>
                     </div>
                     <div className="row">
@@ -38,7 +38,7 @@ function YogaM() {
                             <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
                             This course is certified by the AYUSH Ministry and the participants get a “Yoga Volunteer” certificate upon the successful completion of the course.
                             </p>
-                            <h4 style={{textAlign:'left', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD' }}>Course Information:</h4>
+                            <h4 style={{textAlign:'left', marginTop:'20px',fontFamily: 'Poppins', color: '#004AAD' }}>Course Information:</h4>
                             <div className="row">
                                 <div className="col-lg-4">   
                                     <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}> 
@@ -112,7 +112,7 @@ function YogaM() {
                                 </div>
                             </div>
                             {/* upcoming courses  */}
-                            <h4 style={{textAlign:'left', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD' }}>Upcoming Yoga M Courses</h4>
+                            <h4 style={{textAlign:'left', marginTop:'20px',fontFamily: 'Poppins', color: '#004AAD' }}>Upcoming Yoga M Courses</h4>
                             <div className="row">
                                 <div className="col-lg-4">   
                                     <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}> 

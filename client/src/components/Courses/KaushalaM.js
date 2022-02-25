@@ -6,7 +6,7 @@ function KaushalaM() {
                 <div className="container">
                 <div className="row" >
                         <div className="col-xl-10 offset-xl-1" >
-                            <h1 style={{textAlign:'center', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>KausalaM Intermediate Course</h1>
+                            <h1 style={{textAlign:'center', marginTop:'20px',fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>KausalaM Intermediate Course</h1>
                         </div>
                     </div>
                     <div className="row">
@@ -38,7 +38,7 @@ function KaushalaM() {
                             <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
                             Daily practice of the Asana and Pranayama techniques taught during the course are designed to help remove energy blocks and knots from the body. Their practice makes the mind calm, subtle and focused, and prepares one for meditation mentally, physically and emotionally.
                             </p>
-                            <h4 style={{textAlign:'left', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD' }}>Course Information:</h4>
+                            <h4 style={{textAlign:'left', marginTop:'20px',fontFamily: 'Poppins', color: '#004AAD' }}>Course Information:</h4>
                             <div className="row">
                                 <div className="col-lg-4">   
                                     <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}> 
@@ -100,7 +100,7 @@ function KaushalaM() {
                                 </div>
                             </div>
                             {/* upcoming courses  */}
-                            <h4 style={{textAlign:'left', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD' }}>Upcoming KausalaM  Courses</h4>
+                            <h4 style={{textAlign:'left', marginTop:'20px',fontFamily: 'Poppins', color: '#004AAD' }}>Upcoming KausalaM  Courses</h4>
                             <div className="row">
                                 <div className="col-lg-4">   
                                     <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}> 
