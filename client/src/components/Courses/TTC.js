@@ -4,7 +4,7 @@ function TTC() {
         <>
             <div className="ex-basic-1 pt-5 pb-5" style={{ marginTop: '30px' }}>
                 <div className="container">
-                <div className="row" style={{textAlign:'center', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD' }}>
+                <div className="row" style={{textAlign:'center', marginTop:'100px',fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>
                         <div className="col-xl-10 offset-xl-1">
                             <h1>Teacher Training Course (TTC)</h1>
                         </div>
