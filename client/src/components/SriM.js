@@ -6,12 +6,12 @@ function SriM() {
                 <div className="container">
                 <div className="row" style={{textAlign: 'center', marginTop: '20px', color: 'darkblue',fontFamily: 'Poppins'}}>
                         <div className="col-xl-10 offset-xl-1">
-                            <h1>Sri M</h1>
+                            <h1 style={{textAlign: 'center', marginTop: '20px', color: 'darkblue',fontFamily: 'Poppins'}}>Sri M</h1>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-lg-12">
-                            <img className="img-fluid mt-5 mb-3" src="../images/AboutSriM.png" style={{ width: '100%', height: '300px' }} alt="byvk" />
+                            <img className="img-fluid mt-5 mb-3" src="../images/AboutSriM.png" style={{ width: '100%', height: '600px' }} alt="byvk" />
                         </div>
                     </div>
                 </div>
