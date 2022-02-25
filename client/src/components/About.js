@@ -65,7 +65,7 @@ function About() {
                 <div className="container">
                     <div className="row">
                         <div className="text-container" style={{ marginTop: '20px' }}>
-                            <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px' }}>Our Mission</h1>
+                            <h1 className="h1-large" style={{ fontFamily: 'Poppins', color: '#004AAD',fontSize: '24px',marginTop: '20px'  }}>Our Mission</h1>
                             <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                                 Our mission is to bring about change in the minds and bodies of people so that they can discover the full potential of their mental and physical faculties through Yoga.
                             </p>
