@@ -21,7 +21,6 @@ function AbhayaM() {
                     
                     <div className="row">
                         <div className="col-xl-10 offset-xl-1">
-                            <h1 style={{textAlign:'center', marginTop:'20px',fontFamily: 'Poppins', color: '#004AAD' }}>AbhayaM Senior Citizens Course</h1>
                             <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
                                 <strong>AbhayaM </strong>
                                 is a 14-day residential retreat dedicated for the elderly, designed under the direct guidance of Sri M.
