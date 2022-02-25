@@ -4,14 +4,14 @@ function SriM() {
            
             <div className="ex-basic-1 pt-5 pb-5" style={{ marginTop: '30px' }}>
                 <div className="container">
-                <div className="row" style={{textAlign: 'center', marginTop: '20px', fontFamily: 'Poppins'}}>
+                <div className="row" style={{textAlign: 'center', marginTop: '20px', color: 'darkblue',fontFamily: 'Poppins'}}>
                         <div className="col-xl-10 offset-xl-1">
                             <h1>Sri M</h1>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-lg-12">
-                            <img className="img-fluid mt-5 mb-3" src="../images/AboutSriM.png" style={{ width: '100%', height: '500px' }} alt="byvk" />
+                            <img className="img-fluid mt-5 mb-3" src="../images/AboutSriM.png" style={{ width: '100%', height: '300px' }} alt="byvk" />
                         </div>
                     </div>
                 </div>
@@ -19,7 +19,7 @@ function SriM() {
             <div className="ex-basic-1 pt-4">
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-10 offset-xl-1" >
+                        <div className="col-xl-10 offset-xl-1" style={{ marginTop: '20px'}} >
                             <p style={{ textAlign: 'justify', fontFamily: 'Poppins' }}>
                                 <strong>Sri M</strong> – spiritual guide, social reformer, educationist, author and speaker – was born into a Muslim family on November 6, 1949 in Thiruvananthapuram, Kerala. His transformational journey, from a young boy to a living yogi, is a fascinating story symbolized by single-minded discipline and dedication.
                             </p>
