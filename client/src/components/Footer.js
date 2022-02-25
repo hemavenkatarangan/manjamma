@@ -17,7 +17,7 @@ function Footer() {
                         <p style={{ color: 'white', fontFamily:'Poppins' }}>Link 1</p> */}
                         <div className="col-lg-12">
                         <a href="https://www.facebook.com/TheSatsangFoundationOfficial/">
-                            <img className="img-fluid mt-5 mb-3" src="../images/facebook.JPG" style={{ width: '50px', height: '50px' }} alt="byvk" />
+                            <img className="img-fluid mt-5 mb-3" src="../images/facebook.jpg" style={{ width: '50px', height: '50px' }} alt="byvk" />
                         </a>
                         </div>
                         <div className="col-lg-12">
@@ -50,10 +50,10 @@ function Footer() {
                     <div className="col-lg-3">
                         
                         <div className="col-lg-12">
-                        <img alt="logo" style={{height:'200px', width:'200px'}} src="images/byvkwhite.png"></img>
+                        <img alt="logo" style={{width:'100%'}} src="images/byvkwhite.png"></img>
                         </div>
                         <div className="col-lg-12" style={{ marginTop:'10px'}}>
-                        <img alt="logo" style={{height:'200px', width:'200px'}} src="images/moa.jpg"></img>
+                        <img alt="logo" style={{width:'100%'}} src="images/moa.jpg"></img>
                             {/* <div style={{ height: '142px', width: '100%', textAlign: 'center', marginTop:'10px'}}> */}
                             {/* <span className="fa-stack">
                                 <a href="https://www.facebook.com/TheSatsangFoundationOfficial/">
