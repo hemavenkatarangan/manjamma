@@ -220,7 +220,7 @@ function About() {
                                 This course is for people with busy lives and stressful jobs. It will help them pause and reconnect with their body and mind.
                                 </p>
                                 <h4 className="h4-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-                                <strong>Sakhayam - </strong>online course for women
+                                <strong>SakhyaM - </strong>online course for women
                                 </h4>
                                 <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
                                 This will be designed to help women look after their health better and address common health problems like PCOS, hormonal imbalance and early menopause which many women face.
