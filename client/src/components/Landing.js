@@ -15,7 +15,7 @@ function Landing() {
     return (
         <div className="container">
             <div style={{ marginTop: ' 120px' }}>
-            <div className="container" style={{ width: '1200px'}} >
+            <div>
                 <div className="slider-container">
                     <div className="swiper-container slide-slider">
                         <div className="swiper-wrapper">

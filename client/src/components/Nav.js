@@ -27,7 +27,7 @@ function Nav() {
     return (
         <nav className="navbar navbar-expand-lg fixed-top navbar-light">
             <div className="container">
-                <a className="navbar-brand logo-image" href="/">
+                <a className="navbar-brand logo-image" href="/" style={{marginLeft:'12px'}}>
                     {/* <img src="../images/logo.png" alt="Bharat Yoga Vidya Kendra" />
                     <b>Bharat Yoga Vidya Kendra</b> */}
                     {/* <b className="subtext">An Initiative Of Satsang Foundation</b> */}
@@ -86,6 +86,9 @@ function Nav() {
                         <li className="nav-item">
                             <a className="nav-link page-scroll" style={{ color: 'black' }} href="/contactus">Contact Us</a>
                         </li>
+                        <li>
+                        <img style={{height:'32px'}} src="/images/logosatsang1.png" alt="byvk"></img>
+                    </li>
                     </ul>
                     {/* {isAuthenticated ? <li className="nav-item">
                             <a className="nav-link page-scroll" href="/user">Hi, {user.user.name}</a>
@@ -100,9 +103,9 @@ function Nav() {
                             <a className="btn-solid-sm page-scroll" onClick={(e) => logOutUserFromPanel(e)}>Logout</a>
                         </span>
                     </div> : ''} */}
-                    <div>
-                        <img style={{width:'50%',height:'50%'}} src="/images/logosatsang1.png" alt="byvk"></img>
-                    </div>
+                    {/* <div>
+
+                    </div> */}
                 </div>
             </div>
         </nav>
