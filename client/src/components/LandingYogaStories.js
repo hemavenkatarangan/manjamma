@@ -5,7 +5,7 @@ function LandingYogaStories() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <h2 className="heading white-heading" style={{color:'darkblue', fontFamily:'Poppins', fontSize:'24px'}}>Yoga Stories</h2>
+                            <h2 className="heading white-heading" style={{color:'darkblue', fontFamily:'Poppins', fontSize:'24px',marginTop:'20px',marginBottom:'20px'}}>Yoga Stories</h2>
                             {/* <p className="p-heading">You can read below a few testimonials from satisfied shop owners. Of course there are also some unhappy ones but they're not here</p> */}
                         </div>
                     </div>

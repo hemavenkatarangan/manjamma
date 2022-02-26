@@ -5,7 +5,7 @@ function LandingCourses() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <h2 className="heading white-heading" style={{color:'darkblue', fontFamily:'Poppins', fontSize:'24px'}}>Our Courses</h2>
+                            <h2 className="heading white-heading" style={{color:'darkblue', fontFamily:'Poppins', fontSize:'24px',marginTop:'20px',marginBottom:'20px'}}>Our Courses</h2>
                             <p className="p-heading"></p>
                         </div>
                     </div>
@@ -20,7 +20,7 @@ function LandingCourses() {
                                                 <div className="card-body" style={{textAlign: 'center'}}>
                                                     <img src="images/courses/yogamthumbnail.png"></img>
                                                     <div className="text">
-                                                        <div className="testimonial-author">Yoga M</div>
+                                                        <div className="testimonial-author">YogaM</div>
                                                         {/* <div className="occupation">Doctor</div> */}
                                                     </div>
                                                 </div>
@@ -35,7 +35,7 @@ function LandingCourses() {
                                             <div className="card-body" style={{textAlign: 'center'}}>
                                                     <img src="images/courses/kausalamthumbnail.png" ></img>
                                                     <div className="text">
-                                                        <div className="testimonial-author">Kaushala M</div>
+                                                        <div className="testimonial-author">KausalaM</div>
                                                         {/* <div className="occupation">Doctor</div> */}
                                                     </div>
                                                 </div>
@@ -77,7 +77,7 @@ function LandingCourses() {
                                                 <div className="card-body" style={{textAlign: 'center'}}>
                                                     <img src="images/courses/abhayamthumbnail.png"></img>
                                                     <div className="text">
-                                                        <div className="testimonial-author">Abhaya M</div>
+                                                        <div className="testimonial-author">AbhayaM</div>
                                                         {/* <div className="occupation">Doctor</div> */}
                                                     </div>
                                                 </div>
