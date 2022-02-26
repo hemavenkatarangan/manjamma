@@ -4,7 +4,7 @@ function SriM() {
            
             <div className="ex-basic-1 pt-5 pb-5" style={{ marginTop: '30px' }}>
                 <div className="container">
-                <div className="row" style={{textAlign: 'center', marginTop: '20px', color: 'darkblue',fontFamily: 'Poppins'}}>
+                <div className="row" style={{textAlign: 'center', marginTop: '50px', color: 'darkblue',fontFamily: 'Poppins'}}>
                         <div className="col-xl-10 offset-xl-1">
                             <h1 style={{textAlign: 'center',  color: 'darkblue',fontFamily: 'Poppins'}}>Sri M</h1>
                         </div>

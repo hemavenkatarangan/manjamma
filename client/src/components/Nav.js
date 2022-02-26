@@ -67,9 +67,9 @@ function Nav() {
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="#" id="dropdown01" style={{ color: 'black' }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/yogam">YogaM - Beginners Course</a>
+                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/yogam">Yoga M - Beginners Course</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/kaushalam">KaushalaM - Intermediate Course</a>
+                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/kaushalam">KausalaM - Intermediate Course</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/abhayam">AbhayaM - Senior Citizens Course</a>
                                 <div class="dropdown-divider"></div>
