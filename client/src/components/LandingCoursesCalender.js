@@ -51,8 +51,8 @@ function LandingCoursesCalender() {
 
     return (
         <>
-            <div style={{ background: "url(../images/header-background.png) center center no-repeat" }}>
-                <div className="container">
+           
+                <div className="container"style={{ background: "url(../images/header-background.png) center center no-repeat" }}>
                     <div className="row">
                         <div className="col-lg-12">
                             <h2 className="heading" style={{color:'darkblue', fontFamily:'Poppins', marginTop:'20px',marginBottom:'20px', fontSize: '24px'}}>Course Calendar</h2>
@@ -84,7 +84,7 @@ function LandingCoursesCalender() {
                     </div>
 
                 </div>
-            </div>
+           
         </>
     )
 }

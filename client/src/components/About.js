@@ -193,21 +193,8 @@ function About() {
 									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
 										He encouraged everyone to keep up with their daily practices and have the spirit to learn and enquire ever kindled in their hearts.
 									</p>
-									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-										The second residential TTC conducted in April 2021 was visited by the former Chief Justice of India, Mr Sharad Arvind Bobde. In an interaction session with the students, he explained the importance of discipline in the life of a disciple.
-									</p>
-									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-										The second residential TTC conducted in April 2021 was visited by the former Chief Justice of India, Mr Sharad Arvind Bobde. In an interaction session with the students, he explained the importance of discipline in the life of a disciple.
-									</p>
-									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-										To support the elderly in becoming physically strong and independent in their golden years, BYVK conducted the first ever Yoga retreat AbhayaM in November 2021. It was a sheer delight to see the enthusiasm and dedication of participants who were more than eager to become students again.
-									</p>
-									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-										Our founder Sri M was conferred with the Padma Bhushan Award 2020, for the distinguished service of high order in the field of Spirituality, by the Hon’ble President of India, Shri Ram Nath Kovind, in New Delhi on 8th Nov 2021. Sri M received the award in the ‘Spiritualism’ category, for his work on social issues and promotion of inter-faith peace and harmony.
-									</p>
-								</div>
-								<div className="row">
-									<div className="col-lg-4">
+									<div className="row">
+									<div className="col-lg-4" style={{ textAlign:'center'}}>
 
 
 
@@ -216,30 +203,52 @@ function About() {
 
 
 									</div>
+									</div>
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+										The second residential TTC conducted in April 2021 was visited by the former Chief Justice of India, Mr Sharad Arvind Bobde. In an interaction session with the students, he explained the importance of discipline in the life of a disciple.
+									</p>
+									<div className="row">
+									<div className="col-lg-4" style={{ textAlign:'center'}}>
 
-									<div className="col-lg-4">
+
 
 										<img src="images/highlights/Picture2-CJIwithTTC2.png"></img>
 
-									</div>
-									<div className="col-lg-4">
 
-										<img src="images/highlights/Picture3SriMwithTTC3.png"></img>
 
 									</div>
-								</div>
-								<div className="row" style={{ marginTop: '10px' }}>
-									<div className="col-lg-4">
+									</div>
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+										To support the elderly in becoming physically strong and independent in their golden years, BYVK conducted the first ever Yoga retreat AbhayaM in November 2021. It was a sheer delight to see the enthusiasm and dedication of participants who were more than eager to become students again.
+									</p>
+									<div className="row">
+									<div className="col-lg-4" style={{ textAlign:'center'}}>
+
+
 
 										<img src="images/highlights/Picture4-AbhayaMstudents.png"></img>
 
+
+
 									</div>
-									<div className="col-lg-4">
+									</div>
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+										Our founder Sri M was conferred with the Padma Bhushan Award 2020, for the distinguished service of high order in the field of Spirituality, by the Hon’ble President of India, Shri Ram Nath Kovind, in New Delhi on 8th Nov 2021. Sri M received the award in the ‘Spiritualism’ category, for his work on social issues and promotion of inter-faith peace and harmony.
+									</p>
+									<div className="row">
+									<div className="col-lg-4" style={{ textAlign:'center'}}>
+
+
 
 										<img src="images/highlights/Picture5-SriMPadmaBhushan.png"></img>
 
+
+
+									</div>
 									</div>
 								</div>
+								
+								
 
 
 								<div style={{ marginBottom: '100px', display: showUpcoming }} id="upcoming">
@@ -256,14 +265,7 @@ function About() {
 									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
 										This course is for people with busy lives and stressful jobs. It will help them pause and reconnect with their body and mind.
 									</p>
-									<h4 className="h4-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-										<strong>SakhyaM - </strong>online course for women
-									</h4>
-									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-										This will be designed to help women look after their health better and address common health problems like PCOS, hormonal imbalance and early menopause which many women face.
-									</p>
-								</div>
-								<div className="row">
+									<div className="row">
 									<div className="col-lg-4">
 
 
@@ -273,7 +275,14 @@ function About() {
 
 
 									</div>
-
+									</div>
+									<h4 className="h4-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+										<strong>SakhyaM - </strong>online course for women
+									</h4>
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+										This will be designed to help women look after their health better and address common health problems like PCOS, hormonal imbalance and early menopause which many women face.
+									</p>
+									<div className="row">
 									<div className="col-lg-4">
 
 										<img src="images/upcomingcourses/Picture2-SakhyaM.png"></img>
@@ -281,6 +290,9 @@ function About() {
 									</div>
 									
 								</div>
+								</div>
+								
+
 								<div className="row" style={{marginTop:'20px'}}>
 								</div>
 								

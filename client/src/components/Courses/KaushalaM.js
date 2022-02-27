@@ -144,9 +144,9 @@ function KaushalaM() {
                                     </p>                                  
                                     </div>
                                     <div className="col-lg-8"> 
-                                    <p style={{ float: 'left', fontFamily: 'Poppins', textAlign: 'justify',  fontSize: '16px' }}> 
-                                    <a href="https://bit.ly/KausalaM-April2022">https://bit.ly/KausalaM-April2022</a>
-                                    </p>  
+                                    
+                                    <a href="https://bit.ly/KausalaM-April2022"><p style={{ float: 'left', color:'darkblue',fontFamily: 'Poppins', textAlign: 'justify',  fontSize: '18px' }}> https://bit.ly/KausalaM-April2022</p></a>
+                                   
                                 </div>
                             </div>
                         </div>
