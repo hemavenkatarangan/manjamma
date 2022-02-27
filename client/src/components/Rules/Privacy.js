@@ -5,7 +5,7 @@ return(
                 <div className="container">
                     <div className="row" style={{ marginTop: '100px' }}>
                         <div className="text-container" style={{ marginTop: '45px' }}>
-                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD' }}>Privacy Policy</h3>
+                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: 'darkblue' }}>Privacy Policy</h3>
                             <p className="" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
                             Your use of the website constitutes your consent to all of the terms and conditions contained in this privacy policy (as amended from time to time) and you shall be bound by the same.
                             </p>
