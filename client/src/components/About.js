@@ -183,7 +183,7 @@ function About() {
 										Some of The Satsang Foundation’s projects include the Satsang Vidyalaya, Satsang Rural School, Chanda Satsang Vidyalaya, Sacred Grove Wellnes & Study Centre, MyTree, Jal Seva, Swasthya Kendra, Satsang Seva Mission and Manav Ekta Mission.
 									</p>
 									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-										To learn more you can <a href="https://satsang-foundation.org/">visit their website.</a>
+										To learn more you can <a href="https://satsang-foundation.org/" style={{color: 'darkblue'}}>visit their website.</a>
 									</p>
 
 								</div>
