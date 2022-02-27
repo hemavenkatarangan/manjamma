@@ -60,16 +60,16 @@ function LandingCoursesCalender() {
                         </div>
                     </div>
                     {/* style={{ maxHeight: '300px', overflowY: 'auto', overflowX: 'hidden'}} */}
-                    <div >
+                   
                         {cData.map((data, index) => {
-                            return <><div className="row" >
+                            return <><div className="row" style={{height:'22px'}}>
                                 <div className="col-lg-4" style={{textAlign: 'center'}}>
-                                    <h5 style={{fontFamily:'Poppins',fontSize:'18px'}}>{data.date}</h5>
-                                    <p style={{fontFamily:'Poppins',fontSize:'18px'}}>{data.month}</p>
+                                    <h5 style={{fontFamily:'Poppins',fontSize:'16px'}}>{data.date}</h5>
+                                    <p style={{fontFamily:'Poppins',fontSize:'16px'}}>{data.month}</p>
                                 </div>
                                 <div className="col-lg-4">
-                                    <h4 style={{fontFamily:'Poppins',fontSize:'18px'}}>{data.cName}</h4>
-                                    <p style={{fontFamily:'Poppins',fontSize:'18px'}}>{data.cDescription}</p>
+                                    <h4 style={{fontFamily:'Poppins',fontSize:'16px'}}>{data.cName}</h4>
+                                    <p style={{fontFamily:'Poppins',fontSize:'16px'}}>{data.cDescription}</p>
                                 </div>
                                 <div className="col-lg-4" style={{textAlign:'center'}}>
                                     <div className="" style={{ marginTop: '0px' }}>
@@ -81,7 +81,7 @@ function LandingCoursesCalender() {
                             </div>
                                 <hr /> </>
                         })}
-                    </div>
+                    
 
                 </div>
            
