@@ -5,7 +5,7 @@ function Footer() {
             <div className="container" >
                 <div className="row" style={{ fontFamily: 'Poppins' }}>
                     <div className="col-lg-3">
-                        <h4 style={{ color: 'white', fontFamily: 'Poppins', fontSize:'14px' }}>Courses</h4>
+                        <h4 style={{ color: 'white', fontFamily: 'Poppins', fontSize:'14px' }}><b>COURSES</b></h4>
                         <p style={{ color: 'white', fontFamily: 'Poppins' , fontSize:'12px'}}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/yogam">Yoga M</a></p>
                         <p style={{ color: 'white', fontFamily: 'Poppins' , fontSize:'12px'}}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/kaushalam">KausalaM</a></p>
                         <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/ttc">TTC</a></p>
@@ -33,7 +33,7 @@ function Footer() {
                         </div> */}
                     </div>
                     <div className="col-lg-3">
-                        <h4 style={{ color: 'white', fontFamily: 'Poppins' ,fontSize:'14px'}}>Quick Links</h4>
+                        <h4 style={{ color: 'white', fontFamily: 'Poppins' ,fontSize:'14px'}}><b>QUICK LINKS</b></h4>
                         <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px'}}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/">Home</a></p>
                         <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/about">About Us</a></p>
 
@@ -49,10 +49,12 @@ function Footer() {
                     </div>
                     <div className="col-lg-3">
 
-                        <div className="col-lg-12">
+                        {/* <div className="col-lg-12">
                             <img alt="logo" style={{ width: '100%' }} src="images/byvkwhite.png"></img>
-                        </div>
+                        </div> */}
+
                         <div className="col-lg-12" style={{ marginTop: '12px', textAlign: 'center', marginBottom: '-22px' }}>
+                        <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px' }}>In affiliation with</p>
                             <img alt="logo" style={{ width: '50%', height: '50%', align: 'center' }} src="images/moa.jpg"></img>
                         </div>
                         <div style={{textAlign: 'center'}}>
@@ -71,10 +73,9 @@ function Footer() {
                                 </div>
                     </div>
                     <div className="col-lg-3">
-                        <div className="col-lg-12">
+                        {/* <div className="col-lg-12">
                             <img alt="logo" style={{ width: '100%', height: '150px' }} src="images/tsfexpan.png"></img>
-                            {/* <img alt="logo" style={{height:'200px', width:'200px'}} src="https://satsang-foundation.org/wp-content/uploads/2020/12/Bharat-Yoga-Vidya-Kendra.png"></img> */}
-                        </div>
+                        </div> */}
                         <div className="col-lg-12" style={{ marginTop: '10px', textAlign: 'center' }}>
                             <a href="https://www.google.com/maps/place/The+Satsang+Foundation+Campus/@13.2614361,77.4819141,9z/data=!4m18!1m12!4m11!1m3!2m2!1d78.4775501!2d13.6060505!1m6!1m2!1s0x3bb2660603b12a65:0x3edf91521d6e2f52!2sHF5P%2BJQV+The+Satsang+Foundation+Campus,+Nakkaladdini,+Kumarapuram,+Madanapalle,+Andhra+Pradesh+517325!2m2!1d78.4869222!2d13.5591022!3m4!1s0x3bb2660603b12a65:0x3edf91521d6e2f52!8m2!3d13.5591022!4d78.4869222">
                                 <img alt="logo" style={{ width: '50%', height: '50%' }} src="images/googlemap.png"></img>
