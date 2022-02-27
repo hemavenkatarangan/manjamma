@@ -20,7 +20,7 @@ function LandingCourses() {
                                                 <div className="card-body" style={{textAlign: 'center'}}>
                                                     <img src="images/courses/yogamthumbnail.png"></img>
                                                     <div className="text">
-                                                        <div className="testimonial-author">YogaM</div>
+                                                        <div className="testimonial-author" style={{color:'darkblue'}}>YogaM</div>
                                                         {/* <div className="occupation">Doctor</div> */}
                                                     </div>
                                                 </div>
@@ -35,7 +35,7 @@ function LandingCourses() {
                                             <div className="card-body" style={{textAlign: 'center'}}>
                                                     <img src="images/courses/kausalamthumbnail.png" ></img>
                                                     <div className="text">
-                                                        <div className="testimonial-author">KausalaM</div>
+                                                        <div className="testimonial-author" style={{color:'darkblue'}}>KausalaM</div>
                                                         {/* <div className="occupation">Doctor</div> */}
                                                     </div>
                                                 </div>
@@ -50,7 +50,7 @@ function LandingCourses() {
                                             <div className="card-body" style={{textAlign: 'center'}}>
                                                     <img src="images/courses/ttcthumbnail.png"></img>
                                                     <div className="text">
-                                                        <div className="testimonial-author">TTC</div>
+                                                        <div className="testimonial-author" style={{color:'darkblue'}}>TTC</div>
                                                         {/* <div className="occupation">Doctor</div> */}
                                                     </div>
                                                 </div>
@@ -77,7 +77,7 @@ function LandingCourses() {
                                                 <div className="card-body" style={{textAlign: 'center'}}>
                                                     <img src="images/courses/abhayamthumbnail.png"></img>
                                                     <div className="text">
-                                                        <div className="testimonial-author">AbhayaM</div>
+                                                        <div className="testimonial-author" style={{color:'darkblue'}}>AbhayaM</div>
                                                         {/* <div className="occupation">Doctor</div> */}
                                                     </div>
                                                 </div>
@@ -92,7 +92,7 @@ function LandingCourses() {
                                             <div className="card-body" style={{textAlign: 'center'}}>
                                                     <img src="images/courses/avistaranthumbnail.png" ></img>
                                                     <div className="text">
-                                                        <div className="testimonial-author">Avistaran</div>
+                                                        <div className="testimonial-author" style={{color:'darkblue'}}>Avistaran</div>
                                                         {/* <div className="occupation">Doctor</div> */}
                                                     </div>
                                                 </div>
@@ -107,7 +107,7 @@ function LandingCourses() {
                                             <div className="card-body" style={{textAlign: 'center'}}>
                                                     <img src="images/courses/upcoming.png"></img>
                                                     <div className="text">
-                                                        <div className="testimonial-author">Upcoming Courses</div>
+                                                        <div className="testimonial-author" style={{color:'darkblue'}}>Upcoming Courses</div>
                                                         {/* <div className="occupation">Doctor</div> */}
                                                     </div>
                                                 </div>
