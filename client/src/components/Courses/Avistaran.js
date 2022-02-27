@@ -190,9 +190,9 @@ function Avistaran() {
                                     </p>                                  
                                     </div>
                                     <div className="col-lg-8"> 
-                                    <p style={{ float: 'left', fontFamily: 'Poppins', textAlign: 'justify',  fontSize: '16px' }}> 
-                                    <a href="https://forms.gle/QTA3ErTdwvAjtTxr8">https://forms.gle/QTA3ErTdwvAjtTxr8</a>
-                                    </p>  
+                                    <a href="https://forms.gle/QTA3ErTdwvAjtTxr8"><p style={{ float: 'left', color:'darkblue',fontFamily: 'Poppins', textAlign: 'justify',  fontSize: '18px' }}>https://forms.gle/QTA3ErTdwvAjtTxr8</p>
+                                    </a>
+                                   
                                 </div>
                             </div>
                         </div>
