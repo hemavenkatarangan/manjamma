@@ -30,9 +30,14 @@ function Landing() {
                                 <img src="../images/slider/3.png" className="img-fluid" alt='Byvk' />
                                 </a>
                             </div>
+                             <div className="swiper-slide">
+                                <a href="/about#president">
+                                <img src="../images/slider/Picture3-CJI.png" className="img-fluid" alt='Byvk' />
+                                </a>
+                            </div>
                           <div className="swiper-slide">
                                 <a href="/#courses">
-                                <img src="../images/slider/Picture5-OurCourses.png" className="img-fluid" alt='OurCourses' />
+                                <img src="../images/slider/Picture4-OurCourses.png" className="img-fluid" alt='OurCourses' />
                                 </a>
                             </div>
                             <div className="swiper-slide">
@@ -63,18 +68,18 @@ function Landing() {
                 <YogaPhilosophy />
             </div>
 
-            <div style={{ marginTop: '10px' }} id="courses">
+            <div  id="courses">
                 <LandingCourses />
             </div>
 
-            <div style={{ marginTop: '10px' }}>
+            <div style={{ marginTop: '2px' }}>
                 <LandingCoursesCalender />
             </div>
 
-            <div style={{ marginTop: '10px' }}>
+            <div >
                 <SriMTeachings />
             </div>
-            <div style={{ marginTop: '10px' }}>
+            <div >
                 <LandingYogaStories />
             </div>
         </div>

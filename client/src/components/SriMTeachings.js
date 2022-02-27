@@ -5,11 +5,11 @@ function SriMTeachings() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <h2 className="h2-large white-heading" style={{color:'darkblue', textAlign:'center',marginTop:'20px',marginBottom:'20px',fontFamily:'Poppins', fontSize:'24px'}}><b>Sri M On Yoga</b></h2>
+                            <h2 className="h2-large white-heading" style={{color:'darkblue', textAlign:'center',fontFamily:'Poppins', fontSize:'24px'}}><b>Sri M On Yoga</b></h2>
                             {/* <p className="p-heading">You can read below a few testimonials from satisfied shop owners. Of course there are also some unhappy ones but they're not here</p> */}
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row" >
                         <div className="col-lg-12">
                             <div className="slider-container">
                                 <div className="swiper-container card-slider-tube">

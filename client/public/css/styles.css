@@ -1104,9 +1104,10 @@ input[type='checkbox'] {
 
 /*     Footer     */
 .footer {
-	padding-top: 16px;
-	padding-bottom: 1.5rem;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	background-color:#144068ff;
+	
 }
 
 .footer a {
@@ -1570,7 +1571,7 @@ a:hover.back-to-top {
 	}
 
 	.slider-2 .card-body {
-		padding: 3rem 2.625rem 3.125rem 2.625rem;
+		padding: 0 2.625rem 3.125rem 2.625rem;
 	}
 	.footer .footer-col.first {
 		width: 352px;
