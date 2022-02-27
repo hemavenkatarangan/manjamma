@@ -72,7 +72,7 @@ function Landing() {
                 <LandingCourses />
             </div>
 
-            <div style={{ marginTop: '2px' }}>
+            <div style={{ marginTop: '5px' }}>
                 <LandingCoursesCalender />
             </div>
 
