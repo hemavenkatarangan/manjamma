@@ -9,7 +9,7 @@ function SriM() {
                             <h1 style={{textAlign: 'center',  color: 'darkblue',fontFamily: 'Poppins'}}>Sri M</h1>
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row" style={{marginTop:'-62px'}}>
                         <div className="col-lg-12">
                             <img className="img-fluid mt-5 mb-3" src="../images/AboutSriM.png" style={{ width: '100%', height: '600px' }} alt="byvk" />
                         </div>

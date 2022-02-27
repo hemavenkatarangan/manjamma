@@ -9,7 +9,7 @@ function LandingYogaStories() {
                             {/* <p className="p-heading">You can read below a few testimonials from satisfied shop owners. Of course there are also some unhappy ones but they're not here</p> */}
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row" style={{marginTop:'-50px'}}>
                         <div className="col-lg-12">
                             <div className="slider-container">
                                 <div className="swiper-container card-slider-tube">

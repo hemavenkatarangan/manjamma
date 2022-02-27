@@ -1622,7 +1622,7 @@ a:hover.back-to-top {
     background-position: center;
 }
 .white-heading:after {
-    background: url('../images/underline.png');
+    /* background: url('../images/underline.png'); */
     background-repeat: no-repeat;
     background-position: center;
 }

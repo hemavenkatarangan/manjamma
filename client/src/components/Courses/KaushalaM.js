@@ -9,7 +9,7 @@ function KaushalaM() {
                             <h1 style={{textAlign:'center', marginTop:'50px',fontFamily: 'Poppins', color: 'darkblue',fontSize: '32px' }}>KausalaM Intermediate Course</h1>
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row" style={{marginTop:'-62px'}}>
                         <div className="col-lg-12">
                             <img className="img-fluid mt-5 mb-3" src="../images/courses/KausalaM.png" style={{ width: '100%', height: '500px' , marginTop:'-20px'}} alt="byvk" />
                         </div>

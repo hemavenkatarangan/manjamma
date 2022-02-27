@@ -69,7 +69,12 @@ function About() {
 
 			<div className="ex-basic-1 pt-5 pb-5" style={{ marginTop: '30px' }}>
 				<div className="container">
-					<div className="row">
+				<div className="row" >
+                        <div className="col-xl-10 offset-xl-1" >
+                            <h1 style={{textAlign:'center', marginTop:'50px',fontFamily: 'Poppins', color: 'darkblue',fontSize: '32px'}}>About Us</h1>
+                        </div>
+                    </div>
+					<div className="row" style={{marginTop:'-62px'}}>
 						<div className="col-lg-12">
 							<img className="img-fluid mt-5 mb-3" src="../images/AboutUs.png" style={{ width: '100%', height: '500px' }} alt="smart uniforms" />
 						</div>
