@@ -2,15 +2,15 @@ function Footer() {
 
     return (
         <div className="footer">
-            <div className="container">
+            <div className="container" >
                 <div className="row" style={{ fontFamily: 'Poppins' }}>
                     <div className="col-lg-3">
-                        <h4 style={{ color: 'white', fontFamily: 'Poppins' }}>Courses</h4>
-                        <p style={{ color: 'white', fontFamily: 'Poppins' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/yogam">Yoga M</a></p>
-                        <p style={{ color: 'white', fontFamily: 'Poppins' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/kaushalam">KausalaM</a></p>
-                        <p style={{ color: 'white', fontFamily: 'Poppins' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/ttc">TTC</a></p>
-                        <p style={{ color: 'white', fontFamily: 'Poppins' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/abhayam">AbhayaM</a></p>
-                        <p style={{ color: 'white', fontFamily: 'Poppins' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/avistaran">Avistaran</a></p>
+                        <h4 style={{ color: 'white', fontFamily: 'Poppins', fontSize:'14px' }}>Courses</h4>
+                        <p style={{ color: 'white', fontFamily: 'Poppins' , fontSize:'12px'}}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/yogam">Yoga M</a></p>
+                        <p style={{ color: 'white', fontFamily: 'Poppins' , fontSize:'12px'}}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/kaushalam">KausalaM</a></p>
+                        <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/ttc">TTC</a></p>
+                        <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/abhayam">AbhayaM</a></p>
+                        <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/avistaran">Avistaran</a></p>
                         {/* <p style={{ color: 'white', fontFamily:'Poppins' }}>Link 1</p>
                         <p style={{ color: 'white', fontFamily:'Poppins' }}>Link 1</p>
                         <p style={{ color: 'white', fontFamily:'Poppins' }}>Link 1</p>
@@ -33,12 +33,12 @@ function Footer() {
                         </div> */}
                     </div>
                     <div className="col-lg-3">
-                        <h4 style={{ color: 'white', fontFamily: 'Poppins' }}>Quick Links</h4>
-                        <p style={{ color: 'white', fontFamily: 'Poppins' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/">Home</a></p>
-                        <p style={{ color: 'white', fontFamily: 'Poppins' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/about">About Us</a></p>
+                        <h4 style={{ color: 'white', fontFamily: 'Poppins' ,fontSize:'14px'}}>Quick Links</h4>
+                        <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px'}}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/">Home</a></p>
+                        <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/about">About Us</a></p>
 
-                        <p style={{ color: 'white', fontFamily: 'Poppins' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/srim">Sri M</a></p>
-                        <p style={{ color: 'white', fontFamily: 'Poppins' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/contactus">Contact Us</a></p>
+                        <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/srim">Sri M</a></p>
+                        <p style={{ color: 'white', fontFamily: 'Poppins' , fontSize:'12px'}}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/contactus">Contact Us</a></p>
                         {/* <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/#courses">Courses</a></p>
                         <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/yogam">Yoga M</a></p>
                         <p style={{ color: 'white', fontFamily:'Poppins' }}><a style={{ color: 'white', fontFamily:'Poppins' }} href="/kaushalam">Kaushala M</a></p>
@@ -93,7 +93,7 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="row" style={{ fontFamily: 'Poppins', marginTop: '20px' }}>
+                <div className="row" style={{ fontFamily: 'Poppins' }}>
                     <div className="col-lg-3">
                         <p style={{ color: 'white', fontFamily: 'Poppins', fontSize: '13px' }}>Ⓒ Bharat Yoga Vidya Kendra</p>
                     </div>
