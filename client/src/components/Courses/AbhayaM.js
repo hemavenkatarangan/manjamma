@@ -147,9 +147,9 @@ function AbhayaM() {
                                     </p>                                  
                                     </div>
                                     <div className="col-lg-8"> 
-                                    <p style={{ float: 'left', fontFamily: 'Poppins', textAlign: 'justify', fontSize: '16px' }}> 
-                                    <a href="https://forms.gle/VaotesgHCDD2Y9qe9">https://forms.gle/VaotesgHCDD2Y9qe9</a>
-                                    </p>  
+                                     
+                                    <a href="https://forms.gle/VaotesgHCDD2Y9qe9"><p style={{ float: 'left', color:'darkblue',fontFamily: 'Poppins', textAlign: 'justify', fontSize: '16px' }}>https://forms.gle/VaotesgHCDD2Y9qe9</p></a>
+                                      
                                 </div>
                             </div>
                         </div>
