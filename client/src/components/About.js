@@ -168,25 +168,7 @@ function About() {
 								<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
 									BYVK is located at the Satsang Foundation Campus, on the outskirts of Madanapalle. The Ashram is surrounded by hills on all sides, and the Ashram premises consists of beautiful trees, flowers, birds, cows, a small pond with lilies and fish.
 								</p>
-								<div className="text-container">
-									<h1 className="h1-large" style={{ fontFamily: 'Poppins', color: 'darkblue', fontSize: '24px' }}>About the Satsang Foundation</h1>
-									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-										Bharat Yoga Vidya Kendra is an initiative of The Satsang Foundation.
-									</p>
-									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-										The Satsang Foundation, established by Sri M, is a meeting point for spiritual seekers of all persuasions.
-									</p>
-									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-										The key objectives and activities of the Foundation derive from the dual intents of concern for mankind and the search for truth. Sri Ms teachings and the work of the foundation are designed to help people to explore ways to expand their spiritual horizons and lead a multi-dimensional life. The Satsang Foundation also extends a helping hand to the less privileged of society.
-									</p>
-									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-										Some of The Satsang Foundation’s projects include the Satsang Vidyalaya, Satsang Rural School, Chanda Satsang Vidyalaya, Sacred Grove Wellnes & Study Centre, MyTree, Jal Seva, Swasthya Kendra, Satsang Seva Mission and Manav Ekta Mission.
-									</p>
-									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-										To learn more you can <a href="https://satsang-foundation.org/" style={{color: 'darkblue'}}>visit their website.</a>
-									</p>
-
-								</div>
+								
 								<div style={{ marginBottom: '100px', display: showPresident }} id="president">
 
 								</div>
@@ -296,9 +278,27 @@ function About() {
 									
 								</div>
 								</div>
-								
+								<div className="text-container">
+									<h1 className="h1-large" style={{ fontFamily: 'Poppins', color: 'darkblue', fontSize: '24px' }}>About the Satsang Foundation</h1>
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+										Bharat Yoga Vidya Kendra is an initiative of The Satsang Foundation.
+									</p>
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+										The Satsang Foundation, established by Sri M, is a meeting point for spiritual seekers of all persuasions.
+									</p>
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+										The key objectives and activities of the Foundation derive from the dual intents of concern for mankind and the search for truth. Sri Ms teachings and the work of the foundation are designed to help people to explore ways to expand their spiritual horizons and lead a multi-dimensional life. The Satsang Foundation also extends a helping hand to the less privileged of society.
+									</p>
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+										Some of The Satsang Foundation’s projects include the Satsang Vidyalaya, Satsang Rural School, Chanda Satsang Vidyalaya, Sacred Grove Wellnes & Study Centre, MyTree, Jal Seva, Swasthya Kendra, Satsang Seva Mission and Manav Ekta Mission.
+									</p>
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
+										To learn more you can <a href="https://satsang-foundation.org/" style={{color: 'darkblue'}}>visit their website.</a>
+									</p>
 
-								<div className="row" style={{marginTop:'20px'}}>
+								</div>
+
+								<div className="row" style={{marginTop:'50px'}}>
 								</div>
 								
 								
