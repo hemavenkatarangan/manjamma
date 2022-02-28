@@ -79,7 +79,8 @@ function LandingCoursesCalender() {
                                     </div>
                                 </div>
                             </div>
-                                <hr /> </>
+                                <hr style={{marginTop: '4px'}}/> 
+                                </>
                         })}
                     
 
