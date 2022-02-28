@@ -5,7 +5,7 @@ function Refund() {
                 <div className="container">
                     <div className="row" style={{ marginTop: '100px' }}>
                         <div className="text-container" style={{ marginTop: '45px' }}>
-                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD' }}>Refund & Cancellation Policy</h3>
+                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: 'darkblue' }}>Refund & Cancellation Policy</h3>
                             <p className="" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
                             Our Refund and Cancellation Policy is standard across all of our programs and is as follows:
                             </p>

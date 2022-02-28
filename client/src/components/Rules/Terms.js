@@ -5,7 +5,7 @@ function Terms() {
                 <div className="container">
                     <div className="row" style={{ marginTop: '100px' }}>
                         <div className="text-container" style={{ marginTop: '45px' }}>
-                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD' }}>Terms and Conditions:</h3>
+                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: 'darkblue' }}>Terms and Conditions:</h3>
                             <p className="" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
                                 Use of this site is provided by Bharat Yoga Vidya Kendra subject to the following Terms and Conditions:
                             </p>
@@ -36,7 +36,7 @@ function Terms() {
                                     </p>
                                 </li>
                             </ul>
-                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: '#004AAD' }}>Copyright restrictions:</h3>
+                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: 'darkblue' }}>Copyright restrictions:</h3>
                             <ul>
                                 <li>
                                     <p className="" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>

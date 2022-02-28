@@ -183,7 +183,7 @@ function About() {
 										Some of The Satsang Foundation’s projects include the Satsang Vidyalaya, Satsang Rural School, Chanda Satsang Vidyalaya, Sacred Grove Wellnes & Study Centre, MyTree, Jal Seva, Swasthya Kendra, Satsang Seva Mission and Manav Ekta Mission.
 									</p>
 									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
-										To learn more you can <a href="https://satsang-foundation.org/">visit their website.</a>
+										To learn more you can <a href="https://satsang-foundation.org/" style={{color: 'darkblue'}}>visit their website.</a>
 									</p>
 
 								</div>
@@ -199,7 +199,7 @@ function About() {
 										He encouraged everyone to keep up with their daily practices and have the spirit to learn and enquire ever kindled in their hearts.
 									</p>
 									<div className="row">
-									<div className="col-lg-4" style={{ textAlign:'center'}}>
+									<div className="col-lg-12" style={{ textAlign:'center'}}>
 
 
 
@@ -213,7 +213,7 @@ function About() {
 										The second residential TTC conducted in April 2021 was visited by the former Chief Justice of India, Mr Sharad Arvind Bobde. In an interaction session with the students, he explained the importance of discipline in the life of a disciple.
 									</p>
 									<div className="row">
-									<div className="col-lg-4" style={{ textAlign:'center'}}>
+									<div className="col-lg-12" style={{ textAlign:'center'}}>
 
 
 
@@ -227,7 +227,7 @@ function About() {
 										To support the elderly in becoming physically strong and independent in their golden years, BYVK conducted the first ever Yoga retreat AbhayaM in November 2021. It was a sheer delight to see the enthusiasm and dedication of participants who were more than eager to become students again.
 									</p>
 									<div className="row">
-									<div className="col-lg-4" style={{ textAlign:'center'}}>
+									<div className="col-lg-12" style={{ textAlign:'center'}}>
 
 
 
@@ -241,7 +241,7 @@ function About() {
 										Our founder Sri M was conferred with the Padma Bhushan Award 2020, for the distinguished service of high order in the field of Spirituality, by the Hon’ble President of India, Shri Ram Nath Kovind, in New Delhi on 8th Nov 2021. Sri M received the award in the ‘Spiritualism’ category, for his work on social issues and promotion of inter-faith peace and harmony.
 									</p>
 									<div className="row">
-									<div className="col-lg-4" style={{ textAlign:'center'}}>
+									<div className="col-lg-12" style={{ textAlign:'center'}}>
 
 
 
@@ -271,7 +271,7 @@ function About() {
 										This course is for people with busy lives and stressful jobs. It will help them pause and reconnect with their body and mind.
 									</p>
 									<div className="row">
-									<div className="col-lg-4">
+									<div className="col-lg-12" style={{ textAlign:'center'}}>
 
 
 
@@ -288,7 +288,7 @@ function About() {
 										This will be designed to help women look after their health better and address common health problems like PCOS, hormonal imbalance and early menopause which many women face.
 									</p>
 									<div className="row">
-									<div className="col-lg-4">
+									<div className="col-lg-12" style={{ textAlign:'center'}}>
 
 										<img src="images/upcomingcourses/Picture2-SakhyaM.png"></img>
 
