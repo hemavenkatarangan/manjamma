@@ -42,7 +42,7 @@ function Nav() {
                                 <b style={{ padding: '3px', color: 'darkblue', fontWeight: 'bold', lineHeight: 'normal', fontFamily: 'Droid Serif', fontSize: '18px'}}>Bharat Yoga Vidya Kendra</b>
                             </div>
                             <div className='row'>
-                                <b style={{ color: 'gray', fontSize: '.85rem', fontFamily: 'Droid Serif', fontStyle: 'italic', marginLeft: '.2rem' }}>Lokah Samastah Sukhino Bhavantu</b>
+                                <b style={{ color: 'gray', fontSize: '.85rem', fontFamily: 'Droid Serif', fontStyle: 'italic', marginLeft: '.2rem',fontSize: '12px' }}>Lokah Samastah Sukhino Bhavantu</b>
                             </div>
                         </div>
                     </div>
