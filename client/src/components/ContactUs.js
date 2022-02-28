@@ -5,7 +5,7 @@ function ContactUs() {
                 <div className="container">
                     <div className="row" style={{ marginTop: '100px' }}>
                         <div className="text-container" style={{ marginTop: '45px' }}>
-                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: 'darkblue' }}>Contact Us</h3>
+                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: 'darkblue' ,fontSize: '32px'}}>Contact Us</h3>
                             <p className="" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
                                 You may email us at <a href="mailto:bharatyoga@satsang-foundation.org" style={{color:'darkblue'}}>bharatyoga@satsang-foundation.org</a>, or you may call us on +91-8999-039-823 during office hours (10am-5pm IST).
                             </p>
@@ -15,7 +15,7 @@ function ContactUs() {
                             <p className="" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
                                 <a href="" style={{color:'darkblue'}}>Form Link</a>
                             </p>
-                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: 'darkblue' }}>Visit Us</h3>
+                            <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: 'darkblue',fontSize: '24px' }}>Visit Us</h3>
                             <p className="" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
                                 You may visit us at the Madanapalle Ashram, however it is mandatory to register for your visit. Please note the following:
                             </p>
