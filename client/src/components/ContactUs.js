@@ -21,12 +21,8 @@ function ContactUs() {
                             </p>
                            <p style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
                                     To register, please write to <a href="mailto:mdplcampus@satsang-foundation.org" style={{color:'darkblue'}}>mdplcampus@satsang-foundation.org</a> for day visits, accommodation requests and any other queries.</p>
-                                 
-                        </div>
-                        </div>
-                        <div classname="row">
-                            <div classname="col-lg-6">
-                                <p style={{ fontFamily: 'Poppins', color: 'black', fontSize: '16px' }}>
+                                
+                                <p style={{ fontFamily: 'Poppins', color: 'black', fontSize: '16px' ,textAlign: 'left'}}>
                                     <u>Bharat Yoga Vidya Kendra</u>
                                 </p>
                                 <p style={{ fontFamily: 'Poppins', color: 'black', fontSize: '16px' }}>
@@ -38,9 +34,9 @@ function ContactUs() {
                                 <p style={{ fontFamily: 'Poppins', color: 'black', fontSize: '16px' }}>
                                     Madanapalle, Andhra Pradesh 517325
                                 </p>
-                            </div>
-                            <div classname="col-lg-6">
-                                <p style={{ fontFamily: 'Poppins', color: 'black', fontSize: '16px' }}>
+                            
+                            
+                                <p style={{ fontFamily: 'Poppins', color: 'black', fontSize: '16px' ,textAlign: 'left'}}>
                                     <u>Registered Office</u>
                                 </p>
                                 <p style={{ fontFamily: 'Poppins', color: 'black', fontSize: '16px' }}>
@@ -52,8 +48,10 @@ function ContactUs() {
                                 <p style={{ fontFamily: 'Poppins', color: 'black', fontSize: '16px' }}>
                                 Bengaluru, Karnataka 560005
                                 </p>
-                            </div>
+                            
                         </div>
+                        </div>
+                        
                 </div>
             </div>
         </>

@@ -55,7 +55,7 @@ function Footer() {
 
                         <div className="col-lg-12" style={{ marginTop: '12px', textAlign: 'center', marginBottom: '-22px' }}>
                         <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px' }}>In affiliation with</p>
-                            <img alt="logo" style={{ width: '50%', height: '50%', align: 'center' }} src="images/moa.jpg"></img>
+                            <img alt="logo" style={{ width: '25%', height: '25%', align: 'center' }} src="images/moa.jpg"></img>
                         </div>
                         <div style={{textAlign: 'center'}}>
                                 <a style={{margin:'10px'}} href="https://www.facebook.com/TheSatsangFoundationOfficial/">
