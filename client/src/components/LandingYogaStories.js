@@ -19,7 +19,7 @@ function LandingYogaStories() {
                                             <div className="card">
                                                 <div className="card-body">
                                                     <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/z11oXG-3auE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/kBN4019PO0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
                                                     </div>
                                                 </div>
                                             </div>
