@@ -13,26 +13,15 @@ function ContactUs() {
                                 If you wish to leave us a message or have any queries, please fill out the form at below link:
                             </p>
                             <p className="" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
-                                <a href="" style={{color:'darkblue'}}>Form Link</a>
+                                <a href="https://forms.gle/rRUATBuuCsy5o8Dn9" style={{color:'darkblue',fontSize:'16px'}}> https://forms.gle/rRUATBuuCsy5o8Dn9</a>
                             </p>
                             <h3 className="h3-large" style={{ fontFamily: 'Poppins', color: 'darkblue',fontSize: '24px' }}>Visit Us</h3>
                             <p className="" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
-                                You may visit us at the Madanapalle Ashram, however it is mandatory to register for your visit. Please note the following:
+                                You may visit us at the Madanapalle Ashram, however it is mandatory to register for your visit. 
                             </p>
-                            <ul>
-                                <li><p style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
-                                    To register, please write to <a href="mailto:mdplcampus@satsang-foundation.org" style={{color:'darkblue'}}>mdplcampus@satsang-foundation.org</a> for day visits, accommodation requests and any other queries.</p></li>
-                                <li><p style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
-                                    Requests for accommodation should be made in writing only 10 days in advance of your arrival. Email requests sent earlier than that will not be considered.</p></li>
-                                <li><p style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
-                                    Walk-In/Unplanned Visits are NOT encouraged.</p></li>
-                                <li><p style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
-                                    Simple accommodation and vegetarian food are offered at nominal cost.</p></li>
-                                <li><p style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
-                                    Accommodation is provided for a maximum stay of 3 days only.</p></li>
-                                <li><p style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
-                                    Babaji’s shrine is open from 5 am to 9 pm for visiting residents.</p></li>
-                            </ul>
+                           <p style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'black', fontSize: '16px' }}>
+                                    To register, please write to <a href="mailto:mdplcampus@satsang-foundation.org" style={{color:'darkblue'}}>mdplcampus@satsang-foundation.org</a> for day visits, accommodation requests and any other queries.</p>
+                                 
                         </div>
                         </div>
                         <div classname="row">

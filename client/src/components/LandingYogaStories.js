@@ -14,16 +14,38 @@ function LandingYogaStories() {
                             <div className="slider-container">
                                 <div className="swiper-container card-slider-tube">
                                     <div className="swiper-wrapper">
-                                        <div className="swiper-slide">
+                                       
                                         <div className="swiper-slide">
                                             <div className="card">
                                                 <div className="card-body">
                                                     <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/N0SPfRJejwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/z11oXG-3auE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
                                                     </div>
                                                 </div>
                                             </div>
+                                        
                                         </div>
+                                        
+                                       
+                                         <div className="swiper-slide">
+                                            <div className="card">
+                                                <div className="card-body">
+                                                    <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
+                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/7sRjUbrwMdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                         <div className="swiper-slide">
+                                            <div className="card">
+                                                <div className="card-body">
+                                                    <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
+                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/CUnIcFVvxPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
                                         </div>
                                         <div className="swiper-slide">
                                             <div className="card">
@@ -43,42 +65,8 @@ function LandingYogaStories() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="swiper-slide">
-                                            <div className="card">
-                                            <div className="card-body">
-                                                    <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/ytx9A6ZjBAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* <div className="swiper-slide">
-                                            <div className="card">
-                                            <div className="card-body">
-                                                    <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/m_hOUEO1e9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <div className="card">
-                                            <div className="card-body">
-                                                    <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/m_hOUEO1e9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <div className="card">
-                                            <div className="card-body">
-                                                    <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/m_hOUEO1e9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> */}
+                                        
+                                       
                                     </div>
                                     <div className="swiper-button-next"></div>
                                     <div className="swiper-button-prev"></div>
