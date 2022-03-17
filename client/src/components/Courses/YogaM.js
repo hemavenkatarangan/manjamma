@@ -169,7 +169,7 @@ function YogaM() {
                                     </div>
                                     <div className="col-lg-8"> 
                                      
-                                    <a href="https://forms.gle/3UVihDMRmjmgpVDeA"><p style={{ float: 'left', color:'darkblue',fontFamily: 'Poppins', textAlign: 'justify',  fontSize: '16px' }}>https://forms.gle/3UVihDMRmjmgpVDeA</p></a>
+                                    <a href=" https://forms.gle/1874R8TbaNan2zxY9"><p style={{ float: 'left', color:'darkblue',fontFamily: 'Poppins', textAlign: 'justify',  fontSize: '16px' }}> https://forms.gle/1874R8TbaNan2zxY9</p></a>
                                      
                                 </div>
                             </div>

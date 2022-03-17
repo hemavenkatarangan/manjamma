@@ -4,7 +4,7 @@ const cData = [
     {
         cName: 'Yoga M Beginners Course',
         cDescription: '',
-        date: '5 March - 26 March',
+        date: '2nd April - 24th April',
         month: '',
         cId: 1,
         link:'yogam'
