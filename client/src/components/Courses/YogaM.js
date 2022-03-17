@@ -121,7 +121,7 @@ function YogaM() {
                                     </div>
                                     <div className="col-lg-8"> 
                                     <p style={{ float: 'left', fontFamily: 'Poppins', textAlign: 'justify',  fontSize: '16px' }}> 
-                                    Weekend Batch, 5th to 26th March (Saturday and Sunday ONLY)
+                                    Weekend Batch, 2nd to 24th April (Saturday and Sunday ONLY)
                                     </p>  
                                 </div>
                             </div>
