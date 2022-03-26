@@ -265,7 +265,7 @@ function About() {
 
 								</div>
 								<div className="text-container">
-									<h1 className="h1-large" style={{ fontFamily: 'Poppins', color: 'darkblue', fontSize: '24px' }}>BYVK Upcoming Courses-</h1>
+									<h1 className="h1-large" style={{ fontFamily: 'Poppins', color: 'darkblue', fontSize: '24px' }}>BYVK Upcoming Courses</h1>
 									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
 										In continuing with our efforts to spread wellbeing through Yoga, we are coming up with new and interesting courses.
 									</p>
