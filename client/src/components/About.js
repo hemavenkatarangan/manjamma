@@ -173,7 +173,29 @@ function About() {
 
 								</div>
 								<div className="text-container" >
-									<h1 className="h1-large" style={{ fontFamily: 'Poppins', color: 'darkblue', fontSize: '24px' }}>BYVK highlights and Upcoming Courses</h1>
+									<h1 className="h1-large" style={{ fontFamily: 'Poppins', color: 'darkblue', fontSize: '24px' }}>BYVK News ,Highlights and Upcoming Courses</h1>
+									
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>Bharat Yoga Vidya Kendra (BYVK), an initiative of the Satsang Foundation, has been founded by Sri M with the vision of spreading the ancient science of Yoga to all.</p> 
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>Our aim is to make the ancient yogic teachings relevant to modern times.</p>
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>BYVK is situated at the Satsang Foundation Campus in Madanapalle. There is an opening for a Yoga Teacher  on an immediate basis. </p>
+
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>Mentioned below are the vacancy details -</p>
+
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>All requirements are Mandatory:</p>
+
+    								<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}><b>Education:</b> A Postgraduate Degree in any subject</p>
+    										   <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>Yoga Qualification: Level 3 certificate from the Ayush ministry of Yoga.</p>
+    										   <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>Teaching Experience: 4-7 years of teaching yoga experience on document</p>
+                                               <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>Language skills: Fluent in written and spoken English</p>
+                                               <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>Other skills - Basic knowledge of computers and MS office</p>
+
+                                    <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>Pay scale will be at par with experience and market standards.</p>
+
+                                    <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>Please visit <a href="https://bharatyogavidyakendra.in">bharatyogavidyakendra.in</a> to know more about us.</p> 
+
+                                    <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>Please email a copy of your resume and a cover letter to  <a href="mailto:byvk.resume@gmail.com">byvk.resume@gmail.com </a>by 30th March (deadline for applying).</p>
+									
+									
 									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
 										The first ever residential Yoga Teacher Training Course (TTC) conducted by Bharat Yoga Vidya Kendra (BYVK) in February 2021 was inaugurated by the Honourable President of India, Sri Ramnath Govind. He visited the Yogashala and interacted with the students and teachers.
 									</p>
