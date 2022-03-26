@@ -173,13 +173,13 @@ function About() {
 
 								</div>
 								<div className="text-container" >
-									<h1 className="h1-large" style={{ fontFamily: 'Poppins', color: 'darkblue', fontSize: '24px' }}>BYVK News ,Highlights and Upcoming Courses</h1>
+									<h1 className="h1-large" style={{ fontFamily: 'Poppins', color: 'darkblue', fontSize: '24px' }}>BYVK News </h1>
 									
 									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>Bharat Yoga Vidya Kendra (BYVK), an initiative of the Satsang Foundation, has been founded by Sri M with the vision of spreading the ancient science of Yoga to all.</p> 
 									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>Our aim is to make the ancient yogic teachings relevant to modern times.</p>
 									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>BYVK is situated at the Satsang Foundation Campus in Madanapalle. There is an opening for a Yoga Teacher  on an immediate basis. </p>
 
-									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>Mentioned below are the vacancy details -</p>
+									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: 'darkblue', fontSize: '16px' }}>Mentioned below are the vacancy details -</p>
 
 									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>All requirements are Mandatory:</p>
 
@@ -195,6 +195,7 @@ function About() {
 
                                     <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>Please email a copy of your resume and a cover letter to  <a href="mailto:byvk.resume@gmail.com">byvk.resume@gmail.com </a>by 30th March (deadline for applying).</p>
 									
+									<h1 className="h1-large" style={{ fontFamily: 'Poppins', color: 'darkblue', fontSize: '24px' }}>BYVK Highlights </h1>
 									
 									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
 										The first ever residential Yoga Teacher Training Course (TTC) conducted by Bharat Yoga Vidya Kendra (BYVK) in February 2021 was inaugurated by the Honourable President of India, Sri Ramnath Govind. He visited the Yogashala and interacted with the students and teachers.
@@ -264,7 +265,7 @@ function About() {
 
 								</div>
 								<div className="text-container">
-									<h1 className="h1-large" style={{ fontFamily: 'Poppins', color: 'darkblue', fontSize: '24px' }}>Upcoming Courses-</h1>
+									<h1 className="h1-large" style={{ fontFamily: 'Poppins', color: 'darkblue', fontSize: '24px' }}>BYVK Upcoming Courses-</h1>
 									<p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
 										In continuing with our efforts to spread wellbeing through Yoga, we are coming up with new and interesting courses.
 									</p>
