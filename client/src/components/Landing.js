@@ -50,6 +50,11 @@ function Landing() {
                                 <img src="../images/slider/Picture4-AbhayaM.png" className="img-fluid" alt='Byvk' />
                                 </a>
                             </div>
+                            <div className="swiper-slide">
+                                <a href='/sakhyam'>
+                                <img src="../images/slider/SakhyaM.jpeg" className="img-fluid" alt='Byvk' />
+                                </a>
+                            </div>
                             
                             
                             
