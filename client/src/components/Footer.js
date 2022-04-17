@@ -11,6 +11,8 @@ function Footer() {
                         <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/ttc">TTC</a></p>
                         <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/abhayam">AbhayaM</a></p>
                         <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/avistaran">Avistaran</a></p>
+                        <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px' }}><a style={{ color: 'white', fontFamily: 'Poppins' }} href="/sakhyam">SakhyaM</a></p>
+                       
                         {/* <p style={{ color: 'white', fontFamily:'Poppins' }}>Link 1</p>
                         <p style={{ color: 'white', fontFamily:'Poppins' }}>Link 1</p>
                         <p style={{ color: 'white', fontFamily:'Poppins' }}>Link 1</p>
