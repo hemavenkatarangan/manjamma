@@ -11,7 +11,7 @@ function SakhyaM() {
                     </div>
                     <div className="row" style={{marginTop:'-62px'}}>
                         <div className="col-lg-12">
-                            <img className="img-fluid mt-5 mb-3" src="../images/courses/AbhayaM.png" style={{ width: '100%', height: '500px' }} alt="byvk" />
+                            <img className="img-fluid mt-5 mb-3" src="../images/courses/SakhyaM.jpeg" style={{ width: '100%', height: '500px' }} alt="byvk" />
                         </div>
                     </div>
                 </div>
@@ -26,18 +26,27 @@ function SakhyaM() {
                                 is an online 12-day course designed especially for women.
                             </p>
                             <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', fontSize: '16px' }}>
-                                Yoga has been a time-tested science that helps alleviate both physical as well mental suffering. It is a systematic approach to understanding and remedying the cause of ailments of the body and the mind.
+                           	Yoga has been a time-tested science that helps alleviate both physical as well mental suffering. It is a systematic approach to understanding and remedying the cause of ailments of the body and the mind. Asanas which are one of the eight limbs of Yoga are not merely physical postures, they work on the endocrine system, which is responsible for all the hormonal activity in the human body.
+                           	 </p>
+                            <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', fontSize: '16px' }}>
+                            Yoga helps women adapt easily to changes of different stages from adolescence to menopause. Using this ancient science, SakhyaM has been designed to help women achieve a healthier and happier life.
                             </p>
                             <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', fontSize: '16px' }}>
-                            Asanas which are one of the eight limbs of Yoga are not merely physical postures, they work on the endocrine system, which is responsible for all the hormonal activity in the human body.
+                            Stress is one of the major contributing factors for hormonal imbalance and irregularities in menstruation. Asanas like Ushtrasana, Badddha Konasana and Paschimotanasana (to name a few) that specifically target menstrual disorders will be taught in the course
                             </p>
                             <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', fontSize: '16px' }}>
-                            Using this ancient science, SakhyaM has been designed to help women achieve a healthier and happier life.All asanas, pranayama (breathing exercises), relaxation and meditation techniques taught during the course help prevent many health problems faced by women globally. </p>
-                            
-                            <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', fontSize: '16px' }}>
-                            Physical postures or Asanas that help mitigate some common health issue like hormone imbalance, lack of strength, mood swings, irregular periods, PCOS and early menopause will be taught in this course. A session with an Ayurveda doctor and Yoga therapist will also be arranged to increase awareness about the right diet and adopting a balanced lifestyle. This course aims to promote overall well being in order to prevent any future health related problems</p>
-                            <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', fontSize: '16px' }}>
+                           Pranayama techniques such as Ujjai, Brahmari, Sheetali and Sheetakri which help reduce stress levels and calm the mind will also be taught. Deep relaxation tools like Yoga nidra and meditation techniques like Om meditation will be covered in this course.  <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', fontSize: '16px' }}>
                              SakhyaM is a Sanskrit word that means friendship. Through this course, we hope to develop in women a deep understanding and friendship with their body, mind and breath. Empowerment can be truly found within and the first step to that is achieving a healthy body and mind.</p>
+                            </p>
+                            <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', fontSize: '16px' }}>
+                          A session with an Ayurveda doctor and Yoga therapist will also be arranged to increase awareness about the right diet, adopting a balanced lifestyle and understanding the female anatomy. 
+                           </p>
+                            
+                             <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', fontSize: '16px' }}>
+                          SakhyaM is a Sanskrit word that means friendship. Through this course, we hope to develop in women a deep understanding and friendship with their body, mind and breath. All asanas, pranayama (breathing exercises), relaxation and meditation techniques taught during the course are effective tools to address the pressures of day to day life. 
+							 </p>
+							  <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', fontSize: '16px' }}>
+                          Empowerment can be truly found within and the first step to that is achieving a healthy body and mind. </p>
                             
                             <h4 style={{textAlign:'left', marginTop:'20px',fontFamily: 'Poppins', color: 'darkblue' }}>Course Information:</h4>
                             <div className="row">
@@ -84,7 +93,8 @@ function SakhyaM() {
                                     </div>
                                     <div className="col-lg-8"> 
                                     <p style={{ float: 'left', fontFamily: 'Poppins', textAlign: 'justify', fontSize: '16px' }}> 
-                                    INR 5500 (For Indian residents) or USD 72.24 ( for people living outside India) 
+                                    INR 5800 (For Indian residents) or USD 111 ( for people living outside India) 
+ 
                                     </p>  
                                 </div>
                             </div>
@@ -113,7 +123,7 @@ function SakhyaM() {
                                 </div>
                             </div>
                             {/* upcoming courses  */}
-                            <h4 style={{textAlign:'left', marginTop:'20px',fontFamily: 'Poppins', color: 'darkblue' }}>Upcoming AbhayaM Courses</h4>
+                            <h4 style={{textAlign:'left', marginTop:'20px',fontFamily: 'Poppins', color: 'darkblue' }}>Upcoming Courses</h4>
                             <div className="row">
                                 <div className="col-lg-4">   
                                     <p style={{ textAlign: 'justify', fontFamily: 'Poppins', textAlign: 'justify', fontSize: '16px' }}> 

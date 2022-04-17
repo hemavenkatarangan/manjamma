@@ -77,6 +77,9 @@ function Nav() {
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/avistaran">Avistaran - Yoga for Professionals
                                 </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/sakhyam">SakhyaM - Course for Women
+                                </a>
 
                             </div>
                         </li>
