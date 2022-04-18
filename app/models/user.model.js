@@ -13,7 +13,7 @@ var UserSchema = new Schema(
         override_validation : {type : Boolean, default : false},
         email_id: { type: String, required: true, index: { unique: true, dropDups: true } },
         password: { type: String, required: true },
-        phone_num: { type: Number },
+        phoneNumber: { type: Number },
         permanent_address: { type: String },
         current_address: {type: String},
         city:{type: String},
