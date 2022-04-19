@@ -13,7 +13,7 @@ var UserSchema = new Schema(
         override_validation : {type : Boolean, default : false},
         email_id: { type: String, required: true, index: { unique: true, dropDups: true } },
         password: { type: String, required: true },
-        phoneNumber: { type: Number },
+        phone_num: { type: Number },
         permanent_address: { type: String },
         current_address: {type: String},
         city:{type: String},
@@ -21,9 +21,10 @@ var UserSchema = new Schema(
         nationality: { type: String },
         dob: { type: Date },
         additional_details: [{ type: Schema.Types.ObjectId, ref: 'AdditionalDetail' }],
-        events: [{ type: Schema.Types.ObjectId, ref: 'RegisteredEvent' }],
-        role: { type: String, enum: ['user', 'admin', 'super_admin'], default : "user"},
-        complete_profile: {type : Boolean, default: false }
+        events: [{ type: Schema.Types.ObjectId, ref: 'RegisteredEvent' }],        
+        complete_profile: {type : Boolean, default: false },
+        emergency_num : {type: Number},       
+        isAgreedTerms : {type : Boolean, default : false}
 
     },
     {
@@ -66,10 +67,8 @@ UserSchema.methods = {
 
             const payload = {
                 id: this._id,
-                name: this.first_name, 
-                role: this.role,
-                email: this.email_id,
-                userPic: this.profilePic           
+                name: this.email_id, 
+                role: this.role               
 
             };
 

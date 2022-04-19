@@ -1,6 +1,8 @@
 const User = require('../models/user.model.js');
+const user_roleController = require('../controllers/user_role.controller.js');
 const RegisterEvent = require('../models/registerevent.model');
 const { getError } = require('../helpers/errorHelpers')
+
 
 module.exports = {
 
@@ -15,47 +17,55 @@ module.exports = {
 
     },
 
-    loginUser: async (req,res) =>{
+    loginUser: async (req, res) => {
 
         console.log("inside login");
         let response = {};
         const email_id = req.body.email_id;
         console.log(req.body);
 
-        console.log(email_id); 
-        const password =  req.body.password;
-        const user = await  User.findOne({ email_id : email_id  });
+        console.log(email_id);
+        const password = req.body.password;
+        const user = await User.findOne({ email_id: email_id });
         console.log(user);
         if (!user) {
             response.status_code = "404";
             response.status_message = "Email is not registered";
-            response.result = user;   
+            response.result = user;
             res.status(200).json(response);
         }
-        else{
-          let fact = {};
-            fact = await user.authenticate(password); 
+        else {
+            let fact = {};
+            fact = await user.authenticate(password);
 
-           if(fact.status ===   "200"){
-            response.status_code = "200";
-            response.status_message = "user logged in successfully";
-            response.result = user;
-            response.token = fact.token;
-            res.status(200).json(response);
-           }
+            if (fact.status === "200") {
+                response.status_code = "200";
+                response.status_message = "user logged in successfully";
+                response.result = user;
+                 try{
+                    let userrole = await user_roleController.getUserRoleMethod(user._id);   
+                    response.userrole = userrole;
+                 }
+                 catch (err){
 
-           else {
+                 }
 
-            response.status_code = "404";
-            response.status_message = "Password Incorrect";
-            response.result = user;
-            response.token = fact.token;
-            res.status(200).json(response);
-           }
-           
+                response.token = fact.token;
+                res.status(200).json(response);
+            }
+
+            else {
+
+                response.status_code = "404";
+                response.status_message = "Password Incorrect";
+                response.result = user;
+                response.token = fact.token;
+                res.status(200).json(response);
+            }
+
 
         }
-        
+
 
     },
 
@@ -74,7 +84,7 @@ module.exports = {
     registerUser1: async (req, res) => {
 
         const newUser = new User({
-            first_name: req.body.first_name,            
+            first_name: req.body.first_name,
             emailId: req.body.emailId,
             password: req.body.password
         });
@@ -84,15 +94,16 @@ module.exports = {
 
     registerUser: async (req, res) => {
         let response = {};
-        
+
         try {
             console.log(`inside user creation `);
-          
+
 
             const newUser = new User({
                 first_name: req.body.first_name,
+                last_name: req.body.last_name,
                 email_id: req.body.email_id,
-                phoneNumber : req.body.phoneNumber,
+                phone_num: req.body.phone_num,
                 password: req.body.password
             });
 
@@ -104,15 +115,26 @@ module.exports = {
             response.result = user;
 
 
+
             res.status(200).json(response);
         }
         catch (error) {
             console.log(error.name, error.message);
+            let details = [];
+            response.status_code = "400";
+            response.status_message = "User Registration Failed";
             if (error.name === 'MongoError' && error.code === 11000) {
-               return res.status(400).json(getError('email', 'email already exist'));
+
+                details = getError('email', 'already exist').details;
+                response.result = details;
+                return res.status(400).json(response);
+            }
+            else {
+                details = getError(error.name, error.message).details;
+                response.result = details;
+                res.status(400).json(response);
             }
 
-            res.status(400).json(getError(error.name, error.message));
         }
     },
 

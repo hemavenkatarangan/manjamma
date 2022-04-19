@@ -83,7 +83,7 @@ module.exports = {
             password: Joi.string()
                 .pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).required(),
             confirm_password: Joi.ref('password'),
-            phoneNumber : Joi.string().length(10).pattern(/^[0-9]+$/),
+            phone_num : Joi.string().length(10).pattern(/^[0-9]+$/).required(),
             email_id: Joi.string()
                 .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required()
         }).with('password', 'confirm_password'),

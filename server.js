@@ -4,11 +4,16 @@ const mongoose = require('mongoose');
 const event = require('./app/routers/event.route');
 const user = require('./app/routers/user.route');
 const course = require('./app/routers/course.route');
+const role = require('./app/routers/role.route');
+const userrole = require('./app/routers/user_role.route');
+const audit =  require('./app/routers/audit.route');
+const dotenv = require("dotenv");
 //const fileupload = require('./app/routers/fileupload.route');
 const port = process.env.PORT || 3000
 
 // create express app
 const app = express();
+dotenv.config();
 
 //app.use(express.static(path.join(__dirname, "client/build")));
 app.use(express.json());
@@ -32,6 +37,9 @@ app.use('/courses', course);
 //app.use('/fileupload', fileupload);
 app.use('/events', event);
 app.use('/users', user);
+app.use('/roles', role);
+app.use('/audits', audit);
+app.use('/userroles', userrole);
 // define a simple route
 //app.get("*", (req, res) => {
     //res.sendFile(path.join(__dirname + "/client/build/index.html"));
