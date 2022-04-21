@@ -4,12 +4,14 @@ var Schema = mongoose.Schema;
 
 var CourseSchema = new Schema(
     {
-        name: { type: String},  
-        description:{type: String},   
-        qa: [{ type: Schema.Types.ObjectId, ref: 'QAAdmin'}], 
-        additionalProperties:[{ type: Schema.Types.ObjectId, ref: 'AdditionalProperty'}],
-        autoValidate: {type : Boolean, default: false } 
-        
+        course_title: { type: String}, 
+        course_name : {type: String}, 
+        description:{type: String}, 
+        course_thumbnail : {type: String},
+        carosal_images : [{type: String}], 
+        contents : {type: String},
+        course_documents : [{ type: Schema.Types.ObjectId, ref: 'CourseDocument'}], 
+        isActive :{type: Boolean, default : true}
     },
     {
         timestamps: true
