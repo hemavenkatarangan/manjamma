@@ -57,7 +57,7 @@ function Footer() {
 
                         <div className="col-lg-12" style={{ marginTop: '12px', textAlign: 'center', marginBottom: '-22px' }}>
                         <p style={{ color: 'white', fontFamily: 'Poppins', fontSize:'12px' }}>In affiliation with</p>
-                            <img alt="logo" style={{ width: '25%', height: '25%', align: 'center' }} src="images/moa.jpg"></img>
+                            <img alt="logo" style={{ width: '25%', height: '25%', align: 'center' }} src="../images/moa.jpg"></img>
                         </div>
                         <div style={{textAlign: 'center'}}>
                                 <a style={{margin:'10px'}} href="https://www.facebook.com/TheSatsangFoundationOfficial/">
@@ -80,7 +80,7 @@ function Footer() {
                         </div> */}
                         <div className="col-lg-12" style={{ marginTop: '10px', textAlign: 'center' }}>
                             <a href="https://www.google.com/maps/place/The+Satsang+Foundation+Campus/@13.2614361,77.4819141,9z/data=!4m18!1m12!4m11!1m3!2m2!1d78.4775501!2d13.6060505!1m6!1m2!1s0x3bb2660603b12a65:0x3edf91521d6e2f52!2sHF5P%2BJQV+The+Satsang+Foundation+Campus,+Nakkaladdini,+Kumarapuram,+Madanapalle,+Andhra+Pradesh+517325!2m2!1d78.4869222!2d13.5591022!3m4!1s0x3bb2660603b12a65:0x3edf91521d6e2f52!8m2!3d13.5591022!4d78.4869222">
-                                <img alt="logo" style={{height:'50px', width:'50px'}} src="images/googlemap.png"></img>
+                                <img alt="logo" style={{height:'50px', width:'50px'}} src="../images/googlemap.png"></img>
                             </a>  {/* <img alt="logo" style={{height:'200px', width:'200px'}} src="https://satsang-foundation.org/wp-content/uploads/2020/12/Bharat-Yoga-Vidya-Kendra.png"></img> */}
                         </div>
                         <div className="col-lg-12">

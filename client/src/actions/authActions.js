@@ -12,32 +12,52 @@ export const registerUser = (userData, history) => dispatch => {
   debugger
   axios
     .post("users/register", userData)
-    .then(res => { 
+    .then(res => {
       console.log("==post register message==")
       console.log(res)
-      debugger     
-      if(res.data.status_code!="200")
-      {
+      debugger
+      if (res.data.status_code != "200") {
         alert(res.data.result[0].message);
         return;
       }
-      else
-      {
+      else {
         alert("Successfully created the new user, Please login with email_id & password.")
-        history.push("/login")
+        //history.push("/login")
+        //create user role
+        var user_role;
+        user_role = {
+          user_id: userData.email_id,
+          role_id: "625ff792515c9d882c2ffef8"
+        }
+        console.log("create-userrole")
+        console.log(user_role)
+        axios
+          .post("/userroles/", user_role)
+          .then(res => {
+            debugger
+            //const { token } = res.data.token;
+            history.push("/login")
+          })
+          .catch(err => {
+            // dispatch({
+            //   type: GET_ERRORS,
+            //   payload: err.response.data
+            // })
+            history.push("/login")
+          });
+        //
       }
-    })      
-    .catch(err =>{
-      if(err.response.data.status_code=="400")
-      {
+    })
+    .catch(err => {
+      if (err.response.data.status_code == "400") {
         alert(err.response.data.result[0].message)
         return;
       }
-        // dispatch({
-        //   type: GET_ERRORS,
-        //   payload: err.response.data
-        // })
-      }      
+      // dispatch({
+      //   type: GET_ERRORS,
+      //   payload: err.response.data
+      // })
+    }
     );
 };
 
@@ -48,18 +68,17 @@ export const loginUser = userData => dispatch => {
     .then(res => {
       debugger
       //const { token } = res.data.token;
-      if (res.data.status_code!="200")
-      {
+      if (res.data.status_code != "200") {
         alert("Sorry! Invalid credential. Please try again..")
         return;
       }
-      else
-      {
-        let token  = res.data.token;
+      else {
+        let token = res.data.token;
         localStorage.setItem("jwtToken", token);
         setAuthToken(token);
         const decoded = jwt_decode(token);
         dispatch(setCurrentUser(decoded));
+        callAuditApi(userData)
       }
     })
     .catch(err =>
@@ -70,16 +89,35 @@ export const loginUser = userData => dispatch => {
     );
 };
 
+const callAuditApi = (userData) => {
+  var _audits;
+  _audits = {
+    user_id: userData.email_id,
+    action: "login",
+    date_time: Date.now()
+  }
+  console.log("audit-info")
+  console.log(_audits)
+  axios
+    .post("/audits/", _audits)
+    .then(res => {
+      console.log(res)
+    })
+    .catch(err =>
+      console.log(err)
+    );
+}
+
 export const verifyYourself = (id) => dispatch => {
   axios.get(`v1/users/verify/${id}`)
-  .then(res => console.log(res))
-  .catch(err => console.log(err))
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
 }
 
 export const Me = () => dispatch => {
   axios.get("v1/users/me", headers)
-  .then(res => console.log(res))
-  .catch(err => console.log(err))
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
 }
 
 
@@ -113,9 +151,9 @@ export const logoutUser = () => dispatch => {
 
 export const getCartItems = (userId) => dispatch => {
   axios.post(`v1/cart/getusercart?userId=${userId}`)
-  .then(res =>  dispatch(cartProducts(res.data)))
-  .catch(err => dispatch({
-    type: GET_ERRORS,
-    payload: err.response.data
-  }))
+    .then(res => dispatch(cartProducts(res.data)))
+    .catch(err => dispatch({
+      type: GET_ERRORS,
+      payload: err.response.data
+    }))
 }

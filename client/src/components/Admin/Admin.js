@@ -1,14 +1,11 @@
+import axios from "axios"
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux';
-import { Modal, Button, Table, Switch } from 'antd';
+import { Modal, Button, Table, Switch, Tag, } from 'antd';
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons'
-import { isArray } from 'jquery';
-import axios from 'axios';
-
-const leftData = {
-    NEW_COURSE: 'NEW_COURSE',
-    NEW_EVENT: 'NEW_EVENT',
-}
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+import fileUploadUrl from '../../constants/constants'
 
 const errStyle = {
     color: 'red',
@@ -16,56 +13,49 @@ const errStyle = {
     fontSize: '.7rem'
 }
 
-const questionTypes = [
-    {type: '', name: ''},
-    {type:'Descriptive', name:'Descriptive'},
-    {type:'Selective', name:'Selective'},
-    {type:'Multiple Choice', name:'Multiple Choice'}
-]
-
-const PropertyTypes = [
-    {type: '', name: ''},
-    {type:'doc', name:'Document'},
-    {type:'text', name:'Text'},
-]
-
-const questions = []
-const addProperties = []
-
 function Admin() {
     const user = useSelector(state => state.auth)
     const hello = useSelector(state => state)
-    const [isAuthenticated, setAuthenticated] = useState(false)
-    const [selectedState, setSelectedState] = useState('')
-    const [course, setcourse] = useState({
-        name:'',
-        autoValidate: false,
-        qa:[],
-        additionalProperties:[],
-        autoValidate: false,
-    })
-    const [property, setProperty] = useState({
-        id:0,
-        name:'',
-        type:''
-    })
-    const [listQa, setListQa] = useState([])
     const [isModalVisible, setIsModalVisible] = useState(false);
-    const [isPropertiesModalVisible, setisPropertiesModalVisible] = useState(false)
-    const [listProperty, setListProperty] = useState([])
-    const [data, setData] = useState({
-        id:0,
-        question: '',
-        questionType: '',
-        expectedAnswer: '', 
-        preDefinedValues : '',
-        isAutoValidated: false,
-        isMandatory: false,
+    const [isAuthenticated, setAuthenticated] = useState(false)
+    const [course, setcourse] = useState({
+        course_id: '',
+        course_name: '',
+        course_title: '',
+        course_description: '',
+        course_thumbnail: null,
+        course_documents: [],
+        carosal_images: null,
+        course_contents: '',
+        isActive: true
     })
-    const [descValue, setDescValue] = useState('')
-    const errors = useSelector(state => state.errors)
+    const [errObj, setErrObj] = useState({
+        course_name: '',
+        course_title: '',
+        course_description: '',
+        course_thumbnail: '',
+        course_documents: '',
+        carosal_images: '',
+        course_contents: '',
+    })
 
-    
+    const [boolVal, setBoolVal] = useState(false)
+
+    const showModal = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleOk = () => {
+        setIsModalVisible(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
+    };
+
+    const [courseData, setCourseData] = useState([])
+
+
     useEffect(() => {
         if (user.isAuthenticated) {
             setAuthenticated(true)
@@ -74,12 +64,167 @@ function Admin() {
         }
     })
 
-    const selectingContent = (params) => {
-        if (params === leftData.NEW_COURSE) {
-            setSelectedState(leftData.NEW_COURSE)
-        } else if (params === leftData.NEW_EVENT) {
-            setSelectedState(leftData.NEW_EVENT)
+    useEffect(() => {
+        getCoursesData()
+    }, [])
+
+    const columns = [
+        {
+            title: 'Course Name',
+            dataIndex: 'course_name',
+            key: 'course_name',
+        },
+        {
+            title: 'Course Description',
+            dataIndex: 'course_description',
+            key: 'course_description',
+        },
+        {
+            title: 'Course Status',
+            dataIndex: 'isActive',
+            key: 'isActive',
+            render: tag => <center>{tag ? <Tag color='green' key={tag}>True</Tag> : <Tag color='red' key={tag}>False</Tag>}</center>
+        },
+        {
+            title: 'Action',
+            key: 'action',
+            render: (id, data) => <>
+                <EditOutlined onClick={(e) => { editCourse(data) }} /> {" "} <DeleteOutlined onClick={(e) => deleteCourse(data)} />
+            </>
+        },
+    ];
+
+    const editCourse = (data) => {
+        console.log(data)
+        setcourse(course => ({
+            ...course,
+            course_id: data._id,
+            course_name: data.course_name,
+            course_description: data.course_description,
+            course_thumbnail: data.course_thumbnail,
+            course_title: data.course_title,
+            course_contents: data.contents,
+            course_documents: data.course_documents,
+            carosal_images: data.carosal_images,
+            isActive: data.isActive,
+        }))
+        setIsModalVisible(true)
+        setBoolVal(true)
+    }
+
+    const addCourseData = () => {
+        // course.course_name = '',
+        // course.course_description = '',
+        // course.course_duration = '',
+        // course.course_thumbnail =  null,
+        // course.course_fees =  ''
+        setCourseDataAsNull()
+        setIsModalVisible(true)
+    }
+
+    const setCourseDataAsNull = () => {
+        setcourse(course => ({
+            ...course,
+            course_name: '',
+            course_title: '',
+            course_description: '',
+            course_thumbnail: null,
+            course_documents: [],
+            carosal_images: null,
+            course_contents: '',
+            isActive: true
+        }))
+    }
+
+    const deleteCourse = (data) => {
+        console.log(data)
+        axios.delete('/courses/' + data._id)
+            .then((res) => {
+                console.log(res)
+                getCoursesData()
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    const getCoursesData = () => {
+        axios.get('/courses/')
+            .then((res) => {
+                console.log(res)
+                setCourseData(res.data.result)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    const submitCourseData = () => {
+
+        // validations here
+
+        if (course.course_name.length <= 3) {
+            setErrObj(errObj => ({ ...errObj, course_name: 'Course name should be minimum 3 letters' }));
         }
+
+        if (course.course_title.length <= 3) {
+            setErrObj(errObj => ({ ...errObj, course_title: 'Course title should be minimum 3 letters' }));
+        }
+
+        if (course.course_description.length <= 3) {
+            setErrObj(errObj => ({ ...errObj, course_description: 'Course description should be minimum 15 letters' }));
+        }
+
+        if (course.course_thumbnail.length <= 0) {
+            setErrObj(errObj => ({ ...errObj, course_thumbnail: 'Course thumbnail should have 1 pic' }));
+        }
+
+        if (course.carosal_images.length <= 0) {
+            setErrObj(errObj => ({ ...errObj, carosal_images: 'Course carosal images should have 1 pic' }));
+        }
+
+        submitWithImages()
+    }
+
+    const submitWithImages = (data) => {
+        var obj = course
+        var obj = {
+            course_name: course.course_name,
+            course_title: course.course_title,
+            course_description: course.course_description,
+            course_thumbnail: course.course_thumbnail,
+            contents: course.course_contents,
+            isActive: true,
+            carosal_images: course.carosal_images
+        }
+        if (boolVal) {
+            axios.patch('/courses/' + course.course_id, obj)
+                .then(res => {
+                    console.log(res)
+                    setIsModalVisible(false)
+                    setCourseDataAsNull()
+                    getCoursesData()
+                    setBoolVal(false)
+                    alert(res.data.status_message)
+                })
+                .catch(err => {
+                    console.log(err)
+                })
+        } else {
+            axios.post('/courses/', obj)
+                .then(res => {
+                    console.log(res)
+                    setIsModalVisible(false)
+                    setCourseDataAsNull()
+                    getCoursesData()
+                    setBoolVal(false)
+                    alert(res.data.status_message)
+                })
+                .catch(err => {
+                    console.log(err)
+                })
+        }
+
     }
 
     const onCourseChange = (e) => {
@@ -87,331 +232,120 @@ function Admin() {
         setcourse(course => ({ ...course, [id]: value }));
     }
 
-     const showModal = () => {
-            setData({
-                id: data.id + 1,
-                question: '',
-                questionType: '',
-                expectedAnswer: '', 
-                preDefinedValues : '',
-                isAutoValidated: false,
-                isMandatory: false,
+    const onCourseThumbnailChange = (e) => {
+        var form = new FormData();
+        form.append('course_name', course.course_name)
+        form.append('files', e.target.files[0])
+
+        axios.post(fileUploadUrl, form)
+            .then((res) => {
+                console.log(res)
+                setcourse(course => ({ ...course, course_thumbnail: res.data.result[0] }));
             })
-            setIsModalVisible(true);
-        };
-
-        const handleOk = (index) => {
-            if(!isArray(data.expectedAnswer)){
-                let expec = data.expectedAnswer.split(',')
-                let pre = data.preDefinedValues.split(',')
-            var obj = {
-                id: data.id + 1,
-                question: data.question,
-                questionType: data.questionType,
-                expectedAnswer: expec, 
-                preDefinedValues : pre,
-                isAutoValidated: data.isAutoValidated,
-                isMandatory: data.isMandatory,
-            }
-            questions.push(obj)
-            console.log(questions)
-            setListQa([...questions])
-            } else {
-                let expec = isArray(data.expectedAnswer) ? data.expectedAnswer : data.expectedAnswer.split(',')
-                let pre = isArray(data.preDefinedValues) ? data.preDefinedValues : data.preDefinedValues.split(',')
-                for(let i = 0; i < questions.length; i++) {
-                    if(data.id === questions[i].id) {
-                        questions[i].id =  data.id
-                        questions[i].question=data.question
-                        questions[i].questionType= data.questionType
-                        questions[i].expectedAnswer=expec
-                        questions[i].preDefinedValues = pre
-                        questions[i].isAutoValidated= data.isAutoValidated
-                        questions[i].isMandatory= data.isMandatory
-                    }
-                }
-                setListQa(questions)
-            }
-            
-
-            setIsModalVisible(false);
-        };
-
-        const handleCancel = () => {
-            setIsModalVisible(false);
-        };
-
-        const handleChage = (e, type) => {
-             var id = type ? type : ''
-             var value = e.target ? e.target.value : e
-            if(e.target) {
-                id = e.target.id
-                value = e.target.value
-            }
-            setData(qa => ({ ...qa, [id]: value}));
-
-        }
-
-        const deleteQuestion = (e) => {
-            var arr = listQa
-            for(let i = 0; i < arr.length; i++) {
-                if(e.id === arr[i].id) {
-                    arr.splice(arr[i], 1)
-                    break
-                }
-            }
-            
-            setListQa([...arr])
-            console.log(listQa)
-        }
-
-        const editQuestion = (data) => {
-            setData(data)
-            console.log(data)
-            setIsModalVisible(true);
-        }
-
-        const columns = [
-            {
-              title: 'Name',
-              dataIndex: 'question',
-              key: 'question',
-            },
-            {
-              title: 'Question Type',
-              dataIndex: 'questionType',
-              key: 'questionType',
-            },
-            {
-              title: 'Expected Answer',
-              dataIndex: 'expectedAnswer',
-              key: 'expectedAnswer',
-            },
-            {
-              title: 'Predefined Values',
-              key: 'preDefinedValues',
-              dataIndex: 'preDefinedValues',
-            },
-            {
-              title: 'Action',
-              key: 'action',
-              render: (id, data) => <> 
-              <EditOutlined onClick={(e) => {editQuestion(data)}} /> {" "} <DeleteOutlined onClick={(e) => deleteQuestion(data)} />
-              </>
-            },
-          ];
-
-          const propertyColumns = [
-            {
-              title: 'Name',
-              dataIndex: 'name',
-              key: 'name',
-            },
-            {
-              title: 'Type',
-              dataIndex: 'type',
-              key: 'type',
-            },
-            {
-              title: 'Action',
-              key: 'action',
-              render: (text, record) => <> 
-                <DeleteOutlined onClick={(e) => deletePropertyQuestion(record)} />
-              </>
-            },
-          ];
-
-        //   const editPropertyQuestion = (data) => {
-        //       setProperty(data)
-        //       setisPropertiesModalVisible(true)
-        //   }
-
-          const deletePropertyQuestion = (data) => {
-              var propArray = listProperty
-              let index = propArray.findIndex(a => a.name === data.name);
-            //   for(let i = 0; i < propArray.length; i++) {
-            //       if(data === propArray[i].id) {
-            //           propArray.splice(data[i], 1)
-            //           break
-            //       }
-            //   }
-            propArray.splice(index, 1)
-              setListProperty([...propArray])
-          }
-
-          const handlePropertiesOk = () => {
-              var obj = {
-                  id: property.id + 1,
-                  name: property.name,
-                    type: property.type,              }
-              addProperties.push(obj)
-              setListProperty([...addProperties])
-              setisPropertiesModalVisible(false)
-          }
-
-          const handlePropertiesCancel = () => {
-            setisPropertiesModalVisible(false)
-        }
-
-        const showAdditionalPropertiesModal = () => {
-            setProperty({
-                name:'',
-                type:''
+            .catch(err => {
+                console.log(err)
             })
-            setisPropertiesModalVisible(true)
-        }
-   
-        const handlePropertyChage = (e) => {
-            const { id, value} = e.target
-            setProperty(qa => ({ ...qa, [id]: value}));
-        }
+    }
 
-        const saveCourse = () => {
-            var obj = { 
-                name : course.name,
-                autoValidate: false,
-                qa: listQa,
-                additionalProperties: listProperty
-            }
-
-            axios.post('courses/create', obj)
-            .then(res => console.log(res))
-            .catch(err => err)
+    const onCourseFilesChange = (e) => {
+        var form = new FormData();
+        form.append('course_name', course.course_name)
+        for (let i = 0; i < e.target.files.length; i++) {
+            form.append('files', e.target.files[i])
         }
+        axios.post(fileUploadUrl, form)
+            .then((res) => {
+                console.log(res)
+                setcourse(course => ({ ...course, carosal_images: res.data.result }));
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
 
-        const onDescriptionChange = (e) => {
-            console.log(e)
-        }
+    const setEditorValue = (e) => {
+        console.log(e)
+        setcourse(course => ({...course, course_contents: e}))
+    }
 
     return (
         <>
-            <header className="ex-header">
+            <div className="ex-basic-1 pt-5 pb-5" style={{ marginTop: '30px' }}>
                 <div className="container">
+                    <div className="row" >
+                        <div className="col-xl-10 offset-xl-1" >
+                            <h1 style={{ textAlign: 'center', marginTop: '50px', fontFamily: 'Poppins', color: 'darkblue', fontSize: '32px' }}>Courses Section</h1>
+                        </div>
+                    </div>
+                    {/* <div className="row" style={{marginTop:'-62px'}}>
+                        <div className="col-lg-12">
+                            <img className="img-fluid mt-5 mb-3" src="../images/courses/AbhayaM.png" style={{ width: '100%', height: '500px' }} alt="byvk" />
+                        </div>
+                    </div> */}
+                </div>
+            </div>
+            <div className="ex-basic-1 pt-4" style={{ marginTop: '-50px' }}>
+                <div className="container">
+
                     <div className="row">
-                        <br />
-                        <div className="col-xl-12" style={{textAlign: 'center'}}>
-                            <h1>Hey Hi {user.user.name}, Welcome to Admin Panel!</h1>
+                        <div className="col-xl-10 offset-xl-1" >
+                            <div style={{ float: 'right' }} className="row">
+                                <Button type="primary" shape="round" size="large" onClick={(e) => addCourseData()}>Add Course</Button>
+                            </div>
+                            {/* <div className="row"> */}
+                            <Table
+                                width="100%"
+                                columns={columns}
+                                dataSource={courseData} />
+                            {/* </div> */}
                         </div>
                     </div>
                 </div>
-            </header>
-            <div className="container" style={{marginTop:'12px'}}>
-            <div className="row"> 
-                <div className="col-xl-4">
-                    <div className="row"> 
-                        <Button type="primary" shape="round" size="large" onClick={(e) => selectingContent(leftData.NEW_COURSE)}>Add Course</Button>
-                    </div>
-                    <br />
-                    <div className="row"> 
-                        <Button type="primary" shape="round" size="large" onClick={(e) => selectingContent(leftData.NEW_EVENT)}>Add Event</Button>
-                    </div>
-                </div>
-                <div className='col-xl-8'>
-                    {
-                        selectedState === leftData.NEW_COURSE ? 
-                        <> 
-                            <div className="col-xl-12" style={{textAlign: 'center'}}>
-                                <h1>Add Course</h1>
-                            </div>
-                            <div className="form-group">
-                                <input type="text" className="form-control-input" id="name" onChange={(e) => onCourseChange(e)} required />
-                                <label className="label-control" htmlFor="name">Name</label>
-                                <p style={errStyle}>{errors.name}</p>
-                            </div>
-                            <div>
-                            {/* <RichTextEditor
-                                    value={descValue}
-                                    onChange={onDescriptionChange}
-                                /> */}
-                            </div>
-                                <div className="form-group"><Button type="primary" shape="round" name="Add question" onClick={(e) => showModal(e)}>Add Question</Button> </div>
-                            <div className="form-group">
-                                <Table columns={columns} dataSource={listQa} />
-                            </div>
-                            <div className="form-group">
-                                <Button type="primary" shape="round" name="Add Properties" onClick={(e) => showAdditionalPropertiesModal(e)}>Add Additional Properties</Button> 
-                            </div>
-                            <div className="form-group">
-                                <Table columns={propertyColumns} dataSource={listProperty} />
-                            </div>
-                            <div className="form-group">
-                            <Button type="primary" shape="round" name="save" onClick={(e) => saveCourse(e)}>Save Course</Button>
-                            </div>
-                            {/* {listQa.map((data, index) => {
-                                return <><p><span>{index + 1} : </span> {data.question}</p> <br />
-                                <p><span>Type : </span> {data.questionType}</p> <br /> 
-                                EXPECTED : {data.expectedAnswer.map(d => {return <><p>{d}</p> {' '} </> } )} <br/>
-                                PREDEFINED : {data.preDefinedValues.map(d => {return <><p>{d}</p> {' '} </> } )}
-                                
-                                <Button type="primary"  onClick={(e) => deleteQuestion(index)}>Delete</Button> {' '} <button onClick={(e) => editQuestion(data)}>Edit</button>
-                                </>
-                            })} */}      
-                            
-                            </> : selectedState === leftData.NEW_EVENT ?
-                        <> 
-                            <div className="col-xl-12" style={{textAlign: 'center'}}>
-                                <h1>Add Event</h1>
-                            </div>
-                            <p> selected Event</p>
-                        </>
-                        :
-                        'Nothing Much'
-                    }
-                </div>
-                </div>
             </div>
-            <>
-            <Modal title="Add Question" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                            <div className="form-group">
-                                <input type="text" className="form-control-input" id="question" onChange={(e) => handleChage(e)} value={data.question} required />
-                                <label className="label-control" htmlFor="question">Question</label>
-                                <p style={errStyle}>{errors.Question}</p>
-                            </div>
-                            <div className="form-group">
-                                <select type="select" className="form-control-input" id="questionType" onChange={(e) => handleChage(e)} value={data.questionType}> 
-                                {questionTypes.map((each, index) => {
-                                    return <option value={each.type} key={index}>{each.name}</option>}
-                                )}
-                                </select>
-                                <label className="label-control" htmlFor="name">Question Type</label>
-                                <p style={errStyle}>{errors.questionType}</p>
-                            </div>
-                            <div className="form-group">
-                                <input type="textarea" className="form-control-input" id="expectedAnswer" onChange={(e) => handleChage(e)} value={data.expectedAnswer} required />
-                                <label className="label-control" htmlFor="expectedAnswer">Expected Answer</label>
-                                <p style={errStyle}>{errors.expectedAnswer}</p>
-                            </div>
-                            <div className="form-group">
-                                <input type="textarea" className="form-control-input" id="preDefinedValues" onChange={(e) => handleChage(e)} value={data.preDefinedValues} required />
-                                <label className="label-control" htmlFor="preDefinedValues">PreDefined Values</label>
-                                <p style={errStyle}>{errors.preDefinedValues}</p>
-                            </div>
-                            <div className="form-group">
-                                <Switch defaultChecked={data.isAutoValidated} id="isAutoValidated" onChange={(e) => handleChage(e, 'isAutoValidated')} />
-                                <label className="label-control" htmlFor="isAutoValidated">Is Auto Validate</label>
-                            </div>
-                            <div className="form-group">
-                                <Switch defaultChecked={data.isMandatory} id="isMandatory" onChange={(e) => handleChage(e, 'isMandatory')} />
-                                <label className="label-control" htmlFor="isMandatory">Is Mandatory</label>
-                            </div>
+            <Modal title="Add Course" visible={isModalVisible} onOk={(e) => submitCourseData(e)} onCancel={handleCancel}>
+                <div className="form-group">
+                    <input type="text" className="form-control-input notEmpty" value={course.course_name} id="course_name" onChange={(e) => onCourseChange(e)} required />
+                    <label className="label-control" htmlFor="name">Course Name</label>
+                    <p style={errStyle}>{errObj.course_name}</p>
+                </div>
+                <div className="form-group">
+                    <input type="text" className="form-control-input notEmpty" value={course.course_title} id="course_title" onChange={(e) => onCourseChange(e)} required />
+                    <label className="label-control" htmlFor="course_title">Course Title</label>
+                    <p style={errStyle}>{errObj.course_title}</p>
+                </div>
+                <div className="form-group">
+                    <input type="textarea" className="form-control-input notEmpty" value={course.course_description} id="course_description" onChange={(e) => onCourseChange(e)} required />
+                    <label className="label-control" htmlFor="course_description">Course Description</label>
+                    <p style={errStyle}>{errObj.course_description}</p>
+                </div>
+                <div className="form-group">
+                    <ReactQuill theme="snow" value={course.course_contents || ''} onChange={(e) => setEditorValue(e)}/>
+                </div>
+                {/* <div className="form-group"> */}
+                {/* <label className="label-control" htmlFor="course_thumbnail"> */}
+                {/* Course Thumbnail : &nbsp;&nbsp; */}
+                {/* </label> */}
+                <div className="row">
+                    <div className="col-xl-6">
+                        <div className="col-xl-6">
+                            Course Thumbnail :
+                        </div>
+                        <div className="col-xl-6">
+                        <input type="file" className="" id="course_thumbnail" onChange={(e) => onCourseThumbnailChange(e)} required />
+                        <p style={errStyle}>{errObj.course_thumbnail}</p>
+                        </div>
+                    </div>
+                    <div className="col-xl-6">
+                        <div className="col-xl-6">
+                            Carosal Images :
+                        </div>
+                        <div className="col-xl-6">
+                        <input type="file" multiple className="" id="course_images" onChange={(e) => onCourseFilesChange(e)} required />
+                        <p style={errStyle}>{errObj.carosal_images}</p>
+                        </div>
+                    </div>
+                </div>
             </Modal>
-            <Modal title="Additional Properties" visible={isPropertiesModalVisible} onOk={(e) => handlePropertiesOk(e)} onCancel={(e) => handlePropertiesCancel(e)}>
-                            <div className="form-group">
-                                <input type="text" className="form-control-input" id="name" onChange={(e) => handlePropertyChage(e)} value={property.name} required />
-                                <label className="label-control" htmlFor="name">Name</label>
-                                <p style={errStyle}>{errors.name}</p>
-                            </div>
-                            <div className="form-group">
-                                <select type="select" className="form-control-input" id="type" onChange={(e) => handlePropertyChage(e)} value={property.type}> 
-                                {PropertyTypes.map((each, index) => {
-                                    return <option value={each.type} key={index}>{each.name}</option>}
-                                )}
-                                </select>
-                                <label className="label-control" htmlFor="type">Type</label>
-                                <p style={errStyle}>{errors.type}</p>
-                            </div>
-            </Modal>
-            </>
         </>
     )
 }

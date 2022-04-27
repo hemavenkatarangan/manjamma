@@ -29,6 +29,7 @@ import ContactUs from "./components/ContactUs";
 import Terms from "./components/Rules/Terms";
 import Privacy from "./components/Rules/Privacy";
 import Refund from "./components/Rules/Refund";
+import GenericCourses from "./components/Courses/GenericCourse";
 
 if (localStorage.jwtToken) {
   const token = localStorage.jwtToken;
@@ -60,6 +61,7 @@ function App() {
           <Route exact path="/gallery" component={Gallery} />
           <Route exact path="/events/:id" component={DisplayEvents} />
           <Route exact path="/yogam" component={YogaM} />
+          <Route exact path="/course/:id" component={GenericCourses} />
           <Route exact path="/ttc" component={TTC} />
           <Route exact path="/kaushalam" component={KaushalaM} />
           <Route exact path="/contactus" component={ContactUs} />

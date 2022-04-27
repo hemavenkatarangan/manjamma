@@ -5,8 +5,8 @@ var Schema = mongoose.Schema;
 var UserRoleSchema = new Schema(
     {
         
-        user_id: { type: Schema.Types.ObjectId, ref: 'User'}, 
-        role_id: { type: Schema.Types.ObjectId, ref: 'Role'}
+        user_id:{ type: String }, 
+        role_id:{ type: String }
    
     },
     {

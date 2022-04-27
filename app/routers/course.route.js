@@ -14,7 +14,7 @@ router.route('/:courseId/createdocuments')
 router.route('/:courseId')
     .get(validateParam(schemas.idSchema, ['courseId']), coursesController.getCourse)
     .patch(coursesController.updateCourse)
-    .delete(validateParam(schemas.idSchema, ['courseId']), coursesController.removeCourse);
+    .delete(coursesController.removeCourse);
 
 router.route('/:courseId/complete')
     .get(validateParam(schemas.idSchema, ['courseId']), coursesController.getCompleteCourseDetails);

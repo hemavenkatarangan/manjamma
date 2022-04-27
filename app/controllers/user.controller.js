@@ -103,7 +103,7 @@ module.exports = {
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
                 email_id: req.body.email_id,
-                phone_num: req.body.phone_num,
+                phoneNumber: req.body.phoneNumber,
                 password: req.body.password
             });
 

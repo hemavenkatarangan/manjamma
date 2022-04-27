@@ -79,6 +79,7 @@ module.exports = {
 
         catch (err) {
             response.status_code = "403";
+            response.errorObj = err;
             response.status_message = "Course could not be created";
             response.result = null;
             res.status(200).json(response);

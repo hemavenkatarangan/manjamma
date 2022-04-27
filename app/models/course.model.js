@@ -6,7 +6,7 @@ var CourseSchema = new Schema(
     {
         course_title: { type: String}, 
         course_name : {type: String}, 
-        description:{type: String}, 
+        course_description:{type: String}, 
         course_thumbnail : {type: String},
         carosal_images : [{type: String}], 
         contents : {type: String},
