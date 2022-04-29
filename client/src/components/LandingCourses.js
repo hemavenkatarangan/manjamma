@@ -28,6 +28,7 @@ function LandingCourses() {
                         {
                             courses.length > 0 ? courses.map((data, index) => {
                                 if(data.isActive) {
+	
                                     return  <div className="col-lg-4" key={index}>
                                 <a href={"../course/" + data._id}>
                                     <div className="card">
