@@ -6,6 +6,8 @@ import $ from 'jquery';
 function Nav() {
     const user = useSelector(state => state.auth)
     const [isAuthenticated, setAuthenticated] = useState(false)
+    const [admins, setAdmins] = useState(['jyoti.byvk@gmail.com', 'hema.s.kasturi@gmail.com', 'divakarvishwamithra@gmail.com'])
+    const [adminAuth, setAdminAuth] = useState(false)
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -13,6 +15,12 @@ function Nav() {
             setAuthenticated(true)
         } else {
             setAuthenticated(false)
+        }
+
+        if (admins.includes(user.user.name)) {
+            setAdminAuth(true)
+        } else {
+            setAdminAuth(false)
         }
     })
 
@@ -27,7 +35,7 @@ function Nav() {
     return (
         <nav className="navbar navbar-expand-lg fixed-top navbar-light">
             <div className="container">
-                <a className="navbar-brand logo-image" href="/" style={{marginLeft:'12px'}}>
+                <a className="navbar-brand logo-image" href="/" style={{ marginLeft: '12px' }}>
                     {/* <img src="../images/logo.png" alt="Bharat Yoga Vidya Kendra" />
                     <b>Bharat Yoga Vidya Kendra</b> */}
                     {/* <b className="subtext">An Initiative Of Satsang Foundation</b> */}
@@ -39,10 +47,10 @@ function Nav() {
                         </div>
                         <div className='col' style={{ marginLeft: '-28px', marginTop: '10px' }}>
                             <div className='row'>
-                                <b style={{ padding: '3px', color: 'darkblue', fontWeight: 'bold', lineHeight: 'normal', fontFamily: 'Droid Serif', fontSize: '18px'}}>Bharat Yoga Vidya Kendra</b>
+                                <b style={{ padding: '3px', color: 'darkblue', fontWeight: 'bold', lineHeight: 'normal', fontFamily: 'Droid Serif', fontSize: '18px' }}>Bharat Yoga Vidya Kendra</b>
                             </div>
                             <div className='row'>
-                                <b style={{ color: 'gray', fontSize: '.85rem', fontFamily: 'Droid Serif', fontStyle: 'italic', marginLeft: '.2rem',fontSize: '12px' }}>Lokah Samastah Sukhino Bhavantu</b>
+                                <b style={{ color: 'gray', fontSize: '.85rem', fontFamily: 'Droid Serif', fontStyle: 'italic', marginLeft: '.2rem', fontSize: '12px' }}>Lokah Samastah Sukhino Bhavantu</b>
                             </div>
                         </div>
                     </div>
@@ -89,22 +97,45 @@ function Nav() {
                         <li className="nav-item">
                             <a className="nav-link page-scroll" style={{ color: 'black' }} href="/contactus">Contact Us</a>
                         </li>
+                        {/* <li  class="nav-item dropdown"> */}
+                        {isAuthenticated && adminAuth ? <li  class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="dropdown01" style={{ color: 'black' }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/admin">Course Dashboard</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/">Programs Dashboard</a>
+                                <div class="dropdown-divider"></div>
+                            </div></li> : <></>}
+                        {/* </li> */}
                         <li>
-                        <img style={{height:'32px'}} src="/images/logosatsang1.png" alt="byvk"></img>
-                    </li>
-                    <li className="nav-item">
+                            {isAuthenticated ? <div>
+                                <span className="nav-item">
+                                    <a className="btn-solid-sm page-scroll" onClick={(e) => logOutUserFromPanel(e)}>Logout</a>
+                                </span>
+                            </div> : <div>
+                                <span className="nav-item">
+                                    <a className="btn-solid-sm page-scroll" href="/register">Sign Up</a>
+                                </span>
+                            </div>}
+                        </li>
+                        <li>
+                            <img style={{ height: '32px' }} src="/images/logosatsang1.png" alt="byvk"></img>
+                        </li>
+                        {/* <li className="nav-item">
                             <a className="nav-link page-scroll" style={{ color: 'black' }} href="/register">Sign Up</a>
-                    </li>
+                    </li> */}
                     </ul>
-                    {/* {isAuthenticated ? <li className="nav-item">
-                            <a className="nav-link page-scroll" href="/user">Hi, {user.user.name}</a>
-                        </li> : <div>
+                    {/* {isAuthenticated ? <div>
+                        <span className="nav-item">
+                            <a className="btn-solid-sm page-scroll" onClick={(e) => logOutUserFromPanel(e)}>Logout</a>
+                        </span>
+                    </div> : <div>
                         <span className="nav-item">
                             <a className="btn-solid-sm page-scroll" href="/register">Sign Up</a>
                         </span>
-                    </div>}
-                    
-                    {isAuthenticated ? <div>
+                    </div>} */}
+
+                    {/* {isAuthenticated ? <div>
                         <span className="nav-item">
                             <a className="btn-solid-sm page-scroll" onClick={(e) => logOutUserFromPanel(e)}>Logout</a>
                         </span>

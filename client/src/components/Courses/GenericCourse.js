@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import ReactQuill from 'react-quill';
 
 function GenericCourses() {
@@ -9,38 +9,91 @@ function GenericCourses() {
         var idFind = window.location.href.split('/')
         var id = idFind[idFind.length - 1]
         axios.get('/courses/' + id)
-        .then((res) => {
-            console.log(res.data)
-            setData(res.data.result)
-        })
-        .catch(err => console.error(err))
-    },[])
+            .then((res) => {
+                console.log(res.data)
+                setData(res.data.result)
+            })
+            .catch(err => console.error(err))
+    }, [])
     return (
         <>
-        <div className="ex-basic-1 pt-5 pb-5" style={{ marginTop: '30px' }}>
+            <div className="ex-basic-1 pt-5 pb-5" style={{ marginTop: '30px' }}>
                 <div className="container">
-                <div className="row" >
+                    <div className="row" >
                         <div className="col-xl-10 offset-xl-1" >
-                            <h1 style={{textAlign:'center', marginTop:'50px',fontFamily: 'Poppins', color: 'darkblue',fontSize: '32px' }}>{data.course_name}</h1>
+                            <h1 style={{ textAlign: 'center', marginTop: '50px', fontFamily: 'Poppins', color: 'darkblue', fontSize: '32px' }}>{data.course_name} {'-'} {data.course_title}</h1>
                         </div>
                     </div>
-                    <div className="row" style={{marginTop:'-62px'}}>
+                    <div className="row">
                         <div className="col-lg-12">
-                            <img className="img-fluid mt-5 mb-3" src="../images/courses/AbhayaM.png" style={{ width: '100%', height: '500px' }} alt="byvk" />
+                            <div>
+                                <div className="slider-container">
+                                    <div className="swiper-container slide-slider">
+                                        <div className="swiper-wrapper">
+                                            {
+                                                data.carosal_images ? data.carosal_images.map((data, index) => {
+                                                    return <div className="swiper-slide" key={index}>
+                                                        {/* <a href='/about'> */}
+                                                        <img src={data} className="img-fluid" alt='Byvk' />
+                                                        {/* </a> */}
+                                                    </div>
+                                                }) : ''
+                                            }
+
+                                            {/* <div className="swiper-slide">
+                                <a href="/about#president">
+                                <img src="../images/slider/3.png" className="img-fluid" alt='Byvk' />
+                                </a>
+                            </div>
+                             <div className="swiper-slide">
+                                <a href="/about#president">
+                                <img src="../images/slider/Picture3-CJI.png" className="img-fluid" alt='Byvk' />
+                                </a>
+                            </div>
+                          <div className="swiper-slide">
+                                <a href="/#courses">
+                                <img src="../images/slider/Picture4-OurCourses.png" className="img-fluid" alt='OurCourses' />
+                                </a>
+                            </div>
+                            <div className="swiper-slide">
+                                <a href="/ttc">
+                                <img src="../images/slider/TTC-Picture3.png" className="img-fluid" alt='Byvk' />
+                                </a>
+                            </div>
+                            <div className="swiper-slide">
+                                <a href='/abhayam'>
+                                <img src="../images/slider/Picture4-AbhayaM.png" className="img-fluid" alt='Byvk' />
+                                </a>
+                            </div>
+                            <div className="swiper-slide">
+                                <a href='/sakhyam'>
+                                <img src="../images/slider/SakhyaM.jpeg" className="img-fluid" alt='Byvk' />
+                                </a>
+                            </div> */}
+
+
+
+                                        </div>
+                                        <div className="swiper-button-next"></div>
+                                        <div className="swiper-button-prev"></div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="ex-basic-1 pt-4" style={{marginTop: '-50px'}}>
+            <div className="ex-basic-1 pt-4" style={{ marginTop: '-50px' }}>
                 <div className="container">
-                    
+
                     <div className="row">
-                        <div className="col-xl-10 offset-xl-1" >
+                        <div className="col-xl-12" >
                             <ReactQuill
                                 value={data.contents || ''}
                                 readOnly={true}
                                 theme={"bubble"}
-                                />
+                            />
                         </div>
                     </div>
                 </div>

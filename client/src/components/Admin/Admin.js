@@ -166,7 +166,7 @@ const  modules  = {
         axios.get('/courses/')
             .then((res) => {
                 console.log(res)
-                setCourseData(res.data.result)
+                setCourseData(res.data.result.reverse())
             })
             .catch(err => {
                 console.log(err)
@@ -288,7 +288,7 @@ const  modules  = {
                 <div className="container">
                     <div className="row" >
                         <div className="col-xl-10 offset-xl-1" >
-                            <h1 style={{ textAlign: 'center', marginTop: '50px', fontFamily: 'Poppins', color: 'darkblue', fontSize: '32px' }}>Courses Section</h1>
+                            <h1 style={{ textAlign: 'center', marginTop: '50px', fontFamily: 'Poppins', color: 'darkblue', fontSize: '32px' }}>Course Dashboard</h1>
                         </div>
                     </div>
                     {/* <div className="row" style={{marginTop:'-62px'}}>
@@ -304,7 +304,7 @@ const  modules  = {
                     <div className="row">
                         <div className="col-xl-10 offset-xl-1" >
                             <div style={{ float: 'right' }} className="row">
-                                <Button type="primary" shape="round" size="large" onClick={(e) => addCourseData()}>Add Course</Button>
+                                <Button style={{backgroundColor:'#ffdb58', fontWeight:'bold'}} shape="round" size="large" onClick={(e) => addCourseData()}>Add Course</Button>
                             </div>
                             {/* <div className="row"> */}
                             <Table
@@ -316,7 +316,7 @@ const  modules  = {
                     </div>
                 </div>
             </div>
-            <Modal title="Add Course" visible={isModalVisible} onOk={(e) => submitCourseData(e)} onCancel={handleCancel}>
+            <Modal title="Add Course"  width="75%" visible={isModalVisible} onOk={(e) => submitCourseData(e)} onCancel={handleCancel}>
                 <div className="form-group">
                     <input type="text" className="form-control-input notEmpty" value={course.course_name} id="course_name" onChange={(e) => onCourseChange(e)} required />
                     <label className="label-control" htmlFor="name">Course Name</label>
@@ -332,14 +332,14 @@ const  modules  = {
                     <label className="label-control" htmlFor="course_description">Course Description</label>
                     <p style={errStyle}>{errObj.course_description}</p>
                 </div>
-                <div className="form-group">
-                    <ReactQuill modules={modules} theme="snow" value={course.course_contents || ''} onChange={(e) => setEditorValue(e)} />
+                <div className="form-group" style={{marginBottom:'50px'}}>
+                    <ReactQuill modules={modules} style={{maxHeight:'300px', height: '300px'}} theme="snow" value={course.course_contents || ''} onChange={(e) => setEditorValue(e)} />
                 </div>
                 {/* <div className="form-group"> */}
                 {/* <label className="label-control" htmlFor="course_thumbnail"> */}
                 {/* Course Thumbnail : &nbsp;&nbsp; */}
                 {/* </label> */}
-                <div className="row">
+                <div className="row form-group">
                     <div className="col-xl-6">
                         <div className="col-xl-6">
                             Course Thumbnail :
