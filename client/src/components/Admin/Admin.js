@@ -53,6 +53,20 @@ function Admin() {
         setIsModalVisible(false);
     };
 
+const  modules  = {
+    toolbar: [
+        [{ font: [] }],
+        [{ header: [1, 2, 3, 4, 5, 6, false] }],
+        ["bold", "italic", "underline", "strike"],
+        [{ color: [] }, { background: [] }],
+        [{ script:  "sub" }, { script:  "super" }],
+        ["blockquote", "code-block"],
+        [{ list:  "ordered" }, { list:  "bullet" }],
+        [{ indent:  "-1" }, { indent:  "+1" }, { align: [] }],
+        ["link", "image", "video"],
+        ["clean"],
+    ],
+};
     const [courseData, setCourseData] = useState([])
 
 
@@ -319,7 +333,7 @@ function Admin() {
                     <p style={errStyle}>{errObj.course_description}</p>
                 </div>
                 <div className="form-group">
-                    <ReactQuill theme="snow" value={course.course_contents || ''} onChange={(e) => setEditorValue(e)}/>
+                    <ReactQuill modules={modules} theme="snow" value={course.course_contents || ''} onChange={(e) => setEditorValue(e)} />
                 </div>
                 {/* <div className="form-group"> */}
                 {/* <label className="label-control" htmlFor="course_thumbnail"> */}
