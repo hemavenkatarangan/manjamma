@@ -23,9 +23,9 @@ function Admin() {
         course_name: '',
         course_title: '',
         course_description: '',
-        course_thumbnail: null,
+        course_thumbnail: [],
         course_documents: [],
-        carosal_images: null,
+        carosal_images: [],
         course_contents: '',
         isActive: true
     })
@@ -128,9 +128,9 @@ function Admin() {
             course_name: '',
             course_title: '',
             course_description: '',
-            course_thumbnail: null,
+            course_thumbnail: [],
             course_documents: [],
-            carosal_images: null,
+            carosal_images: [],
             course_contents: '',
             isActive: true
         }))
