@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const event = require('./app/routers/event.route');
 const user = require('./app/routers/user.route');
 const course = require('./app/routers/course.route');
+const program = require('./app/routers/program.route');
 const role = require('./app/routers/role.route');
 const userrole = require('./app/routers/user_role.route');
 const audit =  require('./app/routers/audit.route');
@@ -48,6 +49,7 @@ app.use('/events', event);
 app.use('/users', user);
 app.use('/roles', role);
 app.use('/audits', audit);
+app.use('/programs', program);
 app.use('/userroles', userrole);
 // define a simple route
 //app.get("*", (req, res) => {

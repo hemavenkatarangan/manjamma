@@ -122,13 +122,13 @@ module.exports = {
 
                 details = getError('email', 'already exist').details;
                 response.result = null;
-                respons.err = details;
+                response.err = details;
                 return res.status(400).json(response);
             }
             else {
                 details = getError(error.name, error.message).details;
                 response.result = null;
-                respons.err = details;
+                response.err = details;
                 res.status(400).json(response);
             }
 
