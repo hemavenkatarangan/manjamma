@@ -6,7 +6,7 @@ import $ from 'jquery';
 function Nav() {
     const user = useSelector(state => state.auth)
     const [isAuthenticated, setAuthenticated] = useState(false)
-    const [admins, setAdmins] = useState(['jyoti.byvk@gmail.com', 'hema.s.kasturi@gmail.com', 'divakarvishwamithra@gmail.com'])
+    const [admins, setAdmins] = useState(['jyoti.byvk@gmail.com', 'hema.s.kasturi@gmail.com', 'divakarvishwamithra@gmail.com', 'lohith88@gmail.com'])
     const [adminAuth, setAdminAuth] = useState(false)
     const dispatch = useDispatch()
 

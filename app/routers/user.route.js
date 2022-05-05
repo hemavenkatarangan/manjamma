@@ -1,16 +1,17 @@
 const express = require('express');
 const router = require('express-promise-router')();
 const usersController = require('../controllers/user.controller.js');
-const { validateParam, validateBody, schemas } = require('../helpers/routeHelpers');
+const { validateParam, validateBody, checkRoles, schemas } = require('../helpers/routeHelpers');
+const auth = require('../helpers/authHelper')();
 
 router.route('/')
-    .get(usersController.allUsers)
+    .get([auth.authenticate(),checkRoles(['SUPER'])], usersController.allUsers)
     .post(validateBody(schemas.userSchema), usersController.createUser);
 
 router.route('/register')   
     .post(validateBody(schemas.registerUserSchema), usersController.registerUser);
 router.route('/login')   
-    .post(usersController.loginUser);
+    .post(validateBody(schemas.loginUserSchema),usersController.loginUser);
 
 router.route('/:userId')
     .get(validateParam(schemas.idSchema, ['userId']), usersController.getUser)

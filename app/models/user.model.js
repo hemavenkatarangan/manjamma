@@ -1,36 +1,32 @@
 var mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require("jsonwebtoken");
-const keys = require('./../../config/database.config');
+const keys = require('../../config/config');
+const config = require('../../config/config');
 
 var Schema = mongoose.Schema;
 
-var UserSchema = new Schema(
-    {
+var UserSchema = new Schema(    {
         first_name: { type: String },
         last_name: { type: String },
-        profilePic: { type: String},
-        override_validation : {type : Boolean, default : false},
         email_id: { type: String, required: true, index: { unique: true, dropDups: true } },
         password: { type: String, required: true },
-        phoneNumber: { type: Number },
-        permanent_address: { type: String },
-        current_address: {type: String},
-        city:{type: String},
-        country:{type:String},
-        nationality: { type: String },
-        dob: { type: Date },
-        additional_details: [{ type: Schema.Types.ObjectId, ref: 'AdditionalDetail' }],
-        events: [{ type: Schema.Types.ObjectId, ref: 'RegisteredEvent' }],        
-        complete_profile: {type : Boolean, default: false },
-        emergency_num : {type: Number},       
-        isAgreedTerms : {type : Boolean, default : false}
+        dob : {type: Date},
+        phone_num: { type: Number }, 
+        roles: [
+            {
+                type: String, enum: ["ADMIN", "USER", "SUPERADMIN"]
+            }]
+        ,
+       
+        isAgreedTerms: { type: Boolean, default: false }
 
     },
     {
         timestamps: true
     }
 );
+
 
 
 UserSchema.virtual('age').get(function () {
@@ -60,22 +56,19 @@ UserSchema.methods = {
         console.log("Inside Authenticate");
         const result = await bcrypt.compare(pwd, this.password);
         console.log(result);
-       
-        if (result) {
 
-            console.log(this._id, this.email_id, this.role);
+        if (result) {
 
             const payload = {
                 id: this._id,
-                name: this.email_id, 
-                role: this.role               
+                expire: Date.now() + 1000 * 60 * 60 * 2
 
             };
 
-            const  token =  jwt.sign(payload, keys.secretOrKey,  {
+            const token = jwt.sign(payload, config.jwtSecret, {
                 expiresIn: "2h",
-              });
-        
+            });
+
 
             console.log(token);
             fact.status = "200";
@@ -83,14 +76,14 @@ UserSchema.methods = {
             fact.token = token;
 
             return fact;
-           
+
 
         } else {
 
             fact.status = "404";
             fact.message = " login failed";
             fact.token = null;
-          return fact;
+            return fact;
         }
     }
 };

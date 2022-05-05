@@ -1,5 +1,5 @@
 const express = require('express');
-const dbConfig = require('./config/database.config.js');
+const config = require('./config/config');
 const mongoose = require('mongoose');
 const event = require('./app/routers/event.route');
 const user = require('./app/routers/user.route');
@@ -8,22 +8,31 @@ const role = require('./app/routers/role.route');
 const userrole = require('./app/routers/user_role.route');
 const audit =  require('./app/routers/audit.route');
 const dotenv = require("dotenv");
+
+const auth = require('./app/helpers/authHelper')();
+const passport = require("passport");
 //const fileupload = require('./app/routers/fileupload.route');
-const port = process.env.PORT || 3000
+
 
 // create express app
 const app = express();
 dotenv.config();
 
+const port = process.env.PORT || 3000
+
 //app.use(express.static(path.join(__dirname, "client/build")));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.use(auth.initialize());
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 
 mongoose.Promise = global.Promise;
 
 // Connecting to the database
-mongoose.connect(dbConfig.url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify:true, useCreateIndex :true }).then(() => {
+mongoose.connect(config.url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify:true, useCreateIndex :true }).then(() => {
     console.log("Successfully connected to the database");    
 }).catch(err => {
     console.log('Could not connect to the database. Exiting now...', err);

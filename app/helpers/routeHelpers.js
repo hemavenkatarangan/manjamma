@@ -10,7 +10,7 @@ module.exports = {
 
                 console.log(req['params'][element]);
                 const result = schema.validate({ param: req['params'][element] });
-               
+
                 if (result.error) {
                     response.status_code = "400";
                     response.status_message = "Schema validation failed";
@@ -34,7 +34,7 @@ module.exports = {
     validateBody: (schema) => {
         return (req, res, next) => {
             let response = {};
-           
+
             const result = schema.validate(req.body, { abortEarly: false });
 
             if (result.error) {
@@ -56,6 +56,15 @@ module.exports = {
         }
 
     },
+
+    checkRoles: (roles) => {
+        return (req, res, next) => {
+            !roles.includes(...req.user.roles) ? res.status(400).json('Unauthorized') : next();
+        }
+
+    },
+
+
 
     schemas: {
         userSchema: Joi.object().keys({
@@ -81,12 +90,21 @@ module.exports = {
                 .max(30)
                 .required(),
             password: Joi.string()
-                .pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).required(),
+                .pattern(new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')).required(),
+
             confirm_password: Joi.ref('password'),
-            phoneNumber : Joi.string().length(10).pattern(/^[0-9]+$/).required(),
+            dob: Joi.date(),
+            phone_num: Joi.string().length(10).pattern(/^[0-9]+$/).required(),
             email_id: Joi.string()
                 .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required()
         }).with('password', 'confirm_password'),
+
+        loginUserSchema: Joi.object({
+            email_id: Joi.string()
+                .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required(),
+            password: Joi.string()
+                .pattern(new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')).required()
+        }),
 
         eventSchema: Joi.object().keys({
             eventName: Joi.string().required(),
