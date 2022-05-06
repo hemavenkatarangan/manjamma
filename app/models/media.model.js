@@ -4,10 +4,10 @@ var Schema = mongoose.Schema;
 
 var MediaSchema = new Schema(
     {
-        
-        media_path:{ type: String }, 
-        media_type:{ type: String }
-   
+
+        media_path: { type: Array },
+        media_type: { type: String }
+
     },
     {
         timestamps: true

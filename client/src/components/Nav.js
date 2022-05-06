@@ -111,6 +111,8 @@ function Nav() {
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/programdashboard">Programs Dashboard</a>
                                 <div class="dropdown-divider"></div>
+                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/mediadashboard">Media Dashboard</a>
+                                <div class="dropdown-divider"></div>
                             </div></li> : <></>}
                         {/* </li> */}
                         <li>

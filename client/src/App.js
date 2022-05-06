@@ -32,8 +32,8 @@ import Refund from "./components/Rules/Refund";
 import GenericCourses from "./components/Courses/GenericCourse";
 import CourseDashboard from "./components/Admin/CourseDashboard";
 import ProgramDashboard from "./components/Admin/ProgramDashboard";
-import ImagesDashboard from "./components/Admin/ImagesDashboard";
 import CreateProgram from "./components/Admin/CreateProgram";
+import MediaDashboard from "./components/Admin/ImagesDashboard";
 
 if (localStorage.jwtToken) {
   const token = localStorage.jwtToken;
@@ -72,7 +72,7 @@ function App() {
           <Route exact path="/programdashboard" component={ProgramDashboard} />
           <Route exact path="/createprogram" component={CreateProgram} />
           <Route exact path="/createprogram/:id" component={CreateProgram} />
-          <Route exact path="/imagesdashboard" component={ImagesDashboard} />
+          <Route exact path="/mediadashboard" component={MediaDashboard} />
           <Route exact path="/course/:id" component={GenericCourses} />
           <Route exact path="/ttc" component={TTC} />
           <Route exact path="/kaushalam" component={KaushalaM} />

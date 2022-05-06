@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import { Carousel, Calendar, Badge } from 'antd';
+import { useState, useEffect } from 'react'
 import './Landing.css'
+import axios from 'axios'
 import { Link } from 'react-router-dom';
 import AboutInLanding from './AboutInLanding';
 import YogaPhilosophy from './YogaPhilosophy';
@@ -11,21 +11,39 @@ import LandingYogaStories from './LandingYogaStories';
 
 function Landing() {
     const [isOpen, setOpen] = useState(false)
+    const [images, setImages] = useState([])
+
+    useEffect(() => {
+        let obj = {
+            media_type: 'sliderimages'
+        }
+
+        axios.post('/mediamanagement/media', obj)
+            .then(res => {
+                setImages(res.data.result[0].media_path)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }, [])
 
     return (
         <div className="container">
             <div style={{ marginTop: ' 120px' }}>
-            <div>
-                <div className="slider-container">
-                    <div className="swiper-container slide-slider">
-                        <div className="swiper-wrapper">
-                           
-                            <div className="swiper-slide">
-                                <a href='/about'>
-                                <img src="../images/slider/2.png" className="img-fluid" alt='Byvk' />
-                                </a>
-                            </div>
-                            <div className="swiper-slide">
+                <div>
+                    <div className="slider-container">
+                        <div className="swiper-container slide-slider">
+                            <div className="swiper-wrapper">
+
+                                {images.map((data, index) => {
+                                    return <div className="swiper-slide">
+                                        {/* <a href='/about'> */}
+                                        <img src={data} className="img-fluid" alt='Byvk' />
+                                        {/* </a> */}
+                                    </div>
+                                })}
+
+                                {/* <div className="swiper-slide">
                                 <a href="/about#president">
                                 <img src="../images/slider/3.png" className="img-fluid" alt='Byvk' />
                                 </a>
@@ -54,16 +72,16 @@ function Landing() {
                                 <a href='/sakhyam'>
                                 <img src="../images/slider/SakhyaM.jpeg" className="img-fluid" alt='Byvk' />
                                 </a>
-                            </div>
-                            
-                            
-                            
-                        </div>
-                        <div className="swiper-button-next"></div>
-                        <div className="swiper-button-prev"></div>
+                            </div> */}
 
+
+
+                            </div>
+                            <div className="swiper-button-next"></div>
+                            <div className="swiper-button-prev"></div>
+
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
             <div >
@@ -73,7 +91,7 @@ function Landing() {
                 <YogaPhilosophy />
             </div>
 
-            <div  id="courses">
+            <div id="courses">
                 <LandingCourses />
             </div>
 

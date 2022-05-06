@@ -12,7 +12,7 @@ const data = [
         imgUrl: 'images/courses/kausalamthumbnail.png',
         typeUrl: '../programdashboard',
     },{ 
-        typeName:'Images Dashboard',
+        typeName:'Media Dashboard',
         imgUrl: 'images/courses/kausalamthumbnail.png',
         typeUrl: '../imagesdashboard',
     }
