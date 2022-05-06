@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { logoutUser } from '../actions/authActions'
+import axios from 'axios'
 import $ from 'jquery';
 
 function Nav() {
@@ -8,6 +9,7 @@ function Nav() {
     const [isAuthenticated, setAuthenticated] = useState(false)
     const [admins, setAdmins] = useState(['jyoti.byvk@gmail.com', 'hema.s.kasturi@gmail.com', 'divakarvishwamithra@gmail.com', 'lohith88@gmail.com'])
     const [adminAuth, setAdminAuth] = useState(false)
+    const [courses, setCourses] = useState([])
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -22,7 +24,19 @@ function Nav() {
         } else {
             setAdminAuth(false)
         }
+
+        getCoursesData()
     })
+
+    const getCoursesData = () => {
+        axios.get('/courses')
+        .then(res => {
+            setCourses(res.data.result)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
 
     const logOutUserFromPanel = () => {
         dispatch(logoutUser())
@@ -75,20 +89,16 @@ function Nav() {
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="#" id="dropdown01" style={{ color: 'black' }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/yogam">Yoga M - Beginners Course</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/kaushalam">KausalaM - Intermediate Course</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/abhayam">AbhayaM - Senior Citizens Course</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/ttc">TTC - Yoga Teachers Training Course</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/avistaran">Avistaran - Yoga for Professionals
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/sakhyam">SakhyaM - Course for Women
-                                </a>
-
+                                {
+                                    courses.map((data, index) => {
+                                        if(data.isActive) {
+                                            return <>
+                                            <a class="dropdown-item page-scroll" style={{ color: 'black' }} href={"../course/" + data._id}>{data.course_name} - {data.course_title}</a>
+                                            <div class="dropdown-divider"></div>
+                                        </>
+                                        }
+                                    })
+                                }
                             </div>
                         </li>
                         {/* <li className="nav-item">

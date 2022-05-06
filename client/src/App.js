@@ -30,6 +30,9 @@ import Terms from "./components/Rules/Terms";
 import Privacy from "./components/Rules/Privacy";
 import Refund from "./components/Rules/Refund";
 import GenericCourses from "./components/Courses/GenericCourse";
+import CourseDashboard from "./components/Admin/CourseDashboard";
+import ProgramDashboard from "./components/Admin/ProgramDashboard";
+import ImagesDashboard from "./components/Admin/ImagesDashboard";
 
 if (localStorage.jwtToken) {
   const token = localStorage.jwtToken;
@@ -61,6 +64,9 @@ function App() {
           <Route exact path="/gallery" component={Gallery} />
           <Route exact path="/events/:id" component={DisplayEvents} />
           <Route exact path="/yogam" component={YogaM} />
+          <Route exact path="/courseDashboard" component={CourseDashboard} />
+          <Route exact path="/programdashboard" component={ProgramDashboard} />
+          <Route exact path="/imagesdashboard" component={ImagesDashboard} />
           <Route exact path="/course/:id" component={GenericCourses} />
           <Route exact path="/ttc" component={TTC} />
           <Route exact path="/kaushalam" component={KaushalaM} />
