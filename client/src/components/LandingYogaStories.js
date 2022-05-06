@@ -39,7 +39,7 @@ function LandingYogaStories() {
                                                     <div className="card">
                                                         <div className="card-body">
                                                             <div style={{ border: '1px solid black', height: '152px', width: '214px' }}>
-                                                                <iframe class="youtube-player" src={data} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                                <iframe className="youtube-player" src={data} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -54,7 +54,7 @@ function LandingYogaStories() {
                                             <div className="card">
                                                 <div className="card-body">
                                                     <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/7sRjUbrwMdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                                                    <iframe className="youtube-player" src="https://www.youtube.com/embed/7sRjUbrwMdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
                                                     </div>
                                                 </div>
                                             </div>
@@ -64,7 +64,7 @@ function LandingYogaStories() {
                                             <div className="card">
                                                 <div className="card-body">
                                                     <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/CUnIcFVvxPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                                                    <iframe className="youtube-player" src="https://www.youtube.com/embed/CUnIcFVvxPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
                                                     </div>
                                                 </div>
                                             </div>
@@ -74,7 +74,7 @@ function LandingYogaStories() {
                                             <div className="card">
                                             <div className="card-body">
                                                     <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/mjxZOAsLRFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                                                    <iframe className="youtube-player" src="https://www.youtube.com/embed/mjxZOAsLRFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
                                                     </div>
                                                 </div>
                                             </div>
@@ -83,7 +83,7 @@ function LandingYogaStories() {
                                         <div className="card">
                                         <div className="card-body">
                                                     <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/3hTHiOVn_ss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                                                    <iframe className="youtube-player" src="https://www.youtube.com/embed/3hTHiOVn_ss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
                                                     </div>
                                                 </div>
                                             </div>

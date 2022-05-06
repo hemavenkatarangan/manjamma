@@ -38,7 +38,7 @@ function SriMTeachings() {
                                                     <div className="card">
                                                         <div className="card-body">
                                                             <div style={{ border: '1px solid black', height: '152px', width: '214px' }}>
-                                                                <iframe class="youtube-player" src={data} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                                                <iframe className="youtube-player" src={data} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -51,7 +51,7 @@ function SriMTeachings() {
                                             <div className="card">
                                             <div className="card-body">
                                                     <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/Mx-rNCoqKOw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                                                    <iframe className="youtube-player" src="https://www.youtube.com/embed/Mx-rNCoqKOw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
                                                     </div>
                                                 </div>
                                             </div>
@@ -60,7 +60,7 @@ function SriMTeachings() {
                                         <div className="card">
                                         <div className="card-body">
                                                     <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/lTWWhDXvFdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                                                    <iframe className="youtube-player" src="https://www.youtube.com/embed/lTWWhDXvFdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
                                                     </div>
                                                 </div>
                                             </div>
@@ -69,7 +69,7 @@ function SriMTeachings() {
                                             <div className="card">
                                             <div className="card-body">
                                                     <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/f_VMEB07vZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                                                    <iframe className="youtube-player" src="https://www.youtube.com/embed/f_VMEB07vZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
                                                     </div>
                                                 </div>
                                             </div>
@@ -78,7 +78,7 @@ function SriMTeachings() {
                                             <div className="card">
                                             <div className="card-body">
                                                     <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe class="youtube-player" src="https://www.youtube.com/embed/RfNSU15D80U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                                                    <iframe className="youtube-player" src="https://www.youtube.com/embed/RfNSU15D80U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
                                                     </div>
                                                 </div>
                                             </div>

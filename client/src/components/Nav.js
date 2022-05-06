@@ -82,15 +82,15 @@ function Nav() {
                         <li className="nav-item">
                             <a className="nav-link page-scroll" style={{ color: 'black' }} href="/srim">Sri M</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="dropdown01" style={{ color: 'black' }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <li className="nav-item dropdown">
+                            <a className="nav-link" href="#" id="dropdown01" style={{ color: 'black' }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
+                            <div className="dropdown-menu" aria-labelledby="dropdown01">
                                 {
                                     courses.map((data, index) => {
                                         if(data.isActive) {
                                             return <>
-                                            <a class="dropdown-item page-scroll" style={{ color: 'black' }} href={"../course/" + data._id}>{data.course_name} - {data.course_title}</a>
-                                            <div class="dropdown-divider"></div>
+                                            <a className="dropdown-item page-scroll" style={{ color: 'black' }} href={"../course/" + data._id}>{data.course_name} - {data.course_title}</a>
+                                            <div className="dropdown-divider"></div>
                                         </>
                                         }
                                     })
@@ -103,16 +103,16 @@ function Nav() {
                         <li className="nav-item">
                             <a className="nav-link page-scroll" style={{ color: 'black' }} href="/contactus">Contact Us</a>
                         </li>
-                        {/* <li  class="nav-item dropdown"> */}
-                        {isAuthenticated && user.userData.roles[0] === 'ADMIN' ? <li  class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="dropdown01" style={{ color: 'black' }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/coursedashboard">Course Dashboard</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/programdashboard">Programs Dashboard</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/mediadashboard">Media Dashboard</a>
-                                <div class="dropdown-divider"></div>
+                        {/* <li  className="nav-item dropdown"> */}
+                        {isAuthenticated && user.userData.roles[0] === 'ADMIN' ? <li  className="nav-item dropdown">
+                            <a className="nav-link" href="#" id="dropdown01" style={{ color: 'black' }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
+                            <div className="dropdown-menu" aria-labelledby="dropdown01">
+                                <a className="dropdown-item page-scroll" style={{ color: 'black' }} href="/coursedashboard">Course Dashboard</a>
+                                <div className="dropdown-divider"></div>
+                                <a className="dropdown-item page-scroll" style={{ color: 'black' }} href="/programdashboard">Programs Dashboard</a>
+                                <div className="dropdown-divider"></div>
+                                <a className="dropdown-item page-scroll" style={{ color: 'black' }} href="/mediadashboard">Media Dashboard</a>
+                                <div className="dropdown-divider"></div>
                             </div></li> : <></>}
                         {/* </li> */}
                         <li>
