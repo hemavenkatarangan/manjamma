@@ -8,6 +8,7 @@ const program = require('./app/routers/program.route');
 const role = require('./app/routers/role.route');
 const userrole = require('./app/routers/user_role.route');
 const audit =  require('./app/routers/audit.route');
+const mediamanagement =  require('./app/routers/media_management.route');
 const dotenv = require("dotenv");
 
 const auth = require('./app/helpers/authHelper')();
@@ -51,17 +52,15 @@ app.use('/roles', role);
 app.use('/audits', audit);
 app.use('/programs', program);
 app.use('/userroles', userrole);
-// define a simple route
-//app.get("*", (req, res) => {
-    //res.sendFile(path.join(__dirname + "/client/build/index.html"));
-   // });
+app.use('/mediamanagement', mediamanagement);
+
 
 app.get('/', (req, res) => {
     res.json({"message": "Welcome to BYVK WebSite application"});
 });
 
   
-//   const port = process.env.PORT || 5000;
+
 
 // listen for requests
 app.listen(port, () => {
