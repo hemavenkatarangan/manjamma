@@ -75,7 +75,7 @@ function LandingCoursesCalender() {
 
 
     const getFormatedDate = (date) => {
-        return moment(date).format('DD-MMM-YYYY');
+        return moment(date).format('DD-MMM');
     }
 
     const handleCourseReg = (id) => {
@@ -97,8 +97,8 @@ function LandingCoursesCalender() {
                         {cData.map((data, index) => {
                             return <><div className="row">
                                 <div className="col-lg-4" style={{textAlign: 'center'}}>
-                                    <h5 style={{fontFamily:'Poppins',fontSize:'16px'}}>{getFormatedDate(data.registration_start_date)}</h5>
-                                    <p style={{fontFamily:'Poppins',fontSize:'16px'}}>{getFormatedDate(data.registration_end_date)}</p>
+                                    <h5 style={{fontFamily:'Poppins',fontSize:'16px'}}>{getFormatedDate(data.registration_start_date)} {'to'} {getFormatedDate(data.registration_end_date)}</h5>
+                                    {/* <p style={{fontFamily:'Poppins',fontSize:'16px'}}>{getFormatedDate(data.registration_end_date)}</p> */}
                                 </div>
                                 <div className="col-lg-4">
                                     <h4 style={{fontFamily:'Poppins',fontSize:'16px', textAlign: 'center'}}>{data.name}</h4>
@@ -107,7 +107,7 @@ function LandingCoursesCalender() {
                                 <div className="col-lg-4" style={{textAlign:'center'}}>
                                     <div className="" style={{ marginTop: '0px' }}>
                                         <Button type="primary" style={{ fontFamily:'Poppins',width: '50%', background: '#f3cd74', color: 'black', borderRadius: '18px'}}>
-                                            <a href={data.link}>Learn More</a>
+                                            <a href={"../course/" + data.course}>Learn More</a>
                                         </Button>
                                     </div>
                                 </div>
