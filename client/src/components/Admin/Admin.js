@@ -38,7 +38,8 @@ function Admin() {
         carosal_images: '',
         course_contents: '',
     })
-
+    const [admins, setAdmins] = useState(['jyoti.byvk@gmail.com', 'hema.s.kasturi@gmail.com', 'divakarvishwamithra@gmail.com'])
+    const [adminAuth, setAdminAuth] = useState(false)
     const [boolVal, setBoolVal] = useState(false)
 
     const showModal = () => {
@@ -76,10 +77,20 @@ const  modules  = {
         } else {
             setAuthenticated(false)
         }
+
+        if (admins.includes(user.user.name)) {
+            setAdminAuth(true)
+        } else {
+            setAdminAuth(false)
+        }     
     })
 
     useEffect(() => {
-        getCoursesData()
+        if(adminAuth === false) {
+            window.location.href = "/home"
+        } else {
+            getCoursesData()
+        }
     }, [])
 
     const columns = [

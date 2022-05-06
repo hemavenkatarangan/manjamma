@@ -68,8 +68,8 @@ UserSchema.methods = {
             const payload = {
                 id: this._id,
                 name: this.email_id, 
-                role: this.role               
-
+                role: this.role,
+                username: this.first_name,    
             };
 
             const  token =  jwt.sign(payload, keys.secretOrKey,  {

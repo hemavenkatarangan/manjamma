@@ -108,11 +108,11 @@ function Nav() {
                             </div></li> : <></>}
                         {/* </li> */}
                         <li>
-                            {isAuthenticated ? <div>
+                            {isAuthenticated ? <> <div>
                                 <span className="nav-item">
                                     <a className="btn-solid-sm page-scroll" onClick={(e) => logOutUserFromPanel(e)}>Logout</a>
                                 </span>
-                            </div> : <div>
+                            </div> </>: <div>
                                 <span className="nav-item">
                                     <a className="btn-solid-sm page-scroll" href="/register">Sign Up</a>
                                 </span>
