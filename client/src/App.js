@@ -33,6 +33,7 @@ import GenericCourses from "./components/Courses/GenericCourse";
 import CourseDashboard from "./components/Admin/CourseDashboard";
 import ProgramDashboard from "./components/Admin/ProgramDashboard";
 import ImagesDashboard from "./components/Admin/ImagesDashboard";
+import CreateProgram from "./components/Admin/CreateProgram";
 
 if (localStorage.jwtToken) {
   const token = localStorage.jwtToken;
@@ -41,7 +42,7 @@ if (localStorage.jwtToken) {
   const userData = localStorage.userData;
   console.log(userData);
   store.dispatch(setCurrentUser(decoded));
-  store.dispatch(setUserData(userData));
+  store.dispatch(setUserData(JSON.parse(userData)));
   const currentTime = Date.now() / 1000; // to get in milliseconds
   if (decoded.exp < currentTime) {
     store.dispatch(logoutUser());
@@ -67,8 +68,10 @@ function App() {
           <Route exact path="/gallery" component={Gallery} />
           <Route exact path="/events/:id" component={DisplayEvents} />
           <Route exact path="/yogam" component={YogaM} />
-          <Route exact path="/courseDashboard" component={CourseDashboard} />
+          <Route exact path="/coursedashboard" component={CourseDashboard} />
           <Route exact path="/programdashboard" component={ProgramDashboard} />
+          <Route exact path="/createprogram" component={CreateProgram} />
+          <Route exact path="/createprogram/:id" component={CreateProgram} />
           <Route exact path="/imagesdashboard" component={ImagesDashboard} />
           <Route exact path="/course/:id" component={GenericCourses} />
           <Route exact path="/ttc" component={TTC} />

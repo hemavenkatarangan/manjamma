@@ -18,12 +18,6 @@ function Nav() {
         } else {
             setAuthenticated(false)
         }
-
-        if (admins.includes(user.user.name)) {
-            setAdminAuth(true)
-        } else {
-            setAdminAuth(false)
-        }
     })
 
     useEffect(() => {
@@ -110,12 +104,12 @@ function Nav() {
                             <a className="nav-link page-scroll" style={{ color: 'black' }} href="/contactus">Contact Us</a>
                         </li>
                         {/* <li  class="nav-item dropdown"> */}
-                        {isAuthenticated && adminAuth ? <li  class="nav-item dropdown">
+                        {isAuthenticated && user.userData.roles[0] === 'ADMIN' ? <li  class="nav-item dropdown">
                             <a class="nav-link" href="#" id="dropdown01" style={{ color: 'black' }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/admin">Course Dashboard</a>
+                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/coursedashboard">Course Dashboard</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/">Programs Dashboard</a>
+                                <a class="dropdown-item page-scroll" style={{ color: 'black' }} href="/programdashboard">Programs Dashboard</a>
                                 <div class="dropdown-divider"></div>
                             </div></li> : <></>}
                         {/* </li> */}

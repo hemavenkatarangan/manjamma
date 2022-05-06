@@ -9,13 +9,13 @@ const headers = {
 };
 
 export const registerUser = (userData, history) => dispatch => {
-  debugger
+  
   axios
     .post("users/register", userData)
     .then(res => {
       console.log("==post register message==")
       console.log(res)
-      debugger
+      
       if (res.data.status_code != "200") {
         alert(res.data.result[0].message);
         return;
@@ -34,7 +34,7 @@ export const registerUser = (userData, history) => dispatch => {
         axios
           .post("/userroles/", user_role)
           .then(res => {
-            debugger
+            
             //const { token } = res.data.token;
             history.push("/login")
           })
@@ -62,11 +62,11 @@ export const registerUser = (userData, history) => dispatch => {
 };
 
 export const loginUser = userData => dispatch => {
-  debugger
+  
   axios
     .post("/users/login", userData)
     .then(res => {
-      debugger
+      
       //const { token } = res.data.token;
       if (res.data.status_code != "200") {
         alert("Sorry! Invalid credential. Please try again..")
@@ -75,7 +75,7 @@ export const loginUser = userData => dispatch => {
       else {
         let token = res.data.token;
         localStorage.setItem("jwtToken", token);
-        localStorage.setItem("userData", res.data.result);
+        localStorage.setItem("userData", JSON.stringify(res.data.result));
         setAuthToken(token);
         const decoded = jwt_decode(token);
         dispatch(setCurrentUser(decoded));

@@ -49,32 +49,32 @@ function Register(props) {
                     <div className="text-box mt-5 mb-5">
                         <p className="mb-4" style={{ fontFamily: 'Poppins'}}>Fill out the form below to sign up for the service. Already signed up? Then just <a className="blue" href="/login">Log In</a></p>
                             <div className="form-group">
-                                <input type="text" className="form-control-input" id="first_name" onChange={(e) => handleChage(e)} required />
+                                <input type="text" className="form-control-input notEmpty" id="first_name" onChange={(e) => handleChage(e)} required />
                                 <label className="label-control" htmlFor="first_name">First Name</label>
                                 <p style={errStyle}>{errors.first_name}</p>
                             </div>
                             <div className="form-group">
-                                <input type="text" className="form-control-input" id="last_name" onChange={(e) => handleChage(e)} required />
+                                <input type="text" className="form-control-input notEmpty" id="last_name" onChange={(e) => handleChage(e)} required />
                                 <label className="label-control" htmlFor="last_name">Last Name</label>
                                 <p style={errStyle}>{errors.last_name}</p>
                             </div>
                             <div className="form-group">
-                                <input type="email" className="form-control-input" id="email_id" onChange={(e) => handleChage(e)} required />
+                                <input type="email" className="form-control-input notEmpty" id="email_id" onChange={(e) => handleChage(e)} required />
                                 <label className="label-control" htmlFor="email_id">Email</label>
                                 <p style={errStyle}>{errors.email_id}</p>
                             </div>
                             <div className="form-group">
-                                <input type="password" className="form-control-input" id="password" onChange={(e) => handleChage(e)} required />
+                                <input type="password" className="form-control-input notEmpty" id="password" onChange={(e) => handleChage(e)} required />
                                 <label className="label-control" htmlFor="password">Password</label>
                                 <p style={errStyle}>{errors.password}</p>
                             </div>
                             <div className="form-group">
-                                <input type="password" className="form-control-input" id="confirm_password" onChange={(e) => handleChage(e)} required />
+                                <input type="password" className="form-control-input notEmpty" id="confirm_password" onChange={(e) => handleChage(e)} required />
                                 <label className="label-control" htmlFor="confirm_password">Confirm Password</label>
                                 <p style={errStyle}>{errors.confirm_password}</p>
                             </div>
                              <div className="form-group">
-                                <input type="number" className="form-control-input" id="phone_num" onChange={(e) => handleChage(e)} required />
+                                <input type="number" className="form-control-input notEmpty" id="phone_num" onChange={(e) => handleChage(e)} required />
                                 <label className="label-control" htmlFor="phone_num">Mobile</label>
                                 <p style={errStyle}>{errors.phone_num}</p>
                             </div> 

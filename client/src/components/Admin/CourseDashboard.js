@@ -15,9 +15,8 @@ const errStyle = {
 
 function CourseDashboard() {
     const user = useSelector(state => state.auth)
-    const hello = useSelector(state => state)
-    const [isModalVisible, setIsModalVisible] = useState(false);
     const [isAuthenticated, setAuthenticated] = useState(false)
+    const [isModalVisible, setIsModalVisible] = useState(false);
     const [course, setcourse] = useState({
         course_id: '',
         course_name: '',
@@ -72,26 +71,21 @@ const  modules  = {
 
 
     useEffect(() => {
+        if (user.userData.roles[0] !== 'ADMIN') {
+            window.location.href = '/home'
+            return
+        }
         if (user.isAuthenticated) {
             setAuthenticated(true)
         } else {
             setAuthenticated(false)
-        }
-
-        // if (admins.includes(user.user.name)) {
-        //     setAdminAuth(true)
-        // } else {
-        //     setAdminAuth(false)
-        // }     
-    })
-
-    useEffect(() => {
-    //     if(adminAuth === false) {
-    //         window.location.href = "/home"
-    //     } else {
-            getCoursesData()
-        // }
+        } 
+        getCoursesData()
     }, [])
+
+    // useEffect(() => {
+            
+    // }, [])
 
     const columns = [
         {
@@ -187,28 +181,35 @@ const  modules  = {
     const submitCourseData = () => {
 
         // validations here
-
+        let valid = true
         if (course.course_name.length <= 3) {
+            valid = false
             setErrObj(errObj => ({ ...errObj, course_name: 'Course name should be minimum 3 letters' }));
         }
 
         if (course.course_title.length <= 3) {
+            valid = false
             setErrObj(errObj => ({ ...errObj, course_title: 'Course title should be minimum 3 letters' }));
         }
 
         if (course.course_description.length <= 3) {
+            valid = false
             setErrObj(errObj => ({ ...errObj, course_description: 'Course description should be minimum 15 letters' }));
         }
 
         if (course.course_thumbnail.length <= 0) {
+            valid = false
             setErrObj(errObj => ({ ...errObj, course_thumbnail: 'Course thumbnail should have 1 pic' }));
         }
 
         if (course.carosal_images.length <= 0) {
+            valid = false
             setErrObj(errObj => ({ ...errObj, carosal_images: 'Course carosal images should have 1 pic' }));
         }
 
-        submitWithImages()
+        if(valid) {
+            submitWithImages()
+        }
     }
 
     const submitWithImages = (data) => {

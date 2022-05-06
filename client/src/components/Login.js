@@ -52,12 +52,12 @@ function Login(props) {
                     <div className="text-box mt-5 mb-5">
                         {/* <p className="mb-4" style={{ fontFamily: 'Poppins'}}>You don't have a user id/password? Then please <a className="blue" href="/register">Sign Up</a></p> */}
                             <div className="form-group">
-                                <input type="email" onChange={(e) => handleChage(e)} className="form-control-input" id="userName" />
+                                <input type="email" onChange={(e) => handleChage(e)} className="form-control-input notEmpty" id="userName" />
                                 <label className="label-control" htmlFor="email">Email</label>
                                 <p style={errStyle}>{errors.email}</p>
                             </div>
                             <div className="form-group">
-                                <input type="password" onChange={(e) => handleChage(e)} className="form-control-input" id="password" />
+                                <input type="password" onChange={(e) => handleChage(e)} className="form-control-input notEmpty" id="password" />
                                 <label className="label-control" htmlFor="password">Password</label>
                                 <p style={errStyle}>{errors.password}</p>
                             </div>

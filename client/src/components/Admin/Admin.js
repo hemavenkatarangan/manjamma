@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
 
 
 const data = [
@@ -18,9 +19,14 @@ const data = [
 ]
 
 function Admin() {
+    const user = useSelector(state => state.auth)
+    const [isAuthenticated, setAuthenticated] = useState(false)
 
     useEffect(() => {
-
+        if (user.userData.roles[0] !== 'ADMIN') {
+            window.location.href = '/home'
+            return
+        }
     }, [])
 
     return (

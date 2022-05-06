@@ -8,8 +8,8 @@ var ProgramSchema = new Schema(
         description:{type: String},
         program_fee: { type: Number },
         course: { type: Schema.Types.ObjectId, ref: 'Course' },
-        program_type : { type: String, enum: ['Online', 'Offline', 'Hybrid']},
-        status: { type: String, enum: ['Not Started', 'Open', 'InProgress', 'Cancelled', 'Completed', 'Closed'], default: 'Not Started' },
+        program_type : { type: String, enum: ['ONLINE', 'OFFLINE', 'HYBRID']},
+        status: { type: String, enum: ['NOT_STARTED', 'STARTED', 'COMPLETED'], default: 'NOT_STARTED' },
         min_age: { type: Number },
         max_age: { type: Number },
         registration_start_date: { type: Date },
@@ -22,7 +22,6 @@ var ProgramSchema = new Schema(
         received_application_count:{type : Number},
         registration_acceptance_count : {type: Number},
         close_registration:{type: Boolean, default: false}
-        
     },
     {
         timestamps: true
