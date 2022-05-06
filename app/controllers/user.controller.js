@@ -41,15 +41,7 @@ module.exports = {
             if (fact.status === "200") {
                 response.status_code = "200";
                 response.status_message = "user logged in successfully";
-                response.result = user;
-                 try{
-                    let userrole = await user_roleController.getUserRoleMethod(user._id);   
-                    response.userrole = userrole;
-                 }
-                 catch (err){
-
-                 }
-
+                response.result = user;           
                 response.token = fact.token;
                 res.status(200).json(response);
             }
@@ -58,7 +50,7 @@ module.exports = {
 
                 response.status_code = "404";
                 response.status_message = "Password Incorrect";
-                response.result = user;
+                response.result = null;
                 response.token = fact.token;
                 res.status(200).json(response);
             }
@@ -103,8 +95,11 @@ module.exports = {
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
                 email_id: req.body.email_id,
-                phoneNumber: req.body.phoneNumber,
-                password: req.body.password
+                phone_num: req.body.phone_num,
+                password: req.body.password,
+                dob: req.body.dob,
+                is_agreed_terms:req.body.is_agreed_terms,
+                roles:['USER']
             });
 
             console.log("user creation completed");
@@ -126,12 +121,14 @@ module.exports = {
             if (error.name === 'MongoError' && error.code === 11000) {
 
                 details = getError('email', 'already exist').details;
-                response.result = details;
+                response.result = null;
+                response.err = details;
                 return res.status(400).json(response);
             }
             else {
                 details = getError(error.name, error.message).details;
-                response.result = details;
+                response.result = null;
+                response.err = details;
                 res.status(400).json(response);
             }
 
@@ -207,12 +204,8 @@ module.exports = {
 
     getCompleteUserDetails: async (req, res) => {
         const { userId } = req.value.params;
-        const user = await User.findById(userId).populate({
-            path: 'events',
-            populate: {
-                path: 'event'
-            }
-        });
+        const user = await User.findById(userId);
+        console.log(user);
 
         if (!user) {
             return res.status(404).send({
@@ -220,7 +213,7 @@ module.exports = {
             });
         }
         // const userEvents = user.events;       
-        res.status(200).json(user.events);
+        res.status(200).json(user);
     },
 
     getRegisteredEvent: async (req, res) => {

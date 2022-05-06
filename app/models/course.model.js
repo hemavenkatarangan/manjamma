@@ -9,8 +9,7 @@ var CourseSchema = new Schema(
         course_description:{type: String}, 
         course_thumbnail : {type: String},
         carosal_images : [{type: String}], 
-        contents : {type: String},
-        course_documents : [{ type: Schema.Types.ObjectId, ref: 'CourseDocument'}], 
+        contents : {type: String},      
         isActive :{type: Boolean, default : true}
     },
     {
