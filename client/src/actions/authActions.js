@@ -2,7 +2,7 @@ import axios from "axios";
 import setAuthToken from "../utils/setAuthToken";
 import jwt_decode from "jwt-decode";
 
-import { GET_ERRORS, SET_CURRENT_USER, USER_LOADING, SET_CART_DATA } from "./types";
+import { GET_ERRORS, SET_CURRENT_USER, USER_LOADING, SET_CART_DATA, SET_USER_DATA } from "./types";
 
 const headers = {
   headers: { Token: localStorage.getItem("jwtToken") },
@@ -75,9 +75,11 @@ export const loginUser = userData => dispatch => {
       else {
         let token = res.data.token;
         localStorage.setItem("jwtToken", token);
+        localStorage.setItem("userData", res.data.result);
         setAuthToken(token);
         const decoded = jwt_decode(token);
         dispatch(setCurrentUser(decoded));
+        dispatch(setUserData(res.data.result));
         callAuditApi(userData)
       }
     })
@@ -120,6 +122,12 @@ export const Me = () => dispatch => {
     .catch(err => console.log(err))
 }
 
+export const setUserData = data => {
+  return {
+    type: SET_USER_DATA,
+    payload: data
+  }
+}
 
 export const setCurrentUser = decoded => {
   return {
@@ -145,8 +153,10 @@ export const setUserLoading = () => {
 
 export const logoutUser = () => dispatch => {
   localStorage.removeItem("jwtToken");
+  localStorage.removeItem("userData");
   setAuthToken(false);
   dispatch(setCurrentUser({}));
+  dispatch(setUserData({}));
 };
 
 export const getCartItems = (userId) => dispatch => {

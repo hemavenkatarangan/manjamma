@@ -24,9 +24,11 @@ function Nav() {
         } else {
             setAdminAuth(false)
         }
-
-        getCoursesData()
     })
+
+    useEffect(() => {
+        getCoursesData()
+    }, [])
 
     const getCoursesData = () => {
         axios.get('/courses')

@@ -3,7 +3,7 @@ import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { Provider } from "react-redux";
 import store from "./store";
-import { setCurrentUser, logoutUser } from "./actions/authActions";
+import { setCurrentUser, logoutUser, setUserData } from "./actions/authActions";
 import PrivateRoute from "./privateroute/PrivateRoute";
 import Home from './components/Home';
 import Login from './components/Login';
@@ -38,7 +38,10 @@ if (localStorage.jwtToken) {
   const token = localStorage.jwtToken;
   setAuthToken(token);
   const decoded = jwt_decode(token);
+  const userData = localStorage.userData;
+  console.log(userData);
   store.dispatch(setCurrentUser(decoded));
+  store.dispatch(setUserData(userData));
   const currentTime = Date.now() / 1000; // to get in milliseconds
   if (decoded.exp < currentTime) {
     store.dispatch(logoutUser());

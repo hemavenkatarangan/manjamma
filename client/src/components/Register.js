@@ -15,7 +15,7 @@ function Register(props) {
         last_name:'',
         password:'',
         confirm_password:'',
-        phoneNumber:'',
+        phone_num:'',
         // userRole:'CUSTOMER'
     })
     const errors = useSelector(state => state.errors)
@@ -74,9 +74,9 @@ function Register(props) {
                                 <p style={errStyle}>{errors.confirm_password}</p>
                             </div>
                              <div className="form-group">
-                                <input type="number" className="form-control-input" id="phoneNumber" onChange={(e) => handleChage(e)} required />
-                                <label className="label-control" htmlFor="phoneNumber">Mobile</label>
-                                <p style={errStyle}>{errors.phoneNumber}</p>
+                                <input type="number" className="form-control-input" id="phone_num" onChange={(e) => handleChage(e)} required />
+                                <label className="label-control" htmlFor="phone_num">Mobile</label>
+                                <p style={errStyle}>{errors.phone_num}</p>
                             </div> 
                             <div className="form-group checkbox" style={{ fontFamily: 'Poppins', textAlign: 'center' }}>
                                 <input type="checkbox" id="terms" value="Agreed-to-Terms" required />Would you like you receive emails from BYVK? 
