@@ -129,21 +129,15 @@ function MediaDashboard() {
                     <div className="row">
                         <div className="col-xl-10 offset-xl-1" >
                             <div className="row">
-
-                                {/* <div className="form-group">
-                                    <input type="textarea" className="form-control-input notEmpty" id="userStories" onChange={(e) => onChange(e)} required />
-                                    <label className="label-control" htmlFor="userStories">User Stories</label>
-                                    <p style={errStyle}></p>
-                                </div> */}
                                 <div className="col-xl-12">
-                                    <p>User Stories</p> <strong><p style={errStyle}></p></strong>
+                                    <p>User Stories</p> <strong style={{color:'red'}}>please paste the links with comma space separated (, )</strong>
                                     <textarea rows="5" cols="100" style={{width:'100%'}} value={userStories} onChange={(e) => onChange(e)} required > </textarea>
                                 </div>
                                     <button type="submit" className="form-control-submit-button" onClick={(e) => submitUserStories(e, 'USER_STORIES')}>
                                         Submit User Stories
                                     </button>
                                 <div className="col-xl-12">
-                                    <p>Sri'M Teachings</p> <strong><p style={errStyle}></p></strong>
+                                    <p>Sri'M Teachings</p> <strong style={{color:'red'}}>please paste the links with comma space separated (, )</strong>
                                     <textarea rows="5" cols="100" style={{width:'100%'}} value={sriMTeachings} onChange={(e) => onSriMTeachingsChange(e)} required > </textarea>
                                 </div>
                                 {/* <div> */}
