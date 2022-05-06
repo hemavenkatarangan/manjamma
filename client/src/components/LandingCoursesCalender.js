@@ -1,4 +1,7 @@
 import { Button } from 'antd'
+import { useEffect, useState } from 'react'
+import moment from 'moment';
+import axios from 'axios'
 
 const cData = [
 	{
@@ -53,6 +56,28 @@ const cData = [
 
 function LandingCoursesCalender() {
 
+    const [cData, setcData] = useState([])
+
+    useEffect(() => {
+        getProgramsData()
+    },[])
+
+    const getProgramsData = () => {
+        axios.get('/programs/')
+        .then(res => {
+            console.log(res.data.result)
+            setcData(res.data.result)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
+
+
+    const getFormatedDate = (date) => {
+        return moment(date).format('DD-MMM-YYYY');
+    }
+
     const handleCourseReg = (id) => {
         console.log(id)
     }
@@ -72,12 +97,12 @@ function LandingCoursesCalender() {
                         {cData.map((data, index) => {
                             return <><div className="row">
                                 <div className="col-lg-4" style={{textAlign: 'center'}}>
-                                    <h5 style={{fontFamily:'Poppins',fontSize:'16px'}}>{data.date}</h5>
-                                    <p style={{fontFamily:'Poppins',fontSize:'16px'}}>{data.month}</p>
+                                    <h5 style={{fontFamily:'Poppins',fontSize:'16px'}}>{getFormatedDate(data.registration_start_date)}</h5>
+                                    <p style={{fontFamily:'Poppins',fontSize:'16px'}}>{getFormatedDate(data.registration_end_date)}</p>
                                 </div>
                                 <div className="col-lg-4">
-                                    <h4 style={{fontFamily:'Poppins',fontSize:'16px', textAlign: 'center'}}>{data.cName}</h4>
-                                    <p style={{fontFamily:'Poppins',fontSize:'16px'}}>{data.cDescription}</p>
+                                    <h4 style={{fontFamily:'Poppins',fontSize:'16px', textAlign: 'center'}}>{data.name}</h4>
+                                    <p style={{fontFamily:'Poppins',fontSize:'16px'}}>{data.description}</p>
                                 </div>
                                 <div className="col-lg-4" style={{textAlign:'center'}}>
                                     <div className="" style={{ marginTop: '0px' }}>
