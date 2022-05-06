@@ -167,10 +167,10 @@ function CreateProgram(props) {
             setErrObj(errObj => ({ ...errObj, program_type: 'Program type should select 1' }));
         }
 
-        if (program.status.length <= 0) {
-            valid = false
-            setErrObj(errObj => ({ ...errObj, status: 'Program status should select 1' }));
-        }
+        // if (program.status.length <= 0) {
+        //     valid = false
+        //     setErrObj(errObj => ({ ...errObj, status: 'Program status should select 1' }));
+        // }
 
         if (program.min_age.length <= 0) {
             valid = false
@@ -180,6 +180,16 @@ function CreateProgram(props) {
         if (program.max_age.length <= 0) {
             valid = false
             setErrObj(errObj => ({ ...errObj, max_age: 'Maximum age mandatory' }));
+        }
+
+        if (program.program_start_date.length <= 0) {
+            valid = false
+            setErrObj(errObj => ({ ...errObj, program_start_date: 'Program start date should be mandatory' }));
+        }
+
+        if (program.program_end_date.length <= 0) {
+            valid = false
+            setErrObj(errObj => ({ ...errObj, program_end_date: 'Program end date should be mandatory' }));
         }
 
         if (program.registration_start_date.length <= 0) {
@@ -192,20 +202,10 @@ function CreateProgram(props) {
             setErrObj(errObj => ({ ...errObj, registration_end_date: 'Registration end date should be mandatory' }));
         }
 
-        if (program.publish_date.length <= 0) {
-            valid = false
-            setErrObj(errObj => ({ ...errObj, publish_date: 'Publish date should be mandatory' }));
-        }
-
-        if (program.program_start_date.length <= 0) {
-            valid = false
-            setErrObj(errObj => ({ ...errObj, program_start_date: 'Program start date should be mandatory' }));
-        }
-
-        if (program.program_end_date.length <= 0) {
-            valid = false
-            setErrObj(errObj => ({ ...errObj, program_end_date: 'Program end date should be mandatory' }));
-        }
+        // if (program.publish_date.length <= 0) {
+        //     valid = false
+        //     setErrObj(errObj => ({ ...errObj, publish_date: 'Publish date should be mandatory' }));
+        // }
 
         if (program.program_max_size.length <= 0) {
             valid = false
@@ -289,12 +289,13 @@ function CreateProgram(props) {
                             </div>
                             <div className="form-group">
                                 <input type="number" className="form-control-input notEmpty" value={program.program_fee} id="program_fee" onChange={(e) => onProgramChange(e)} required />
-                                <label className="label-control" htmlFor="program_fee">Program Fee</label>
+                                <label className="label-control" htmlFor="program_fee">Program Fee (In Rupees)</label>
                                 <p style={errStyle}>{errObj.program_fee}</p>
                             </div>
                             <div className="form-group">
                                 {/* <input type="" className="form-control-input notEmpty" value={program.course} id="course" onChange={(e) => onProgramChange(e)} required /> */}
                                 <select className="form-control-input notEmpty" value={program.course} id="course" onChange={(e) => onProgramChange(e)} required>
+                                    <option value=''>Select</option>
                                     {courseData.map((d, index) => {
                                         if (d.isActive) {
                                             return <option value={d._id} key={index}>{d.course_name}</option>
@@ -307,6 +308,7 @@ function CreateProgram(props) {
                             <div className="form-group">
                                 {/* <input type="number" className="form-control-input notEmpty" value={program.program_type} id="program_type" onChange={(e) => onProgramChange(e)} required /> */}
                                 <select className="form-control-input notEmpty" id="program_type" calue={program.program_type} onChange={(e) => onProgramChange(e)} required>
+                                <option value=''>Select</option>
                                     {programType.map((d, index) => {
                                         return <option value={d.pValue} key={index}>{d.pName}</option>
                                     })}
@@ -314,16 +316,14 @@ function CreateProgram(props) {
                                 <label className="label-control" htmlFor="program_type">Program Type</label>
                                 <p style={errStyle}>{errObj.program_type}</p>
                             </div>
-                            <div className="form-group">
-                                {/* <input type="number" className="form-control-input notEmpty" value={program.program_type} id="program_type" onChange={(e) => onProgramChange(e)} required /> */}
-                                <select className="form-control-input notEmpty" id="status" value={program.status} onChange={(e) => onProgramChange(e)} required>
+                            {/* <div className="form-group"> <select className="form-control-input notEmpty" id="status" value={program.status} onChange={(e) => onProgramChange(e)} required>
                                     {programStatus.map((d, index) => {
                                         return <option value={d.pValue} key={index}>{d.pName}</option>
                                     })}
                                 </select>
                                 <label className="label-control" htmlFor="status">Program Status</label>
                                 <p style={errStyle}>{errObj.status}</p>
-                            </div>
+                            </div> */}
                             <div className="form-group">
                                 <input type="number" className="form-control-input notEmpty" value={program.min_age} id="min_age" onChange={(e) => onProgramChange(e)} required />
                                 <label className="label-control" htmlFor="min_age">Minimum Age</label>
@@ -335,21 +335,6 @@ function CreateProgram(props) {
                                 <p style={errStyle}>{errObj.max_age}</p>
                             </div>
                             <div className="form-group">
-                                <input type="date" className="form-control-input notEmpty" value={program.registration_start_date} id="registration_start_date" onChange={(e) => onProgramChange(e)} required />
-                                <label className="label-control" htmlFor="registration_start_date">Registration Start Date</label>
-                                <p style={errStyle}>{errObj.registration_start_date}</p>
-                            </div>
-                            <div className="form-group">
-                                <input type="date" className="form-control-input notEmpty" value={program.registration_end_date} id="registration_end_date" onChange={(e) => onProgramChange(e)} required />
-                                <label className="label-control" htmlFor="registration_end_date">Registration End Date</label>
-                                <p style={errStyle}>{errObj.registration_end_date}</p>
-                            </div>
-                            <div className="form-group">
-                                <input type="date" className="form-control-input notEmpty" value={program.publish_date} id="publish_date" onChange={(e) => onProgramChange(e)} required />
-                                <label className="label-control" htmlFor="publish_date">Publish Date</label>
-                                <p style={errStyle}>{errObj.publish_date}</p>
-                            </div>
-                            <div className="form-group">
                                 <input type="date" className="form-control-input notEmpty" value={program.program_start_date} id="program_start_date" onChange={(e) => onProgramChange(e)} required />
                                 <label className="label-control" htmlFor="program_start_date">Program Start Date</label>
                                 <p style={errStyle}>{errObj.program_start_date}</p>
@@ -359,6 +344,21 @@ function CreateProgram(props) {
                                 <label className="label-control" htmlFor="program_end_date">Program End Date</label>
                                 <p style={errStyle}>{errObj.program_end_date}</p>
                             </div>
+                            <div className="form-group">
+                                <input type="date" className="form-control-input notEmpty" value={program.registration_start_date} id="registration_start_date" onChange={(e) => onProgramChange(e)} required />
+                                <label className="label-control" htmlFor="registration_start_date">Registration Start Date</label>
+                                <p style={errStyle}>{errObj.registration_start_date}</p>
+                            </div>
+                            <div className="form-group">
+                                <input type="date" className="form-control-input notEmpty" value={program.registration_end_date} id="registration_end_date" onChange={(e) => onProgramChange(e)} required />
+                                <label className="label-control" htmlFor="registration_end_date">Registration End Date</label>
+                                <p style={errStyle}>{errObj.registration_end_date}</p>
+                            </div>
+                            {/* <div className="form-group">
+                                <input type="date" className="form-control-input notEmpty" value={program.publish_date} id="publish_date" onChange={(e) => onProgramChange(e)} required />
+                                <label className="label-control" htmlFor="publish_date">Publish Date</label>
+                                <p style={errStyle}>{errObj.publish_date}</p>
+                            </div> */}
                             <div className="form-group">
                                 <input type="number" className="form-control-input notEmpty" value={program.program_max_size} id="program_max_size" onChange={(e) => onProgramChange(e)} required />
                                 <label className="label-control" htmlFor="program_max_size">Program maximum Size</label>
