@@ -50,7 +50,7 @@ function CreateProgram(props) {
         program_fee: '',
         course: '',
         program_type: '',
-        status: '',
+        status: 'NOT_STARTED',
         min_age: '',
         max_age: '',
         registration_start_date: '',
