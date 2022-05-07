@@ -20,7 +20,19 @@ function Landing() {
 
         axios.post('/mediamanagement/media', obj)
             .then(res => {
-                setImages(res.data.result[0].media_path)
+	            var mediafiles = new Array();
+	            
+	            for(var i = 0;i<res.data.result.length;i++)
+	            {
+		            var images = res.data.result[i].media_path;
+		            for(var j = 0;j<images.length;j++)
+		            {
+						mediafiles.push(images[j]);
+						console.log(images[j]);
+					}
+				}
+	            setImages(mediafiles)
+                //setImages(res.data.result[0].media_path)
             })
             .catch(err => {
                 console.log(err)
@@ -43,38 +55,7 @@ function Landing() {
                                     </div>
                                 })}
 
-                                {/* <div className="swiper-slide">
-                                <a href="/about#president">
-                                <img src="../images/slider/3.png" className="img-fluid" alt='Byvk' />
-                                </a>
-                            </div>
-                             <div className="swiper-slide">
-                                <a href="/about#president">
-                                <img src="../images/slider/Picture3-CJI.png" className="img-fluid" alt='Byvk' />
-                                </a>
-                            </div>
-                          <div className="swiper-slide">
-                                <a href="/#courses">
-                                <img src="../images/slider/Picture4-OurCourses.png" className="img-fluid" alt='OurCourses' />
-                                </a>
-                            </div>
-                            <div className="swiper-slide">
-                                <a href="/ttc">
-                                <img src="../images/slider/TTC-Picture3.png" className="img-fluid" alt='Byvk' />
-                                </a>
-                            </div>
-                            <div className="swiper-slide">
-                                <a href='/abhayam'>
-                                <img src="../images/slider/Picture4-AbhayaM.png" className="img-fluid" alt='Byvk' />
-                                </a>
-                            </div>
-                            <div className="swiper-slide">
-                                <a href='/sakhyam'>
-                                <img src="../images/slider/SakhyaM.jpeg" className="img-fluid" alt='Byvk' />
-                                </a>
-                            </div> */}
-
-
+                              
 
                             </div>
                             <div className="swiper-button-next"></div>
