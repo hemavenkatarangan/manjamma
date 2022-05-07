@@ -11,7 +11,20 @@ function SriMTeachings() {
 
         axios.post('/mediamanagement/media', obj)
             .then(res => {
-                setSrimTeachings(res.data.result[0].media_path)
+	
+				var mediafiles = new Array();
+	            
+	            for(var i = 0;i<res.data.result.length;i++)
+	            {
+		            var images = res.data.result[i].media_path;
+		            for(var j = 0;j<images.length;j++)
+		            {
+						mediafiles.push(images[j]);
+						console.log(images[j]);
+					}
+				}
+	            setSrimTeachings(mediafiles)
+               // setSrimTeachings(res.data.result[0].media_path)
             })
             .catch(err => {
                 console.log(err)
@@ -38,7 +51,7 @@ function SriMTeachings() {
                                                     <div className="card">
                                                         <div className="card-body">
                                                             <div style={{ border: '1px solid black', height: '152px', width: '214px' }}>
-                                                                <iframe className="youtube-player" src={data} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                                                <iframe className="youtube-player" src={data} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -47,42 +60,7 @@ function SriMTeachings() {
                                             })
                                         }
 
-                                        {/* <div className="swiper-slide">
-                                            <div className="card">
-                                            <div className="card-body">
-                                                    <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe className="youtube-player" src="https://www.youtube.com/embed/Mx-rNCoqKOw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                        <div className="card">
-                                        <div className="card-body">
-                                                    <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe className="youtube-player" src="https://www.youtube.com/embed/lTWWhDXvFdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <div className="card">
-                                            <div className="card-body">
-                                                    <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe className="youtube-player" src="https://www.youtube.com/embed/f_VMEB07vZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <div className="card">
-                                            <div className="card-body">
-                                                    <div style={{border: '1px solid black', height: '152px', width: '214px'}}>
-                                                    <iframe className="youtube-player" src="https://www.youtube.com/embed/RfNSU15D80U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> */}
+                                       
 
                                     </div>
                                     <div className="swiper-button-next"></div>
