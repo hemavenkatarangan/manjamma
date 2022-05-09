@@ -159,7 +159,7 @@ function CreateProgram(props) {
 
         if (program.course.length <= 0) {
             valid = false
-            setErrObj(errObj => ({ ...errObj, course: 'Course should select 1' }));
+            setErrObj(errObj => ({ ...errObj, course: 'Course should be Selected' }));
         }
 
         if (program.program_type.length <= 0) {
@@ -167,10 +167,7 @@ function CreateProgram(props) {
             setErrObj(errObj => ({ ...errObj, program_type: 'Program type should select 1' }));
         }
 
-        // if (program.status.length <= 0) {
-        //     valid = false
-        //     setErrObj(errObj => ({ ...errObj, status: 'Program status should select 1' }));
-        // }
+        
 
         if (program.min_age.length <= 0) {
             valid = false
@@ -237,8 +234,17 @@ function CreateProgram(props) {
         if (props.match.params.id) {
             axios.patch('/programs/' + props.match.params.id, program)
                 .then(res => {
-                    alert(res.data.status_message)
-                    visitProgramDashboard()
+                   
+                    if(res.data.status_code === "200")
+	        {
+            alert(res.data.status_message)
+           visitProgramDashboard()
+            }
+            else
+            {
+	        alert(res.data.error);
+			}
+                   
                 })
                 .catch(err => {
                     console.log(err)
@@ -246,11 +252,21 @@ function CreateProgram(props) {
         } else {
             axios.post('/programs/', program)
                 .then(res => {
-                    alert(res.data.status_message)
-                    visitProgramDashboard()
+                   
+                    if(res.data.status_code === "200")
+	        {
+            alert(res.data.status_message)
+            visitProgramDashboard()
+            }
+            else
+            {
+	        alert(res.data.error);
+			}
+                   
                 })
                 .catch(err => {
-                    console.log(err)
+						 alert(err.response.data.error)
+                    console.log(err.response.data.error)
                 })
         }
     }

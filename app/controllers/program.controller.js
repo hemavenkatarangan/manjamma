@@ -77,21 +77,72 @@ module.exports = {
         try {
 
             const newProgram = new Program(req.body);
+            console.log(JSON.stringify(req.body))
+            
+            var reg_start_date = req.body.registration_start_date;
+            var reg_end_date = req.body.registration_end_date;
+            var prg_start_date = req.body.program_start_date;
+            var prg_end_date = req.body.program_end_date;
+            
+            var error_msg = "";
+            // Fetch year, month and day of
+            // respective dates
+            const [sy, sm, sd] = prg_start_date.split('-')
+            const [ey, em, ed] = prg_end_date.split('-')
+ 
+            // Constructing dates from given
+            // string date input
+            const startDate = new Date(sy, sm-1, sd)
+            const endDate = new Date(ey, em-1, ed)
+             
+            // Validate start date so that it must
+            // comes before end date
+            if (startDate >= endDate) {
+				error_msg = 'Program Start date  must be before Program End date';
+                throw Error(
+					error_msg)
+				
+            }
+            
+            // validate registration date with program start date
+            const [rsy, rsm, rsd] = reg_start_date.split('-')
+            const [rey, rem, red] = reg_end_date.split('-')
+            
+            const regStartDate = new Date(rsy, rsm-1, rsd)
+            const regEndDate = new Date(rey, rem-1, red)
+            
+            if(regStartDate >= startDate)
+            {
+				error_msg = 'Registration Start date  must be before Program Start date';
+                throw Error(
+					error_msg)
+			}
+			
+			
+            
+             if (regStartDate >= regEndDate) {
+				error_msg = 'Registration Start date  must be before Registration End date';
+                throw Error(
+					error_msg)
+				
+            }
+            
             const program = await newProgram.save();
 
             response.status_code = "200";
-            response.status_message = "Program Created";
+            response.status_message = "Program Created Successfully ";
             response.result = program;
             res.status(200).json(response);
 
         }
 
         catch (err) {
-
+           
             response.status_code = "403";
-            response.errorObj = err;
+            response.error = error_msg;
             response.status_message = "Program could not be created";
             response.result = null;
+            console.log("Error in "+ JSON.stringify(response));
             res.status(403).json(response);
 
         }

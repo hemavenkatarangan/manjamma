@@ -83,11 +83,18 @@ function ProgramDashboard() {
     const deleteProgram = (data) => {
         axios.delete('/programs/' + data._id)
         .then(res => {
+	        if(res.data.status_code === "200")
+	        {
             alert(res.data.status_message)
             getProgramsData()
+            }
+            else
+            {
+	        alert(res.data.error);
+			}
         })
         .catch(err => {
-            console.log(err)
+			console.log("Error"+err)           
         })
     }
 
