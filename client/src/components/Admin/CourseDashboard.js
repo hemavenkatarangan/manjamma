@@ -4,8 +4,14 @@ import { useSelector } from 'react-redux';
 import { Modal, Button, Table, Switch, Tag, } from 'antd';
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons'
 import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+//import 'react-quill/dist/quill.snow.css';
+import '../Quill.css'
 import fileUploadUrl from '../../constants/constants'
+
+const Quill = ReactQuill.Quill;
+var Font = Quill.import("formats/font");
+Font.whitelist = ["Roboto", "Poppins"];
+Quill.register(Font, true);
 
 const errStyle = {
     color: 'red',
@@ -55,7 +61,7 @@ function CourseDashboard() {
 
 const  modules  = {
     toolbar: [
-        [{ font: [] }],
+        [{ font: Font.whitelist  }],
         [{ header: [1, 2, 3, 4, 5, 6, false] }],
         ["bold", "italic", "underline", "strike"],
         [{ color: [] }, { background: [] }],
