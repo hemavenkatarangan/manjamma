@@ -164,7 +164,7 @@ function CreateProgram(props) {
 
         if (program.program_type.length <= 0) {
             valid = false
-            setErrObj(errObj => ({ ...errObj, program_type: 'Program type should select 1' }));
+            setErrObj(errObj => ({ ...errObj, program_type: 'Program type should be Selected' }));
         }
 
         
@@ -174,10 +174,15 @@ function CreateProgram(props) {
             setErrObj(errObj => ({ ...errObj, min_age: 'Minimum age mandatory' }));
         }
 
-        if (program.max_age.length <= 0) {
+        else if (program.max_age.length <= 0) {
             valid = false
             setErrObj(errObj => ({ ...errObj, max_age: 'Maximum age mandatory' }));
         }
+        else if(program.max_age<program.min_age)
+        {
+			valid = false
+			setErrObj(errObj => ({ ...errObj, max_age: 'Maximum age cant be lesser than Minimum age' }));
+		}
 
         if (program.program_start_date.length <= 0) {
             valid = false
