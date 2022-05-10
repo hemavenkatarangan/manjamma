@@ -48,7 +48,7 @@ function LandingCoursesCalender() {
                         {cData.map((data, index) => {
                             return <><div  key = { index } className="row">
                                 <div className="col-lg-4" style={{textAlign: 'center'}}>
-                                    <h5 style={{fontFamily:'Poppins',fontSize:'16px'}}>{getFormatedDate(data.registration_start_date)} {'to'} {getFormatedDate(data.registration_end_date)}</h5>
+                                    <h5 style={{fontFamily:'Poppins',fontSize:'16px'}}>{getFormatedDate(data.program_start_date)} {'to'} {getFormatedDate(data.program_end_date)}</h5>
                                     {/* <p style={{fontFamily:'Poppins',fontSize:'16px'}}>{getFormatedDate(data.registration_end_date)}</p> */}
                                 </div>
                                 <div className="col-lg-4">
