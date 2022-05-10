@@ -34,7 +34,7 @@ import CourseDashboard from "./components/Admin/CourseDashboard";
 import ProgramDashboard from "./components/Admin/ProgramDashboard";
 import CreateProgram from "./components/Admin/CreateProgram";
 import MediaDashboard from "./components/Admin/ImagesDashboard";
-
+import Careers from "./components/Careers";
 if (localStorage.jwtToken) {
   const token = localStorage.jwtToken;
   setAuthToken(token);
@@ -83,6 +83,7 @@ function App() {
           <Route exact path="/terms" component={Terms} />
           <Route exact path="/privacy" component={Privacy} />
           <Route exact path="/refund" component={Refund} />
+          <Route exact path="/careers" component={Careers} />
           <Switch>
             <PrivateRoute exact path="/home" component={Home} />
             {/* <Route path="/404" component={NotFound} /> */}
