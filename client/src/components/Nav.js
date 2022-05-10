@@ -74,22 +74,22 @@ function Nav() {
                 <div className="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                     <ul className="navbar-nav ml-auto" style={{ fontFamily: 'Poppins' }}>
                         <li className="nav-item">
-                            <a className="nav-link page-scroll" style={{ color: 'black' }} href="/">Home <span className="sr-only">(current)</span></a>
+                            <a className="nav-link page-scroll" style={{ color: 'black',fontSize: '18px' }} href="/">Home <span className="sr-only">(current)</span></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link page-scroll" style={{ color: 'black' }} href="/about">About Us</a>
+                            <a className="nav-link page-scroll" style={{ color: 'black',fontSize: '18px' }} href="/about">About Us</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link page-scroll" style={{ color: 'black' }} href="/srim">Sri M</a>
+                            <a className="nav-link page-scroll" style={{ color: 'black',fontSize: '18px' }} href="/srim">Sri M</a>
                         </li>
                         <li className="nav-item dropdown">
-                            <a className="nav-link" href="#" id="dropdown01" style={{ color: 'black' }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
+                            <a className="nav-link" href="#" id="dropdown01" style={{ color: 'black',fontSize: '18px' }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
                             <div className="dropdown-menu" aria-labelledby="dropdown01">
                                 {
                                     courses.map((data, index) => {
                                         if(data.isActive) {
                                             return <>
-                                            <a className="dropdown-item page-scroll" style={{ color: 'black' }} href={"../course/" + data._id}>{data.course_name} - {data.course_title}</a>
+                                            <a className="dropdown-item page-scroll" style={{ color: 'black',fontSize: '18px' }} href={"../course/" + data._id}>{data.course_name} - {data.course_title}</a>
                                             <div className="dropdown-divider"></div>
                                         </>
                                         }
@@ -98,20 +98,20 @@ function Nav() {
                             </div>
                         </li>
                        <li className="nav-item">
-                            <a className="nav-link page-scroll" style={{color:'black'}} href="/careers">Careers</a>
+                            <a className="nav-link page-scroll" style={{color:'black',fontSize: '18px'}} href="/careers">Careers</a>
                         </li> 
                         <li className="nav-item">
-                            <a className="nav-link page-scroll" style={{ color: 'black' }} href="/contactus">Contact Us</a>
+                            <a className="nav-link page-scroll" style={{ color: 'black',fontSize: '18px' }} href="/contactus">Contact Us</a>
                         </li>
                         {/* <li  className="nav-item dropdown"> */}
                         {isAuthenticated && user.userData.roles[0] === 'ADMIN' ? <li  className="nav-item dropdown">
-                            <a className="nav-link" href="#" id="dropdown01" style={{ color: 'black' }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
+                            <a className="nav-link" href="#" id="dropdown01" style={{ color: 'black',fontSize: '18px' }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
                             <div className="dropdown-menu" aria-labelledby="dropdown01">
-                                <a className="dropdown-item page-scroll" style={{ color: 'black' }} href="/coursedashboard">Course Dashboard</a>
+                                <a className="dropdown-item page-scroll" style={{ color: 'black',fontSize: '18px' }} href="/coursedashboard">Course Dashboard</a>
                                 <div className="dropdown-divider"></div>
-                                <a className="dropdown-item page-scroll" style={{ color: 'black' }} href="/programdashboard">Programs Dashboard</a>
+                                <a className="dropdown-item page-scroll" style={{ color: 'black' ,fontSize: '18px'}} href="/programdashboard">Programs Dashboard</a>
                                 <div className="dropdown-divider"></div>
-                                <a className="dropdown-item page-scroll" style={{ color: 'black' }} href="/mediadashboard">Media Dashboard</a>
+                                <a className="dropdown-item page-scroll" style={{ color: 'black',fontSize: '18px' }} href="/mediadashboard">Media Dashboard</a>
                                 <div className="dropdown-divider"></div>
                             </div></li> : <></>}
                         {/* </li> */}
