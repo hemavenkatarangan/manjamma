@@ -1,3 +1,3 @@
-const fileUploadUrl = 'bharatyogavidyakendra.in/media/upload'
+const fileUploadUrl = 'https://bharatyogavidyakendra.in/media/upload'
 
 export default fileUploadUrl
