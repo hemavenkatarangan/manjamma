@@ -40,36 +40,7 @@ function GenericCourses() {
                                                 }) : ''
                                             }
 
-                                            {/* <div className="swiper-slide">
-                                <a href="/about#president">
-                                <img src="../images/slider/3.png" className="img-fluid" alt='Byvk' />
-                                </a>
-                            </div>
-                             <div className="swiper-slide">
-                                <a href="/about#president">
-                                <img src="../images/slider/Picture3-CJI.png" className="img-fluid" alt='Byvk' />
-                                </a>
-                            </div>
-                          <div className="swiper-slide">
-                                <a href="/#courses">
-                                <img src="../images/slider/Picture4-OurCourses.png" className="img-fluid" alt='OurCourses' />
-                                </a>
-                            </div>
-                            <div className="swiper-slide">
-                                <a href="/ttc">
-                                <img src="../images/slider/TTC-Picture3.png" className="img-fluid" alt='Byvk' />
-                                </a>
-                            </div>
-                            <div className="swiper-slide">
-                                <a href='/abhayam'>
-                                <img src="../images/slider/Picture4-AbhayaM.png" className="img-fluid" alt='Byvk' />
-                                </a>
-                            </div>
-                            <div className="swiper-slide">
-                                <a href='/sakhyam'>
-                                <img src="../images/slider/SakhyaM.jpeg" className="img-fluid" alt='Byvk' />
-                                </a>
-                            </div> */}
+                                           
 
 
 
