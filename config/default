@@ -29,26 +29,7 @@ server{
      return 301 https://bharatyogavidyakendra.in$request_uri;
 }
 
-server {
-  # Setup the domain name(s)
-  server_name https://bharatyogavidyakendra.in;
-  listen 8080
-  listen [::]:8080;
-  
 
-  # Setup the proxy
-  # This will forward all requests to the server
-  # and then it will relay the servers response back to the client
-  location / {
-    proxy_pass http://localhost:8080;
-    proxy_http_version 1.1;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection 'upgrade';
-    proxy_set_header Host $host;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_cache_bypass $http_upgrade;
-  }
-}
 server {
         #listen 80 default_server;
         #listen [::]:80 default_server;
@@ -75,6 +56,10 @@ server {
                 # as directory, then fall back to displaying a 404.
                 proxy_pass http://localhost:3001;
         }
-
+	location /images {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                proxy_pass http://localhost:8080;
+        }
        
 }
