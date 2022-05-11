@@ -56,10 +56,10 @@ server {
                 # as directory, then fall back to displaying a 404.
                 proxy_pass http://localhost:3001;
         }
-	location /artifact {
+	location /upload {
                 # First attempt to serve request as file, then
                 # as directory, then fall back to displaying a 404.
-                proxy_pass http://localhost:8080;
+                proxy_pass http://localhost:8080$request_uri;
         }
        
 }
