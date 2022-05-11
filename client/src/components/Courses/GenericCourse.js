@@ -54,7 +54,7 @@ function GenericCourses() {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-xl-12" >
+                        <div class="editor-container" >
                             <ReactQuill
                                 value={data.contents || ''}
                                 readOnly={true}
