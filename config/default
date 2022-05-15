@@ -58,8 +58,8 @@ client_max_body_size 2048M;
                 proxy_pass http://localhost:8080/upload;
         }
         
-        location ^~ /media {
-        rewrite ^/media(/.*)$ $1 break;
+        location ^~ /picture {
+        rewrite ^/picture(/.*)$ $1 break;
         proxy_pass    http://127.0.0.1:8080/;
   	 }
         
