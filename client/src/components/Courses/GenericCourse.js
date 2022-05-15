@@ -32,10 +32,11 @@ function GenericCourses() {
                                         <div className="swiper-wrapper">
                                             {
                                                 data.carosal_images ? data.carosal_images.map((data, index) => {
+	console.log(data);
                                                     return <div className="swiper-slide" key={index}>
-                                                        {/* <a href='/about'> */}
+                                                        
                                                         <img src={data} className="img-fluid" alt='Byvk' />
-                                                        {/* </a> */}
+                                                       
                                                     </div>
                                                 }) : ''
                                             }
