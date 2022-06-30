@@ -9,6 +9,7 @@ const role = require('./app/routers/role.route');
 const userrole = require('./app/routers/user_role.route');
 const audit =  require('./app/routers/audit.route');
 const mediamanagement =  require('./app/routers/media_management.route');
+const usermanagement =  require('./app/routers/user_management.route');
 const dotenv = require("dotenv");
 
 const auth = require('./app/helpers/authHelper')();
@@ -53,6 +54,7 @@ app.use('/audits', audit);
 app.use('/programs', program);
 app.use('/userroles', userrole);
 app.use('/mediamanagement', mediamanagement);
+app.use('/usermanagement', usermanagement);
 
 
 app.get('/', (req, res) => {
