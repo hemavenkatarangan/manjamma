@@ -21,7 +21,8 @@ var ProgramSchema = new Schema(
         registered_count: { type: Number },
         received_application_count:{type : Number},
         registration_acceptance_count : {type: Number},
-        close_registration:{type: Boolean, default: false}
+        close_registration:{type: Boolean, default: false},
+        required_documents:{type:Array}
     },
     {
         timestamps: true
