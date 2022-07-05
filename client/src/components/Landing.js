@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
 import './Landing.css'
 import axios from 'axios'
-import { Link } from 'react-router-dom';
+
 import AboutInLanding from './AboutInLanding';
-import YogaPhilosophy from './YogaPhilosophy';
-import LandingCourses from './LandingCourses';
+
 import LandingCoursesCalender from './LandingCoursesCalender';
 import SriMTeachings from './SriMTeachings';
-import LandingYogaStories from './LandingYogaStories';
+
 
 function Landing() {
     const [isOpen, setOpen] = useState(false)
@@ -68,13 +67,9 @@ function Landing() {
             <div >
                 <AboutInLanding />
             </div>
-            <div style={{ marginTop: '10px' }}>
-                <YogaPhilosophy />
-            </div>
+           
 
-            <div id="courses">
-                <LandingCourses />
-            </div>
+           
 
             <div style={{ marginTop: '5px' }}>
                 <LandingCoursesCalender />
@@ -83,9 +78,7 @@ function Landing() {
             <div >
                 <SriMTeachings />
             </div>
-            <div >
-                <LandingYogaStories />
-            </div>
+           
         </div>
     )
 }
