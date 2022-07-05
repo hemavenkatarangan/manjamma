@@ -1,0 +1,66 @@
+#
+# In most cases, administrators will remove this file from sites-enabled/ and
+# leave it as reference inside of sites-available where it will continue to be
+# updated by the nginx packaging team.
+#
+# This file will automatically load configuration files provided by other
+# applications, such as Drupal or Wordpress. These applications will be made
+# available underneath a path with that package name, such as /drupal8.
+#
+# Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
+##
+
+# Default server configuration
+#
+
+server {
+       
+   
+       listen 80;
+       listen [::]:80;
+       server_name bharatyogavidyakendra.in;
+       return 301 https://bharatyogavidyakendra.in$request_uri;
+}
+
+server{
+     listen 80;
+     listen [::]:80;
+     server_name www.bharatyogavidyakendra.in;
+     return 301 https://bharatyogavidyakendra.in$request_uri;
+}
+
+
+server {
+        
+                                               
+
+  		 listen 443 ssl http2 default_server;
+         listen [::]:443 ssl http2 default_server;
+      
+         ssl_certificate /etc/ssl/certs/bharatyogavidyakendra-bundle.crt;
+         ssl_certificate_key /home/ubuntu/bharatyogavidyakendra.key;
+        
+client_max_body_size 2048M;
+        root /var/www/html;
+ # Add index.php to the list if you are using PHP
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name bharatyogavidyakendra.in;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                proxy_pass http://localhost:3001;
+        }
+	location /upload {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                proxy_pass http://localhost:8080/upload;
+        }
+        
+        location ^~ /picture {
+        rewrite ^/picture(/.*)$ $1 break;
+        proxy_pass    http://127.0.0.1:8080/;
+  	 }
+        
+}
