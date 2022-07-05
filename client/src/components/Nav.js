@@ -46,6 +46,7 @@ function Nav() {
         <nav className="navbar navbar-expand-lg fixed-top navbar-light">
             <div className="container">
                 <a className="navbar-brand logo-image" href="/" style={{ marginLeft: '12px' }}>
+
                     
                     <div className='row'>
 
@@ -97,6 +98,7 @@ function Nav() {
                        
                     </ul>
                   
+
                 </div>
             </div>
         </nav>

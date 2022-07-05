@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './Landing.css'
 import axios from 'axios'
 
+
 import AboutInLanding from './AboutInLanding';
 
 import LandingCoursesCalender from './LandingCoursesCalender';
@@ -79,6 +80,7 @@ function Landing() {
                 <SriMTeachings />
             </div>
            
+
         </div>
     )
 }

@@ -39,7 +39,9 @@ function LandingCoursesCalender() {
                 <div className="container"style={{ background: "url(../images/header-background.png) center center no-repeat" }}>
                     <div className="row">
                         <div className="col-lg-12">
+
                             <h2 className="heading" style={{color:'darkblue', fontFamily:'Poppins', marginTop:'20px',marginBottom:'20px', fontSize: '24px'}}>Events</h2>
+
                             {/* <p className="p-heading"></p> */}
                         </div>
                     </div>

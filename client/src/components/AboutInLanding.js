@@ -4,6 +4,7 @@ function AboutInLanding() {
             <div className="row">
                 <div className="col-lg-7">
                     <div className="text-container" style={{ marginTop: '32px' }}>
+
                         <h2 className="heading white-heading" style={{ textAlign: 'left', color: 'darkblue', fontFamily: 'Poppins', fontSize: '24px', marginTop: '20px', marginBottom: '20px' }}>About Amma Manjamma</h2>
 
                         <p className="p-large" style={{ fontFamily: 'Poppins', textAlign: 'justify', color: '#333436', fontSize: '16px' }}>
@@ -12,6 +13,7 @@ function AboutInLanding() {
                 </div>
                 <div className="col-lg-5" style={{ textAlign: 'center', marginTop: '65px' }}>
                     <img src="../images/aboutmanjamma.jpg" alt="Manjamma" />
+
                 </div>
             </div>
         </>

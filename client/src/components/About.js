@@ -71,6 +71,7 @@ function About() {
 				<div className="container">
 				<div className="row" >
                         <div className="col-xl-10 offset-xl-1" >
+
                             <h1 style={{textAlign:'center', marginTop:'50px',fontFamily: 'Poppins', color: 'darkblue',fontSize: '32px'}}>About Amma</h1>
                         </div>
                     </div>
@@ -128,6 +129,7 @@ Life story of Manjamma has added in Karnataka Folklore University and Karnataka 
 
 							</div>
 						
+
 
 
 						</div>
