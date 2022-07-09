@@ -37,7 +37,7 @@ function Register(props) {
                     <div className="row">
                         <div className="col-xl-10 offset-xl-1" style={{ fontFamily: 'Poppins'}}>
                             <h1 className="text-center">Sign Up</h1>
-                            <p style={{ fontFamily: 'Poppins'}}>To stay up to date with BYVK’s latest and programs and information please sign up to receive our communications.</p>
+                            <p style={{ fontFamily: 'Poppins'}}>To stay up to date with Amma Manjamma's' latest and programs and information please sign up to receive our communications.</p>
                         </div>
                     </div>
                 </div>
@@ -79,10 +79,10 @@ function Register(props) {
                                 <p style={errStyle}>{errors.phone_num}</p>
                             </div> 
                             <div className="form-group checkbox" style={{ fontFamily: 'Poppins', textAlign: 'center' }}>
-                                <input type="checkbox" id="terms" value="Agreed-to-Terms" required />Would you like you receive emails from BYVK? 
+                                <input type="checkbox" id="terms" value="Agreed-to-Terms" required />Would you like you receive emails ? 
                                 <h5 style={{ fontFamily: 'Poppins', color:'red', marginTop:'10px'}}>Disclaimer</h5>
                                 <p style={{ fontFamily: 'Poppins', textAlign:'justify'}}><i>
-                                BYVK will keep your personal information private and secure. By submitting the above information you are agreeing to BYVK keeping you informed about our programs, and agreeing that we can share it with third party vendors required to send you our communications.
+                                This site will keep your personal information private and secure. By submitting the above information you are agreeing to keeping you informed about our programs, and agreeing that we can share it with third party vendors required to send you our communications.
                                     </i></p>
                             </div>
                             <div className="form-group">

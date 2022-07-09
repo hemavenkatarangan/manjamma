@@ -13,6 +13,8 @@ function Nav() {
     const dispatch = useDispatch()
 
     useEffect(() => {
+	console.log("User ");
+	console.log(user);
         if (user.isAuthenticated) {
             setAuthenticated(true)
         } else {
@@ -78,7 +80,13 @@ function Nav() {
                             <a className="nav-link page-scroll" style={{ color: 'black',fontSize: '14px' }} href="/about">About Manjamma</a>
                         </li>
                        
-                       
+                         {isAuthenticated && user.userData.roles.indexOf("ADMIN") > -1 ? <li  className="nav-item dropdown">
+                            <a className="nav-link" href="#" id="dropdown01" style={{ color: 'black',fontSize: '14px' }} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
+                            <div className="dropdown-menu" aria-labelledby="dropdown01">
+                               
+                                <a className="dropdown-item page-scroll" style={{ color: 'black',fontSize: '14px' }} href="/mediadashboard">Media Dashboard</a>
+                                <div className="dropdown-divider"></div>
+                            </div></li> : <></>}
                        
                        
                         <li>
